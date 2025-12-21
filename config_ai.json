@@ -1,0 +1,22 @@
+{
+  "lookback_hours": 48,
+  "output_dir": "./ai_output",
+  "archive_file": "./youtube_archive.json",
+  "claude_timeout_seconds": 600,
+  "claude_model": "claude-sonnet-4-20250514",
+  "_model_options": {
+    "_comment": "可选模型列表",
+    "best_quality": "claude-opus-4-20250514 (最佳质量，最贵)",
+    "balanced": "claude-sonnet-4-20250514 (推荐，平衡质量与成本)",
+    "fast": "claude-3-5-haiku-latest (快速但质量较差)"
+  },
+  "email_enabled": true,
+  "subtitle_merge_interval": 30,
+  "min_duration_minutes": 10,
+  "check_interval_hours": 5,
+  "_comment_loop": "持续运行模式：每隔 X 小时检测一次新视频。设为 0 表示只运行一次不循环",
+
+  "review_enabled": true,
+  "review_remove_ai_garbage": true,
+  "_comment_review": "审核模块：review_enabled 启用章节重组，review_remove_ai_garbage 用 haiku 删除 AI 废话（只删不改）"
+}

@@ -1,0 +1,1840 @@
+1
+00:00:00,240 --> 00:00:04,880
+Formula 1 cars are the absolute pinnacle
+
+2
+00:00:02,879 --> 00:00:07,600
+of engineering, right? Everything is
+
+3
+00:00:04,880 --> 00:00:09,519
+perfect, huge top speed. If you used it
+
+4
+00:00:07,600 --> 00:00:11,200
+as your daily commuting car, you'd have
+
+5
+00:00:09,519 --> 00:00:12,559
+an absolute nightmare, right? And I
+
+6
+00:00:11,200 --> 00:00:14,160
+think the same can be said for these
+
+7
+00:00:12,559 --> 00:00:16,160
+models, right? A model that is
+
+8
+00:00:14,160 --> 00:00:18,480
+incredibly good on humanity's last exam
+
+9
+00:00:16,160 --> 00:00:20,240
+or MMLU might be absolute nightmare to
+
+10
+00:00:18,480 --> 00:00:22,400
+use day-to-day. Most reporting on
+
+11
+00:00:20,240 --> 00:00:24,480
+benchmarks is done on technical
+
+12
+00:00:22,400 --> 00:00:26,400
+benchmarks these days, right? Um that is
+
+13
+00:00:24,480 --> 00:00:28,720
+where you get the model uh you you give
+
+14
+00:00:26,400 --> 00:00:30,480
+it a set of evaluations uh maybe on one
+
+15
+00:00:28,720 --> 00:00:32,160
+theme or maybe on an exam and then you
+
+16
+00:00:30,480 --> 00:00:34,399
+get a score and humans aren't really
+
+17
+00:00:32,160 --> 00:00:36,320
+involved in that loop. Hey, my name is
+
+18
+00:00:34,399 --> 00:00:38,399
+Andrew Gordon. Uh I'm a staff researcher
+
+19
+00:00:36,320 --> 00:00:40,399
+in behavioral science at Prolific. So I
+
+20
+00:00:38,399 --> 00:00:43,680
+work on the sciences team uh tackling
+
+21
+00:00:40,399 --> 00:00:45,200
+questions related to humans in research
+
+22
+00:00:43,680 --> 00:00:47,120
+specifically online research.
+
+23
+00:00:45,200 --> 00:00:48,879
+>> My name is Nora Petrova. I'm an AI
+
+24
+00:00:47,120 --> 00:00:51,280
+researcher at Prolific. I'm tackling
+
+25
+00:00:48,879 --> 00:00:53,440
+questions around how do we include
+
+26
+00:00:51,280 --> 00:00:55,440
+humans development of AI models and
+
+27
+00:00:53,440 --> 00:00:57,440
+evaluation of AI models? How do we align
+
+28
+00:00:55,440 --> 00:00:58,800
+them to human values? And how do we
+
+29
+00:00:57,440 --> 00:00:59,520
+fully understand what they're capable
+
+30
+00:00:58,800 --> 00:01:01,359
+of?
+
+31
+00:00:59,520 --> 00:01:02,800
+>> How helpful do people find models?
+
+32
+00:01:01,359 --> 00:01:04,640
+What's the communication like? How
+
+33
+00:01:02,800 --> 00:01:06,640
+adaptive do they find it? What do they
+
+34
+00:01:04,640 --> 00:01:08,400
+think of the model's personality? And
+
+35
+00:01:06,640 --> 00:01:10,080
+that when you get ratings on those kind
+
+36
+00:01:08,400 --> 00:01:12,240
+of factors, what you actually get is an
+
+37
+00:01:10,080 --> 00:01:14,400
+actionable set of results that say,
+
+38
+00:01:12,240 --> 00:01:16,159
+okay, your model is struggling with
+
+39
+00:01:14,400 --> 00:01:18,320
+trust or your model is struggling with
+
+40
+00:01:16,159 --> 00:01:19,520
+personality. And we had a first go at
+
+41
+00:01:18,320 --> 00:01:22,000
+this with what's called the prolific
+
+42
+00:01:19,520 --> 00:01:24,000
+user experience leaderboard. Uh that was
+
+43
+00:01:22,000 --> 00:01:25,840
+kind of proof of concept with 500
+
+44
+00:01:24,000 --> 00:01:27,520
+participants from the US uh a
+
+45
+00:01:25,840 --> 00:01:29,920
+representative set of participants where
+
+46
+00:01:27,520 --> 00:01:32,159
+they evaluated a single model at a time
+
+47
+00:01:29,920 --> 00:01:33,680
+and gave their feedback in a like scale
+
+48
+00:01:32,159 --> 00:01:36,799
+format. You know how helpful did you
+
+49
+00:01:33,680 --> 00:01:38,240
+find the model 1 to 7 and so on. We've
+
+50
+00:01:36,799 --> 00:01:40,400
+actually moved now and taken the
+
+51
+00:01:38,240 --> 00:01:42,479
+learnings from that initial leaderboard
+
+52
+00:01:40,400 --> 00:01:45,439
+and and built it into what we're calling
+
+53
+00:01:42,479 --> 00:01:47,280
+humane which is our main leaderboard. Um
+
+54
+00:01:45,439 --> 00:01:48,960
+and that uses a much a similar approach
+
+55
+00:01:47,280 --> 00:01:52,960
+to chat arena in the sense that we have
+
+56
+00:01:48,960 --> 00:01:55,360
+comparative battles between um between
+
+57
+00:01:52,960 --> 00:01:57,119
+models uh which actually allows us to
+
+58
+00:01:55,360 --> 00:01:58,880
+much more clearly differentiate which
+
+59
+00:01:57,119 --> 00:02:00,799
+model is performing better. What if we
+
+60
+00:01:58,880 --> 00:02:02,719
+could have a a fairer approach where we
+
+61
+00:02:00,799 --> 00:02:05,600
+actually diversely sampled and
+
+62
+00:02:02,719 --> 00:02:07,040
+stratified folks based on how old they
+
+63
+00:02:05,600 --> 00:02:09,119
+are and where they live and what their
+
+64
+00:02:07,040 --> 00:02:11,360
+values are. What would be a fairer
+
+65
+00:02:09,119 --> 00:02:13,920
+approach to understand the behavior of
+
+66
+00:02:11,360 --> 00:02:15,200
+models and to do evaluation? So this is
+
+67
+00:02:13,920 --> 00:02:17,040
+what Andrew and Nora have been doing at
+
+68
+00:02:15,200 --> 00:02:19,760
+prolific. How do we know whether these
+
+69
+00:02:17,040 --> 00:02:21,760
+models are actually good for the humans
+
+70
+00:02:19,760 --> 00:02:24,640
+that are using them? How can we make
+
+71
+00:02:21,760 --> 00:02:26,480
+evaluation metrics which are fairer?
+
+72
+00:02:24,640 --> 00:02:27,920
+This is Andrew and Nora.
+
+73
+00:02:26,480 --> 00:02:29,760
+>> But the problem is at the moment I mean
+
+74
+00:02:27,920 --> 00:02:31,360
+the the field of kind of evaluations and
+
+75
+00:02:29,760 --> 00:02:33,519
+benchmarking these models is incredibly
+
+76
+00:02:31,360 --> 00:02:35,040
+nent, right? It's only been around as
+
+77
+00:02:33,519 --> 00:02:36,959
+long as LLMs have been around in the
+
+78
+00:02:35,040 --> 00:02:38,640
+last couple of years. And because of
+
+79
+00:02:36,959 --> 00:02:39,920
+that it's a kind of like a fractured
+
+80
+00:02:38,640 --> 00:02:41,360
+field, right? There's no there's no
+
+81
+00:02:39,920 --> 00:02:44,959
+standard playing field for how these
+
+82
+00:02:41,360 --> 00:02:46,480
+labs uh report um data on on on
+
+83
+00:02:44,959 --> 00:02:48,720
+benchmarking. You know, some may
+
+84
+00:02:46,480 --> 00:02:50,319
+emphasize with Grock 4 recently, we saw
+
+85
+00:02:48,720 --> 00:02:52,480
+huge amount of emphasis on humanity's
+
+86
+00:02:50,319 --> 00:02:55,599
+last last exam, right? And and less so
+
+87
+00:02:52,480 --> 00:02:57,519
+on other benchmarks and some models will
+
+88
+00:02:55,599 --> 00:03:00,080
+come out without any benchmarking data
+
+89
+00:02:57,519 --> 00:03:02,000
+at all. Right? um and without some kind
+
+90
+00:03:00,080 --> 00:03:04,000
+of essentially there's a lot of
+
+91
+00:03:02,000 --> 00:03:05,599
+heterogeneity in how these labs report
+
+92
+00:03:04,000 --> 00:03:07,760
+the results and what it what it leads to
+
+93
+00:03:05,599 --> 00:03:11,040
+for me is a situation where I think
+
+94
+00:03:07,760 --> 00:03:13,680
+we're at risk of struggling to actually
+
+95
+00:03:11,040 --> 00:03:15,680
+compare the models on any even playing
+
+96
+00:03:13,680 --> 00:03:17,280
+field but there's of course bigger
+
+97
+00:03:15,680 --> 00:03:19,680
+questions as well about you know models
+
+98
+00:03:17,280 --> 00:03:22,239
+are often lorded for doing the highest
+
+99
+00:03:19,680 --> 00:03:24,000
+score in humanities last exam so we know
+
+100
+00:03:22,239 --> 00:03:26,800
+from a technical perspective the model
+
+101
+00:03:24,000 --> 00:03:28,560
+has advanced above its rivals but for me
+
+102
+00:03:26,800 --> 00:03:31,280
+and I guess my kind of core or argument
+
+103
+00:03:28,560 --> 00:03:34,319
+in this space is if you just rely on
+
+104
+00:03:31,280 --> 00:03:36,319
+those technical metrics, you miss half
+
+105
+00:03:34,319 --> 00:03:38,400
+the point, right? Like these models are
+
+106
+00:03:36,319 --> 00:03:40,799
+designed for humans to use at the end of
+
+107
+00:03:38,400 --> 00:03:43,440
+the day. Most of the users are humans
+
+108
+00:03:40,799 --> 00:03:44,959
+and simple performance on these exams
+
+109
+00:03:43,440 --> 00:03:47,040
+doesn't necessarily correlate to a good
+
+110
+00:03:44,959 --> 00:03:49,280
+user experience. All the frontier labs
+
+111
+00:03:47,040 --> 00:03:51,200
+really uh need to start kind of having
+
+112
+00:03:49,280 --> 00:03:52,879
+uh human preference leaderboards a
+
+113
+00:03:51,200 --> 00:03:54,879
+little more front of mind alongside all
+
+114
+00:03:52,879 --> 00:03:56,640
+the technical metrics. People are
+
+115
+00:03:54,879 --> 00:03:58,879
+increasingly using these models for very
+
+116
+00:03:56,640 --> 00:04:01,519
+sensitive topics and questions for
+
+117
+00:03:58,879 --> 00:04:03,599
+mental health for uh how should they
+
+118
+00:04:01,519 --> 00:04:07,599
+should navigate problems in their lives
+
+119
+00:04:03,599 --> 00:04:09,519
+and there is no oversight on that and in
+
+120
+00:04:07,599 --> 00:04:11,280
+any other area where these topics are
+
+121
+00:04:09,519 --> 00:04:13,599
+discussed there is a lot of regulation
+
+122
+00:04:11,280 --> 00:04:15,680
+and then a lot of kind of ethical
+
+123
+00:04:13,599 --> 00:04:17,519
+conduct built into it. Whereas here is
+
+124
+00:04:15,680 --> 00:04:18,880
+kind of the wild west at the moment and
+
+125
+00:04:17,519 --> 00:04:20,160
+some companies are taking it more
+
+126
+00:04:18,880 --> 00:04:23,040
+seriously than others and trying to
+
+127
+00:04:20,160 --> 00:04:25,120
+study the ways in which humans are uh
+
+128
+00:04:23,040 --> 00:04:28,080
+using the models for for more personal
+
+129
+00:04:25,120 --> 00:04:30,479
+topics and and problems and we've seen
+
+130
+00:04:28,080 --> 00:04:33,840
+some pretty starking examples recently
+
+131
+00:04:30,479 --> 00:04:36,240
+with with Gro 3 and Mecca Hetler and uh
+
+132
+00:04:33,840 --> 00:04:38,400
+it does raise questions about how how
+
+133
+00:04:36,240 --> 00:04:39,759
+thin of a veneer is the safety training
+
+134
+00:04:38,400 --> 00:04:41,919
+on top of some of these models.
+
+135
+00:04:39,759 --> 00:04:44,560
+>> Well, there is no leaderboard for
+
+136
+00:04:41,919 --> 00:04:47,680
+safety, right? like there's no metric
+
+137
+00:04:44,560 --> 00:04:48,960
+like we we don't grade LLMs by how safe
+
+138
+00:04:47,680 --> 00:04:51,040
+they are. In fact, it's not really even
+
+139
+00:04:48,960 --> 00:04:53,360
+in the question apart from some
+
+140
+00:04:51,040 --> 00:04:54,880
+researchers. So, I mean I I would argue
+
+141
+00:04:53,360 --> 00:04:58,800
+that that should be just as important as
+
+142
+00:04:54,880 --> 00:05:00,400
+how fast or smart the model is. You
+
+143
+00:04:58,800 --> 00:05:02,320
+know, how safe is it for the people to
+
+144
+00:05:00,400 --> 00:05:04,320
+use? There's been a lot of interesting
+
+145
+00:05:02,320 --> 00:05:06,400
+research coming from anthropic in that
+
+146
+00:05:04,320 --> 00:05:09,600
+direction with regards to safety with
+
+147
+00:05:06,400 --> 00:05:11,120
+regards to alignments of the models and
+
+148
+00:05:09,600 --> 00:05:13,039
+using constitutional AI and various
+
+149
+00:05:11,120 --> 00:05:15,280
+approaches that they've um that they've
+
+150
+00:05:13,039 --> 00:05:17,919
+explored and also around mechanistic
+
+151
+00:05:15,280 --> 00:05:19,919
+interpretability just peering kind of
+
+152
+00:05:17,919 --> 00:05:23,360
+behind the curtains of the models and
+
+153
+00:05:19,919 --> 00:05:25,840
+understanding how an input produces a
+
+154
+00:05:23,360 --> 00:05:28,000
+certain output which kind of features
+
+155
+00:05:25,840 --> 00:05:30,479
+concepts which circuits get activated
+
+156
+00:05:28,000 --> 00:05:32,479
+along the way and kind of tracing
+
+157
+00:05:30,479 --> 00:05:35,520
+the thoughts essentially of these models
+
+158
+00:05:32,479 --> 00:05:38,639
+and trying to isolate where potential
+
+159
+00:05:35,520 --> 00:05:40,479
+problems may emerge. So work of this
+
+160
+00:05:38,639 --> 00:05:43,039
+kind is very important and raising the
+
+161
+00:05:40,479 --> 00:05:45,199
+confidence that these models will be
+
+162
+00:05:43,039 --> 00:05:47,199
+able to handle novel situations in safe
+
+163
+00:05:45,199 --> 00:05:49,759
+ways. I think the the one other thing
+
+164
+00:05:47,199 --> 00:05:52,560
+I'd say is um given that chatbot Arena
+
+165
+00:05:49,759 --> 00:05:54,000
+is the number one and frankly pretty
+
+166
+00:05:52,560 --> 00:05:57,199
+much the only human preference
+
+167
+00:05:54,000 --> 00:05:58,479
+leaderboard out there for for LLMs, it's
+
+168
+00:05:57,199 --> 00:05:59,759
+really important that we actually
+
+169
+00:05:58,479 --> 00:06:01,120
+understand what's going on behind the
+
+170
+00:05:59,759 --> 00:06:03,039
+scenes. So obviously, you know, Chat
+
+171
+00:06:01,120 --> 00:06:04,639
+Bolerina is entirely open source. People
+
+172
+00:06:03,039 --> 00:06:06,000
+go in, they put in a prompt, they get
+
+173
+00:06:04,639 --> 00:06:07,600
+response from two different models. They
+
+174
+00:06:06,000 --> 00:06:09,360
+then say which one is better. And that
+
+175
+00:06:07,600 --> 00:06:10,960
+paper found that actually what was
+
+176
+00:06:09,360 --> 00:06:13,520
+happening in the background is that some
+
+177
+00:06:10,960 --> 00:06:15,280
+companies are getting access to a lot
+
+178
+00:06:13,520 --> 00:06:17,520
+more private testing uh in the
+
+179
+00:06:15,280 --> 00:06:19,759
+background than others. For instance,
+
+180
+00:06:17,520 --> 00:06:22,240
+before Llama 4 launched, we saw Meta
+
+181
+00:06:19,759 --> 00:06:23,600
+released 27 models on the arena. But of
+
+182
+00:06:22,240 --> 00:06:25,840
+course, only one was actually reported
+
+183
+00:06:23,600 --> 00:06:27,680
+in the end, which obviously undermines
+
+184
+00:06:25,840 --> 00:06:29,120
+the integrity of the arena because the
+
+185
+00:06:27,680 --> 00:06:30,960
+more comparisons you have for your
+
+186
+00:06:29,120 --> 00:06:32,720
+model, the more access to prompts you
+
+187
+00:06:30,960 --> 00:06:34,800
+have, the more data you have to refine a
+
+188
+00:06:32,720 --> 00:06:36,960
+better model that's better at the arena.
+
+189
+00:06:34,800 --> 00:06:38,720
+and it adds an element of bias into into
+
+190
+00:06:36,960 --> 00:06:41,360
+the data which is very very hard to get
+
+191
+00:06:38,720 --> 00:06:43,039
+around. There are other issues that were
+
+192
+00:06:41,360 --> 00:06:45,280
+called out and issues that we've seen
+
+193
+00:06:43,039 --> 00:06:47,440
+ourselves which we think kind of
+
+194
+00:06:45,280 --> 00:06:49,199
+dictates the need for a more rigorous
+
+195
+00:06:47,440 --> 00:06:51,039
+and and methodologically sound approach
+
+196
+00:06:49,199 --> 00:06:52,880
+to doing these kind of human preference
+
+197
+00:06:51,039 --> 00:06:54,720
+data sets amongst us. I think we had a
+
+198
+00:06:52,880 --> 00:06:56,080
+pretty good idea um beyond beyond the
+
+199
+00:06:54,720 --> 00:06:57,600
+criticisms in the leaderboard illusion
+
+200
+00:06:56,080 --> 00:06:58,960
+paper. We think that it actually that
+
+201
+00:06:57,600 --> 00:07:00,880
+paper didn't really touch on some of the
+
+202
+00:06:58,960 --> 00:07:02,720
+other things we we think should be cared
+
+203
+00:07:00,880 --> 00:07:05,039
+about when you're doing human preference
+
+204
+00:07:02,720 --> 00:07:07,280
+evaluation. I think for me there's kind
+
+205
+00:07:05,039 --> 00:07:08,800
+of three big areas I think where where
+
+206
+00:07:07,280 --> 00:07:11,199
+we've sought to improve. First of all,
+
+207
+00:07:08,800 --> 00:07:14,240
+as you mentioned sample. So obviously
+
+208
+00:07:11,199 --> 00:07:15,919
+the sample for uh the chatbot arena is
+
+209
+00:07:14,240 --> 00:07:17,120
+anybody right. We don't know anything
+
+210
+00:07:15,919 --> 00:07:19,919
+about them. We don't collect any
+
+211
+00:07:17,120 --> 00:07:22,240
+demographic data. Uh so they are just
+
+212
+00:07:19,919 --> 00:07:23,840
+people going there anonymously prompting
+
+213
+00:07:22,240 --> 00:07:25,360
+the models and giving their preference
+
+214
+00:07:23,840 --> 00:07:27,199
+data. Now obviously that's great. You
+
+215
+00:07:25,360 --> 00:07:28,639
+get a huge amount of data which is
+
+216
+00:07:27,199 --> 00:07:30,639
+fantastic but you know nothing about the
+
+217
+00:07:28,639 --> 00:07:32,880
+people giving the data which is fairly
+
+218
+00:07:30,639 --> 00:07:35,280
+suboptimal. Um then in terms of
+
+219
+00:07:32,880 --> 00:07:37,840
+specificity any for anybody that's used
+
+220
+00:07:35,280 --> 00:07:39,759
+chat arena all you're doing is saying I
+
+221
+00:07:37,840 --> 00:07:41,680
+like this response more or I like this
+
+222
+00:07:39,759 --> 00:07:44,319
+response more right in the real world
+
+223
+00:07:41,680 --> 00:07:45,840
+that kind of data is is useless in a
+
+224
+00:07:44,319 --> 00:07:47,599
+sense right it it gives you a really
+
+225
+00:07:45,840 --> 00:07:49,680
+nice way to make a nice leaderboard of
+
+226
+00:07:47,599 --> 00:07:52,720
+AI models but it tells the companies
+
+227
+00:07:49,680 --> 00:07:55,520
+nothing about why that preference um has
+
+228
+00:07:52,720 --> 00:07:58,000
+been has been uh given. So in in our
+
+229
+00:07:55,520 --> 00:07:59,599
+approach we sought to um mitigate that
+
+230
+00:07:58,000 --> 00:08:01,599
+by actually splitting preference down
+
+231
+00:07:59,599 --> 00:08:03,840
+into its constituent parts. So things
+
+232
+00:08:01,599 --> 00:08:05,280
+like how helpful do people find models?
+
+233
+00:08:03,840 --> 00:08:07,120
+What's the communication like? How
+
+234
+00:08:05,280 --> 00:08:09,120
+adaptive do they find it? What do they
+
+235
+00:08:07,120 --> 00:08:10,879
+think of the model's personality? And
+
+236
+00:08:09,120 --> 00:08:12,639
+that when you get ratings on those kind
+
+237
+00:08:10,879 --> 00:08:14,800
+of factors, what you actually get is an
+
+238
+00:08:12,639 --> 00:08:16,879
+actionable set of results that say,
+
+239
+00:08:14,800 --> 00:08:18,639
+okay, your model is struggling with
+
+240
+00:08:16,879 --> 00:08:20,479
+trust or your model is struggling with
+
+241
+00:08:18,639 --> 00:08:21,840
+personality. That's where you need to be
+
+242
+00:08:20,479 --> 00:08:24,000
+focusing to really actually build a
+
+243
+00:08:21,840 --> 00:08:26,000
+model that is good for real users in the
+
+244
+00:08:24,000 --> 00:08:27,440
+real world. But there's no QA in the
+
+245
+00:08:26,000 --> 00:08:29,120
+sense that okay, I could go in and I
+
+246
+00:08:27,440 --> 00:08:30,720
+could just say hello or I could say
+
+247
+00:08:29,120 --> 00:08:32,399
+absolutely nothing or I could have a
+
+248
+00:08:30,720 --> 00:08:34,880
+multi-turn conversation and completely
+
+249
+00:08:32,399 --> 00:08:36,800
+wander from you know how big is the sun
+
+250
+00:08:34,880 --> 00:08:39,120
+to how long is a snake you know like
+
+251
+00:08:36,800 --> 00:08:40,640
+just uh topic wandering which I don't
+
+252
+00:08:39,120 --> 00:08:42,479
+think is a really good nuance view of
+
+253
+00:08:40,640 --> 00:08:44,080
+models. So we've built in to our
+
+254
+00:08:42,479 --> 00:08:47,040
+structure where participants come in and
+
+255
+00:08:44,080 --> 00:08:49,519
+they have multi-step uh conversations
+
+256
+00:08:47,040 --> 00:08:51,279
+with models. we built in QA that
+
+257
+00:08:49,519 --> 00:08:53,920
+actually says, you know, if if you put
+
+258
+00:08:51,279 --> 00:08:55,680
+low low effort into your question or you
+
+259
+00:08:53,920 --> 00:08:57,040
+start wondering, we're going to penalize
+
+260
+00:08:55,680 --> 00:08:58,800
+you and three three of those and you're
+
+261
+00:08:57,040 --> 00:09:00,800
+out. So, those are the kind of
+
+262
+00:08:58,800 --> 00:09:02,000
+principles I guess we built the
+
+263
+00:09:00,800 --> 00:09:03,839
+leaderboard around.
+
+264
+00:09:02,000 --> 00:09:05,279
+>> I would just touch upon uh the
+
+265
+00:09:03,839 --> 00:09:07,920
+methodology that we've used, which is
+
+266
+00:09:05,279 --> 00:09:10,080
+true skill. It's um a framework uh if
+
+267
+00:09:07,920 --> 00:09:12,080
+you will developed by Microsoft for
+
+268
+00:09:10,080 --> 00:09:14,240
+estimating the skill levels of players
+
+269
+00:09:12,080 --> 00:09:18,880
+on Xbox Live. So they take into account
+
+270
+00:09:14,240 --> 00:09:21,760
+things like randomness in games, um, um,
+
+271
+00:09:18,880 --> 00:09:23,279
+changing skill levels across time,
+
+272
+00:09:21,760 --> 00:09:26,080
+whether someone is having kind of a
+
+273
+00:09:23,279 --> 00:09:28,880
+fluky win streak versus a seasoned
+
+274
+00:09:26,080 --> 00:09:30,320
+player that consistently performs well.
+
+275
+00:09:28,880 --> 00:09:32,880
+So all of these things that we thought
+
+276
+00:09:30,320 --> 00:09:35,120
+would be good to take into account. And
+
+277
+00:09:32,880 --> 00:09:36,959
+uh it's a very flexible system that
+
+278
+00:09:35,120 --> 00:09:39,680
+estimates probabilities with basing
+
+279
+00:09:36,959 --> 00:09:41,839
+distributions with kind of a mean and a
+
+280
+00:09:39,680 --> 00:09:44,320
+variance that gets narrow and narrow
+
+281
+00:09:41,839 --> 00:09:46,080
+over time as the system kind of learns
+
+282
+00:09:44,320 --> 00:09:48,480
+about the outcome of these battles or
+
+283
+00:09:46,080 --> 00:09:50,959
+these comparisons. Most importantly,
+
+284
+00:09:48,480 --> 00:09:53,680
+it's based on information gain. So the
+
+285
+00:09:50,959 --> 00:09:56,160
+way the way we pick the next pair that
+
+286
+00:09:53,680 --> 00:09:58,160
+should occur in the tournament is based
+
+287
+00:09:56,160 --> 00:10:00,399
+on how much we will learn from these
+
+288
+00:09:58,160 --> 00:10:01,760
+models going head-to-head. How much are
+
+289
+00:10:00,399 --> 00:10:02,880
+how much information are they giving us?
+
+290
+00:10:01,760 --> 00:10:05,360
+how much are they reducing the
+
+291
+00:10:02,880 --> 00:10:08,399
+uncertainty and we kind of order the
+
+292
+00:10:05,360 --> 00:10:12,240
+queue of pairs according to that and
+
+293
+00:10:08,399 --> 00:10:14,320
+that gets us to a place of minimized
+
+294
+00:10:12,240 --> 00:10:15,839
+uncertainty as fast as possible as fast
+
+295
+00:10:14,320 --> 00:10:17,600
+as we can. It's a really flexible
+
+296
+00:10:15,839 --> 00:10:19,600
+approach. Uh we can run separate
+
+297
+00:10:17,600 --> 00:10:21,839
+tournaments like we've done with our
+
+298
+00:10:19,600 --> 00:10:23,200
+demographic groups. We have around 20
+
+299
+00:10:21,839 --> 00:10:25,360
+demographic groups and we've run
+
+300
+00:10:23,200 --> 00:10:27,600
+separate tournaments for them and we can
+
+301
+00:10:25,360 --> 00:10:30,240
+consolidate the findings for each
+
+302
+00:10:27,600 --> 00:10:32,959
+tournament to obtain kind of a an
+
+303
+00:10:30,240 --> 00:10:35,360
+overall leaderboards that is much less
+
+304
+00:10:32,959 --> 00:10:37,920
+uncertain than any of the individual
+
+305
+00:10:35,360 --> 00:10:39,600
+tournaments or leaderboards that we can
+
+306
+00:10:37,920 --> 00:10:41,440
+um produce from any of the demographic
+
+307
+00:10:39,600 --> 00:10:43,200
+groups. So it it really allows us to
+
+308
+00:10:41,440 --> 00:10:45,440
+slice and dice data in any way we want
+
+309
+00:10:43,200 --> 00:10:48,320
+and we can easily add more demographic
+
+310
+00:10:45,440 --> 00:10:50,720
+groups, more models over time. uh we're
+
+311
+00:10:48,320 --> 00:10:51,680
+yeah developing in in in the open and
+
+312
+00:10:50,720 --> 00:10:52,880
+welcoming feedback.
+
+313
+00:10:51,680 --> 00:10:55,440
+>> I think one of the things they pointed
+
+314
+00:10:52,880 --> 00:10:56,959
+out in the leaderboards illusion paper
+
+315
+00:10:55,440 --> 00:10:59,440
+was that actually some models are
+
+316
+00:10:56,959 --> 00:11:02,480
+sampled considerably higher than other
+
+317
+00:10:59,440 --> 00:11:04,160
+models and the I I believe that the the
+
+318
+00:11:02,480 --> 00:11:05,600
+folks behind chatbot arena said that's
+
+319
+00:11:04,160 --> 00:11:07,040
+because people come to the arena to play
+
+320
+00:11:05,600 --> 00:11:08,320
+with the latest models, right? Which is
+
+321
+00:11:07,040 --> 00:11:10,480
+all well and good. People want to play
+
+322
+00:11:08,320 --> 00:11:12,640
+with with the state-of-the-art, right?
+
+323
+00:11:10,480 --> 00:11:14,480
+Which is great, but it doesn't lead to
+
+324
+00:11:12,640 --> 00:11:16,000
+an efficient sampling method. It it
+
+325
+00:11:14,480 --> 00:11:17,200
+essentially means that some models get a
+
+326
+00:11:16,000 --> 00:11:18,800
+lot more battles than others. They
+
+327
+00:11:17,200 --> 00:11:20,640
+therefore get a lot more data. They
+
+328
+00:11:18,800 --> 00:11:21,760
+therefore get a lot better in the arena.
+
+329
+00:11:20,640 --> 00:11:23,040
+And there's a pretty strong relationship
+
+330
+00:11:21,760 --> 00:11:26,720
+between the number of battles and the
+
+331
+00:11:23,040 --> 00:11:29,920
+place on the leadboard. We only ever do
+
+332
+00:11:26,720 --> 00:11:31,600
+battles based on the need from the data.
+
+333
+00:11:29,920 --> 00:11:33,200
+So the uncertainty is high for a
+
+334
+00:11:31,600 --> 00:11:35,120
+specific model against another specific
+
+335
+00:11:33,200 --> 00:11:36,480
+model. We conduct a battle for that to
+
+336
+00:11:35,120 --> 00:11:38,240
+lower that uncertainty. So it's all
+
+337
+00:11:36,480 --> 00:11:40,320
+driven by the data. It's very
+
+338
+00:11:38,240 --> 00:11:41,839
+computationally sound because we don't
+
+339
+00:11:40,320 --> 00:11:44,399
+actually make any more comparisons than
+
+340
+00:11:41,839 --> 00:11:45,760
+we need to. Um, and it allows us to
+
+341
+00:11:44,399 --> 00:11:47,279
+really get to a point where models are
+
+342
+00:11:45,760 --> 00:11:48,160
+strongly differentiated based on
+
+343
+00:11:47,279 --> 00:11:50,399
+uncertainty.
+
+344
+00:11:48,160 --> 00:11:52,720
+>> If we have a certain goal with regards
+
+345
+00:11:50,399 --> 00:11:54,000
+to uncertainty, in order to fully
+
+346
+00:11:52,720 --> 00:11:55,040
+differentiate the models at the
+
+347
+00:11:54,000 --> 00:11:56,800
+confidence interval that we're
+
+348
+00:11:55,040 --> 00:11:58,720
+interested in, we can just conduct more
+
+349
+00:11:56,800 --> 00:12:00,800
+battles until we get there. The control
+
+350
+00:11:58,720 --> 00:12:02,399
+is in our hands. Uh, in essence, we just
+
+351
+00:12:00,800 --> 00:12:04,560
+need to recruit more participants in
+
+352
+00:12:02,399 --> 00:12:07,120
+order to get to that level of certainty.
+
+353
+00:12:04,560 --> 00:12:08,720
+The way we've sampled for this study,
+
+354
+00:12:07,120 --> 00:12:10,639
+we're obviously using uh our own
+
+355
+00:12:08,720 --> 00:12:13,040
+participants from the prolific platform,
+
+356
+00:12:10,639 --> 00:12:15,040
+but we've sampled effectively in based
+
+357
+00:12:13,040 --> 00:12:17,200
+on the census data that we have for both
+
+358
+00:12:15,040 --> 00:12:18,639
+the US and the UK. So, the long-term
+
+359
+00:12:17,200 --> 00:12:20,560
+vision of this would obviously be a more
+
+360
+00:12:18,639 --> 00:12:23,200
+global product, but at the moment, what
+
+361
+00:12:20,560 --> 00:12:24,639
+we do is we we stratify our our sample
+
+362
+00:12:23,200 --> 00:12:28,240
+i.e. our participants who are giving us
+
+363
+00:12:24,639 --> 00:12:30,160
+this feedback by demographics like their
+
+364
+00:12:28,240 --> 00:12:32,240
+uh their age, their ethnicity, their
+
+365
+00:12:30,160 --> 00:12:34,399
+political alignment. And we have an
+
+366
+00:12:32,240 --> 00:12:36,560
+awful lot of data from from censuses
+
+367
+00:12:34,399 --> 00:12:38,240
+that tells us, you know, each country is
+
+368
+00:12:36,560 --> 00:12:40,160
+made up of this certain proportion of
+
+369
+00:12:38,240 --> 00:12:42,000
+these demographics, which essentially
+
+370
+00:12:40,160 --> 00:12:43,519
+allows us to say that when we've
+
+371
+00:12:42,000 --> 00:12:46,240
+amalgamated all these findings and we
+
+372
+00:12:43,519 --> 00:12:48,240
+find that leading model, we can very
+
+373
+00:12:46,240 --> 00:12:50,800
+confidently say that that model is
+
+374
+00:12:48,240 --> 00:12:52,320
+preferred by as representative a set of
+
+375
+00:12:50,800 --> 00:12:54,720
+the general public as we can possibly
+
+376
+00:12:52,320 --> 00:12:57,360
+get. So hopefully in that sense it's a
+
+377
+00:12:54,720 --> 00:13:01,040
+lot more related to like the the real
+
+378
+00:12:57,360 --> 00:13:03,360
+world preferences of people in the world
+
+379
+00:13:01,040 --> 00:13:05,279
+rather than a very potentially skewed
+
+380
+00:13:03,360 --> 00:13:07,519
+and biased subset that might be uh
+
+381
+00:13:05,279 --> 00:13:10,160
+responding to the chatbot arena because
+
+382
+00:13:07,519 --> 00:13:12,079
+we we ran our first one as an MVP a
+
+383
+00:13:10,160 --> 00:13:14,480
+proof of concept that was a lot more
+
+384
+00:13:12,079 --> 00:13:17,360
+about kind of um proving that we can do
+
+385
+00:13:14,480 --> 00:13:19,519
+this in a rigorous and methodologically
+
+386
+00:13:17,360 --> 00:13:22,000
+sound way. Uh when we actually ran that
+
+387
+00:13:19,519 --> 00:13:23,519
+we only ran it with 500 participants. It
+
+388
+00:13:22,000 --> 00:13:25,440
+gave us a lot of insights about how we
+
+389
+00:13:23,519 --> 00:13:26,959
+build humane which is our leaderboard
+
+390
+00:13:25,440 --> 00:13:28,399
+that we're working on at the moment. Now
+
+391
+00:13:26,959 --> 00:13:29,920
+that leaderboard is actually running as
+
+392
+00:13:28,399 --> 00:13:31,760
+we speak in the background. We're still
+
+393
+00:13:29,920 --> 00:13:33,839
+having battles. So we expect to be able
+
+394
+00:13:31,760 --> 00:13:36,480
+to have more uh data from that. But what
+
+395
+00:13:33,839 --> 00:13:38,800
+I can say about the the first uh the
+
+396
+00:13:36,480 --> 00:13:40,399
+first round that we did models tended to
+
+397
+00:13:38,800 --> 00:13:41,760
+perform across the board of the six
+
+398
+00:13:40,399 --> 00:13:43,360
+models we tested which were leading
+
+399
+00:13:41,760 --> 00:13:45,600
+models at the time they performed a lot
+
+400
+00:13:43,360 --> 00:13:47,200
+worse on personality metrics and
+
+401
+00:13:45,600 --> 00:13:48,639
+background and culture metrics as
+
+402
+00:13:47,200 --> 00:13:50,639
+opposed to things like helpfulness,
+
+403
+00:13:48,639 --> 00:13:52,160
+communication, adaptiveness. What that
+
+404
+00:13:50,639 --> 00:13:54,639
+really signals is that there's there's
+
+405
+00:13:52,160 --> 00:13:58,560
+some some uh I guess more subjective
+
+406
+00:13:54,639 --> 00:14:01,279
+aspect of these models which people are
+
+407
+00:13:58,560 --> 00:14:03,040
+less impressed by potentially just they
+
+408
+00:14:01,279 --> 00:14:04,399
+were doing tasks that don't elicit a
+
+409
+00:14:03,040 --> 00:14:06,079
+personality in the model or they don't
+
+410
+00:14:04,399 --> 00:14:07,920
+elicit the model talking about
+
+411
+00:14:06,079 --> 00:14:08,959
+background and culture. Also the model
+
+412
+00:14:07,920 --> 00:14:10,480
+doesn't know their background and
+
+413
+00:14:08,959 --> 00:14:13,680
+culture so it's very hard to align with
+
+414
+00:14:10,480 --> 00:14:15,199
+them. But the other uh possibility is
+
+415
+00:14:13,680 --> 00:14:17,440
+that potentially models are just not
+
+416
+00:14:15,199 --> 00:14:19,600
+very good at that. And that would be uh
+
+417
+00:14:17,440 --> 00:14:21,360
+potentially an effect of the data
+
+418
+00:14:19,600 --> 00:14:23,760
+they've been trained on. Right? Because
+
+419
+00:14:21,360 --> 00:14:25,040
+we know very little. I mean obviously
+
+420
+00:14:23,760 --> 00:14:28,560
+models are trained on the entire
+
+421
+00:14:25,040 --> 00:14:30,240
+internet. But
+
+422
+00:14:28,560 --> 00:14:32,079
+it when you train a model on the entire
+
+423
+00:14:30,240 --> 00:14:34,480
+internet, do you get a personality that
+
+424
+00:14:32,079 --> 00:14:36,480
+really represents what people want?
+
+425
+00:14:34,480 --> 00:14:38,399
+Right? And and from this testing, we
+
+426
+00:14:36,480 --> 00:14:40,480
+found that generally people were less
+
+427
+00:14:38,399 --> 00:14:42,720
+impressed with model personality or its
+
+428
+00:14:40,480 --> 00:14:44,399
+ability to have an understanding of
+
+429
+00:14:42,720 --> 00:14:46,480
+their background or culture than with
+
+430
+00:14:44,399 --> 00:14:48,639
+more kind of I guess objective measures.
+
+431
+00:14:46,480 --> 00:14:51,519
+>> And obviously a lot of um these models
+
+432
+00:14:48,639 --> 00:14:53,360
+have undergone extensive fine-tuning to
+
+433
+00:14:51,519 --> 00:14:57,120
+tailor their personalities or tailor how
+
+434
+00:14:53,360 --> 00:14:58,639
+they approach answering questions that
+
+435
+00:14:57,120 --> 00:15:00,399
+are different across the different
+
+436
+00:14:58,639 --> 00:15:02,959
+companies. But uh we've observed
+
+437
+00:15:00,399 --> 00:15:04,480
+recently that there has been an increase
+
+438
+00:15:02,959 --> 00:15:06,560
+in psychop fancy or this kind of
+
+439
+00:15:04,480 --> 00:15:08,959
+peopleleasing behavior of models and
+
+440
+00:15:06,560 --> 00:15:11,199
+people generally don't seem to like it.
+
+441
+00:15:08,959 --> 00:15:13,839
+One thing that this the results of this
+
+442
+00:15:11,199 --> 00:15:16,320
+experiments or and the later data set
+
+443
+00:15:13,839 --> 00:15:18,880
+will allow us to answer is what is a
+
+444
+00:15:16,320 --> 00:15:23,279
+correlation between telltale signs of
+
+445
+00:15:18,880 --> 00:15:27,040
+psychopansy and a down votes in the
+
+446
+00:15:23,279 --> 00:15:29,040
+personality metric that um uh does that
+
+447
+00:15:27,040 --> 00:15:32,079
+uh influence people's decisions on which
+
+448
+00:15:29,040 --> 00:15:34,079
+model they prefer? uh we can um perform
+
+449
+00:15:32,079 --> 00:15:36,560
+various types of post-processing and
+
+450
+00:15:34,079 --> 00:15:38,160
+analysis of the data to identify the
+
+451
+00:15:36,560 --> 00:15:39,839
+levels of psychopancy that's observed in
+
+452
+00:15:38,160 --> 00:15:41,839
+the data sets and to try to identify
+
+453
+00:15:39,839 --> 00:15:44,959
+interesting relationships between the
+
+454
+00:15:41,839 --> 00:15:47,600
+feedback that people gave kind of uh
+
+455
+00:15:44,959 --> 00:15:51,279
+more uh model driven kind of LLM as a
+
+456
+00:15:47,600 --> 00:15:53,600
+judge uh oriented uh analysis of of the
+
+457
+00:15:51,279 --> 00:15:56,880
+conversations and kind of classification
+
+458
+00:15:53,600 --> 00:15:59,120
+of various patterns and and and what the
+
+459
+00:15:56,880 --> 00:16:03,480
+models exhibit. So, it's quite quite
+
+460
+00:15:59,120 --> 00:16:03,480
+interesting to see what we'll find.
+

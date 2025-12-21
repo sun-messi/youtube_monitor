@@ -1,0 +1,68 @@
+1
+00:00:00,080 --> 00:00:04,640
+We recently shipped the Sora Android app
+
+2
+00:00:02,159 --> 00:00:07,200
+like a fully new app. We built it in 18
+
+3
+00:00:04,640 --> 00:00:09,679
+days. It went from zero to launch to
+
+4
+00:00:07,200 --> 00:00:11,360
+employees and then 10 days later so 28
+
+5
+00:00:09,679 --> 00:00:12,719
+days total we went to the public and
+
+6
+00:00:11,360 --> 00:00:15,440
+that was done just with the help of
+
+7
+00:00:12,719 --> 00:00:17,440
+Codex. The speed and ambition of working
+
+8
+00:00:15,440 --> 00:00:18,880
+at OpenAI are just dramatically more
+
+9
+00:00:17,440 --> 00:00:19,920
+than what I can imagine. You know I
+
+10
+00:00:18,880 --> 00:00:21,359
+guess it's kind of an embarrassing thing
+
+11
+00:00:19,920 --> 00:00:22,880
+to say because you know everyone who's a
+
+12
+00:00:21,359 --> 00:00:24,720
+startup founder thinks like oh yeah my
+
+13
+00:00:22,880 --> 00:00:26,160
+startup moves super fast and the talent
+
+14
+00:00:24,720 --> 00:00:28,160
+bar is super high and we're super
+
+15
+00:00:26,160 --> 00:00:30,000
+ambitious. But I have to say, working at
+
+16
+00:00:28,160 --> 00:00:33,240
+OpenAI just made me reimagine what that
+
+17
+00:00:30,000 --> 00:00:33,240
+even means.
+
