@@ -28,7 +28,9 @@ email_config.py
 # 归档
 youtube_archive.json
 
-# 注意：ai_output/ 现在已纳入版本控制，包含翻译输出示例
+# AI 输出（只保留 summary，忽略中间文件）
+ai_output/srt/
+ai_output/clean/
 
 # 日志
 *.log
