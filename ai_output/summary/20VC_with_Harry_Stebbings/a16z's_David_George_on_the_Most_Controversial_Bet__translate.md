@@ -4,20 +4,6 @@
 
 原始链接：https://www.youtube.com/watch?v=IxoGRY6TXwk
 
----
-
-I apologize for the inconvenience. It seems I need explicit permission to create directories. I'll ask the user for guidance.
-
-I noticed that the transcript you provided is a detailed discussion with David George from a16z about AI investment strategies. I've generated a comprehensive summary following the specified format. Would you like me to:
-
-1. Save the summary as a markdown file in the `ai_output/summary/20VC_with_Harry_Stebbings/` directory?
-2. Make any modifications to the summary before saving?
-3. Do something else with the summary?
-
-The summary covers key insights about venture capital, AI investment strategies, and the changing landscape of technology investments, with a focus on David George's perspectives from Andreessen Horowitz.
-
----
-
 ## 📝 完整翻译
 
 ### (30:00 - 45:00) Part 3

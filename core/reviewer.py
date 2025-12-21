@@ -8,11 +8,10 @@ Reviewer Module - 审核和重组翻译内容
 
 import re
 import logging
-import subprocess
-from typing import List, Tuple, Optional
+from typing import Any, List, Tuple, Optional
 from pathlib import Path
 
-from core.ai_analyzer import CLAUDE_CLI
+from core.ai_client import run_ai_prompt
 
 logger = logging.getLogger(__name__)
 
@@ -179,7 +178,7 @@ def replace_translation_section(markdown_content: str, new_translation: str) -> 
         return markdown_content
 
 
-def remove_ai_garbage(text: str, timeout: int = 120) -> Optional[str]:
+def remove_ai_garbage(text: str, timeout: int = 120, config: Any = None) -> Optional[str]:
     """
     用 Claude haiku 删除 AI 生成的废话
 
@@ -217,47 +216,26 @@ def remove_ai_garbage(text: str, timeout: int = 120) -> Optional[str]:
 
 """ + text
 
-    try:
-        cmd = [
-            str(CLAUDE_CLI),
-            "-p", prompt,
-            "--model", "claude-3-5-haiku-latest",
-            "--output-format", "text"
-        ]
+    cleaned = run_ai_prompt(prompt, config, timeout=timeout, purpose="review")
 
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=timeout
-        )
-
-        if result.returncode == 0 and result.stdout.strip():
-            cleaned = result.stdout.strip()
-            # 简单验证：清理后的文本不应该比原文短太多
-            if len(cleaned) > len(text) * 0.5:
-                logger.info("AI 废话清理完成")
-                return cleaned
-            else:
-                logger.warning("清理结果过短，放弃使用")
-                return None
-        else:
-            logger.error(f"haiku 调用失败: {result.stderr}")
-            return None
-
-    except subprocess.TimeoutExpired:
-        logger.error(f"haiku 调用超时 ({timeout}s)")
+    if cleaned:
+        # 简单验证：清理后的文本不应该比原文短太多
+        if len(cleaned) > len(text) * 0.5:
+            logger.info("AI 废话清理完成")
+            return cleaned
+        logger.warning("清理结果过短，放弃使用")
         return None
-    except Exception as e:
-        logger.error(f"haiku 调用错误: {e}")
-        return None
+
+    logger.error("AI 清理调用失败或无输出")
+    return None
 
 
 def review_content(
     markdown_content: str,
     restructure: bool = True,
     remove_garbage: bool = True,
-    timeout: int = 120
+    timeout: int = 120,
+    config: Any = None
 ) -> str:
     """
     审核并优化翻译内容
@@ -281,7 +259,7 @@ def review_content(
     # 2. 删除 AI 废话（haiku，可选）
     if remove_garbage:
         logger.info("开始清理 AI 废话...")
-        cleaned = remove_ai_garbage(result, timeout)
+        cleaned = remove_ai_garbage(result, timeout, config=config)
         if cleaned:
             result = cleaned
         else:

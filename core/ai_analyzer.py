@@ -1,5 +1,5 @@
 """
-AI video analysis using Claude CLI.
+AI video analysis using AI CLI.
 
 Based on working implementation from /home/sunj11/youtube_monitor/process_ai.py
 """
@@ -7,43 +7,14 @@ Based on working implementation from /home/sunj11/youtube_monitor/process_ai.py
 import logging
 import os
 import re
-import subprocess
 import tempfile
-from typing import List, Optional, Tuple
+from typing import Any, List, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
 
+from core.ai_client import run_ai_prompt
+
 logger = logging.getLogger(__name__)
-
-
-def get_claude_cli_path() -> Path:
-    """
-    Find the latest Claude CLI binary from VSCode extensions.
-
-    Returns:
-        Path to the Claude CLI binary
-    """
-    extensions_dir = Path.home() / ".vscode-server/extensions"
-
-    if not extensions_dir.exists():
-        # Fallback if extensions directory doesn't exist
-        return Path.home() / ".vscode-server/extensions/anthropic.claude-code-2.0.72-linux-x64/resources/native-binary/claude"
-
-    # Find all claude-code extensions and get the latest one
-    try:
-        claude_extensions = sorted([d for d in extensions_dir.iterdir() if d.name.startswith("anthropic.claude-code-")])
-        if claude_extensions:
-            latest = claude_extensions[-1]  # Get the last (newest) version
-            return latest / "resources/native-binary/claude"
-    except Exception:
-        pass  # If any error occurs, fall back to known version
-
-    # Fallback to known version
-    return Path.home() / ".vscode-server/extensions/anthropic.claude-code-2.0.72-linux-x64/resources/native-binary/claude"
-
-
-# Claude CLI path
-CLAUDE_CLI = get_claude_cli_path()
 
 
 @dataclass
@@ -68,10 +39,11 @@ def call_claude_with_prompt(
     prompt_file: Path,
     input_content: str,
     timeout: int = 300,
-    model: str = None
+    model: str = None,
+    config: Any = None
 ) -> str:
     """
-    Call Claude CLI with a local prompt file.
+    Call AI CLI with a local prompt file.
 
     Args:
         prompt_file: Path to prompt file (e.g., PROMPT_SUMMARY)
@@ -96,50 +68,24 @@ def call_claude_with_prompt(
     else:
         full_prompt = f"{prompt_template}\n\n---\n\n{input_content}"
 
-    # Write to temp file for Claude CLI
+    # Write to temp file for AI CLI
     with tempfile.NamedTemporaryFile(mode='w', suffix='.md', delete=False, encoding='utf-8') as tmp:
         tmp.write(full_prompt)
         tmp_path = tmp.name
 
-    logger.info(f"Calling Claude CLI with prompt: {prompt_file.name}" + (f" (model: {model})" if model else ""))
+    logger.info(
+        f"Calling AI CLI with prompt: {prompt_file.name}"
+        + (f" (model: {model})" if model else "")
+    )
 
     try:
-        # Pass the full prompt directly to Claude CLI
-        cmd = [
-            str(CLAUDE_CLI),
-            "-p", full_prompt,
-            "--output-format", "text"
-        ]
-        if model:
-            cmd.extend(["--model", model])
-
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=timeout
-        )
-
-        if result.returncode != 0:
-            logger.error(f"Claude CLI error: {result.stderr}")
-            return ""
-
-        return result.stdout.strip()
-
-    except subprocess.TimeoutExpired:
-        logger.error(f"Claude CLI timeout after {timeout}s")
-        return ""
-    except FileNotFoundError:
-        logger.error("Claude CLI not found. Make sure 'claude' is installed and in PATH.")
-        return ""
-    except Exception as e:
-        logger.error(f"Claude CLI error: {e}")
-        return ""
+        result = run_ai_prompt(full_prompt, config, timeout=timeout, model=model)
+        return result.strip() if result else ""
     finally:
         # Clean up temp file
         try:
             os.unlink(tmp_path)
-        except:
+        except Exception:
             pass
 
 
@@ -147,10 +93,11 @@ def generate_summary(
     clean_file: Path,
     prompt_file: Path,
     timeout: int = 300,
-    model: str = None
+    model: str = None,
+    config: Any = None
 ) -> str:
     """
-    Generate AI summary using Claude CLI.
+    Generate AI summary using AI CLI.
 
     Args:
         clean_file: Path to cleaned subtitle file
@@ -167,7 +114,7 @@ def generate_summary(
     with open(clean_file, "r", encoding="utf-8") as f:
         subtitle_content = f.read()
 
-    return call_claude_with_prompt(prompt_file, subtitle_content, timeout, model)
+    return call_claude_with_prompt(prompt_file, subtitle_content, timeout, model, config=config)
 
 
 def parse_chapters_from_summary(summary: str) -> List[Tuple[int, str]]:
@@ -287,10 +234,11 @@ def analyze_video(
     subtitle_text: str,
     prompt_file: Optional[Path] = None,
     timeout: int = 300,
-    model: str = None
+    model: str = None,
+    config: Any = None
 ) -> Optional[AnalysisResult]:
     """
-    Analyze video content using Claude CLI.
+    Analyze video content using AI CLI.
 
     Args:
         subtitle_text: Subtitle content (with metadata header)
@@ -302,17 +250,17 @@ def analyze_video(
         AnalysisResult or None if failed
     """
     try:
-        logger.info("Analyzing video content with Claude CLI")
+        logger.info("Analyzing video content with AI CLI")
 
         # Use provided prompt or default
         if prompt_file and prompt_file.exists():
-            summary = call_claude_with_prompt(prompt_file, subtitle_text, timeout, model)
+            summary = call_claude_with_prompt(prompt_file, subtitle_text, timeout, model, config=config)
         else:
             # Direct prompt if no file provided
-            summary = _call_claude_direct(subtitle_text, timeout, model)
+            summary = _call_claude_direct(subtitle_text, timeout, model, config=config)
 
         if not summary:
-            logger.error("No response from Claude CLI")
+            logger.error("No response from AI CLI")
             return None
 
         # Parse results from markdown
@@ -344,9 +292,14 @@ def analyze_video(
         return None
 
 
-def _call_claude_direct(subtitle_text: str, timeout: int = 300, model: str = None) -> str:
+def _call_claude_direct(
+    subtitle_text: str,
+    timeout: int = 300,
+    model: str = None,
+    config: Any = None
+) -> str:
     """
-    Call Claude CLI directly with a prompt (no file).
+    Call AI CLI directly with a prompt (no file).
 
     Args:
         subtitle_text: Subtitle content
@@ -370,34 +323,8 @@ def _call_claude_direct(subtitle_text: str, timeout: int = 300, model: str = Non
 
 请用 Markdown 格式输出。"""
 
-    try:
-        cmd = [
-            str(CLAUDE_CLI),
-            "-p", prompt,
-            "--output-format", "text"
-        ]
-        if model:
-            cmd.extend(["--model", model])
-
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=timeout
-        )
-
-        if result.returncode != 0:
-            logger.error(f"Claude CLI error: {result.stderr}")
-            return ""
-
-        return result.stdout.strip()
-
-    except subprocess.TimeoutExpired:
-        logger.error(f"Claude CLI timeout after {timeout}s")
-        return ""
-    except Exception as e:
-        logger.error(f"Claude CLI error: {e}")
-        return ""
+    result = run_ai_prompt(prompt, config, timeout=timeout, model=model)
+    return result.strip() if result else ""
 
 
 def validate_analysis(analysis: AnalysisResult) -> Tuple[bool, List[str]]:

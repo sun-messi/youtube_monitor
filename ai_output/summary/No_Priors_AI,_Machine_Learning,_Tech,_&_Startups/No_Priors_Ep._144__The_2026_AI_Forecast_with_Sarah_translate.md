@@ -1,346 +1,94 @@
-# No Priors Ep. 144 | The 2026 AI Forecast with Sarah & Elad
+No Priors Ep. 144 | The 2026 AI Forecast with Sarah & Elad
 
-## 📹 视频信息
+## 📹 Video Information
 
-- **频道**: No Priors: AI, Machine Learning, Tech, & Startups
-- **发布日期**: 2025-12-19
-- **时长**: 40:45
-- **原始链接**: [https://www.youtube.com/watch?v=TOsNrV3bXtQ](https://www.youtube.com/watch?v=TOsNrV3bXtQ)
-
----
-
-> 本文内容整理自 No Priors 播客主持人 Sarah 和 Elad 在 No Priors: AI, Machine Learning, Tech, & Startups 频道的年终预测讨论。
+- **Channel**: No Priors: AI, Machine Learning, Tech, & Startups
+- **Published Date**: 2025-12-19
+- **Duration**: 40:45
+- **Original Link**: [https://www.youtube.com/watch?v=TOsNrV3bXtQ](https://www.youtube.com/watch?v=TOsNrV3bXtQ)
 
 ## TL;DR
 
-Sarah 和 Elad 对 2026 年 AI 发展的全面预测：从医生、律师等保守职业群体的快速AI采用，到机器人、IPO、消费级应用的突破，以及新一代研究实验室的崛起。
+Sarah and Elad's comprehensive predictions for AI development in 2026: rapid AI adoption in conservative professions like doctors and lawyers, breakthroughs in robotics, IPOs, consumer applications, and the rise of a new generation of research labs.
 
-## 📑 章节导航表
+## 📑 Chapter Navigation
 
-| 时间戳 | 章节标题 | 一句话概括 |
+| Timestamp | Chapter Title | One-Sentence Summary |
 |--------|----------|-----------|
-| 00:00-02:39 | 2024年AI回顾与个人话题 | 总结AI领域突破并讨论微塑料等轻松话题 |
-| 02:39-05:43 | 2026年预测：垂直整合与专业采用 | 预测AI在医疗、法律等保守行业的加速普及 |
-| 05:43-09:16 | 基础模型发展与机器人技术 | 讨论物理科学模型突破和机器人行业的起伏 |
-| 09:16-14:21 | 机器人竞争格局与IPO/M&A市场 | 分析Tesla、Waymo等巨头优势及资本市场波动 |
-| 14:21-18:55 | 消费级应用突破与创新障碍 | 探讨AI消费产品的发展瓶颈和突破可能 |
-| 18:55-21:27 | 新研究实验室与资本集中化 | 讨论Neolabs资金及资本向头部模型的集中 |
-| 21:27-26:05 | 技术路线分化与演化系统 | 探讨多元架构竞争和类生物演化AI系统 |
-| 26:05-30:41 | 非AI预测：国防科技与生物技术 | 预测无人机国防和GLP-1等生物技术影响 |
-| 30:41-40:21 | 业界专家2026年预测集锦 | 汇总推理系统、代理AI、开源模型等领域预测 |
+| 00:00-02:39 | 2024 AI Recap and Personal Topics | Summarizing AI breakthroughs and discussing light topics like microplastics |
+| 02:39-05:43 | 2026 Predictions: Vertical Integration and Professional Adoption | Predicting AI acceleration in conservative industries like medicine and law |
+| 05:43-09:16 | Foundation Model Development and Robotics Technology | Discussing breakthroughs in physical science models and robotics industry fluctuations |
+| 09:16-14:21 | Robotics Competitive Landscape and IPO/M&A Market | Analyzing advantages of giants like Tesla and Waymo, and capital market volatility |
+| 14:21-18:55 | Consumer-Level Application Breakthroughs and Innovation Barriers | Exploring development bottlenecks and breakthrough possibilities for AI consumer products |
+| 18:55-21:27 | New Research Labs and Capital Centralization | Discussing Neolabs funding and capital concentration towards top models |
+| 21:27-26:05 | Technological Route Differentiation and Evolutionary Systems | Exploring multi-architecture competition and bio-inspired AI systems |
+| 26:05-30:41 | Non-AI Predictions: Defense Technology and Biotechnology | Predicting drone defense and GLP-1 biotechnology impacts |
+| 30:41-40:21 | Industry Expert 2026 Predictions Compilation | Summarizing predictions for reasoning systems, agent AI, and open-source models |
 
-## 📊 核心论点
+## 📊 Key Arguments
 
-#### AI行业将经历传统周期性质疑与反弹
+#### AI Industry Will Experience Typical Cyclical Doubt and Rebound
 
-- **核心内容**：2026年将出现"AI泡沫论"和"AI无用论"的声音，这是所有技术周期的典型现象。技术传播需要10年时间，而人们已经从AI获得巨大价值且将获得更多。医疗文档记录、法律、编程等垂直领域将出现少数几个主导玩家的整合。
-- **关键概念**：技术采用周期、垂直整合、炒作周期、价值实现滞后
-- **实际意义**：投资者和从业者需要忽略短期噪音，专注于长期价值创造和具体应用场景的深化。
+- **Core Content**: In 2026, voices of "AI bubble" and "AI uselessness" will emerge, a typical phenomenon in technology cycles. Technology dissemination takes 10 years, and people have already gained and will gain enormous value from AI. Vertical domains like medical documentation, law, and programming will see integration by a few dominant players.
+- **Key Concepts**: Technology adoption cycle, vertical integration, hype cycle, value realization lag
+- **Practical Significance**: Investors and practitioners need to ignore short-term noise and focus on long-term value creation and specific application scenario deepening.
 
-#### 保守行业成为AI最快采用者的paradox
+#### Paradox: Conservative Industries Become Fastest AI Adopters
 
-- **核心内容**：医生、律师、会计师等传统上最抗拒技术变化的专业人群，现在成为AI的最积极采用者。医生大量使用AI进行临床决策支持和文档记录，这些专业人士发现AI能显著改善工作质量。这种现象在历史上是前所未有的。
-- **关键概念**：专业服务自动化、临床决策支持、法律科技、非结构化数据处理
-- **实际意义**：传统认为变革阻力最大的行业实际上蕴含巨大AI应用机会，将推动整个专业服务行业的数字化转型。
+- **Core Content**: Doctors, lawyers, accountants - traditionally most resistant to technological change - are now the most enthusiastic AI adopters. Doctors extensively use AI for clinical decision support and documentation, finding that AI significantly improves work quality. This phenomenon is unprecedented in history.
+- **Key Concepts**: Professional service automation, clinical decision support, legal tech, unstructured data processing
+- **Practical Significance**: Traditional industries believed to have the most change resistance actually contain huge AI application opportunities, driving digital transformation of entire professional service industries.
 
-#### 物理科学基础模型将出现突破性案例
+#### Breakthrough Cases in Physical Science Foundation Models
 
-- **核心内容**：2026年将出现1-2个材料科学、物理学或数学领域的重大AI突破案例，如新材料发明或数学猜想证明。这将触发"科学已被解决"的过度炒作，但长期趋势被低估。基础模型开始延伸到语言之外的物理世界建模。
-- **关键概念**：物理建模、材料设计、数学证明、科学发现加速、多模态基础模型
-- **实际意义**：AI将从信息处理工具转向科学研究的核心引擎，可能在新材料、药物设计、清洁能源等领域产生革命性突破。
+- **Core Content**: In 2026, 1-2 major AI breakthroughs will occur in material science, physics, or mathematics, such as new material invention or mathematical conjecture proof. This will trigger over-hyping of "science being solved", but long-term trends are underestimated. Foundation models begin to extend beyond language to physical world modeling.
+- **Key Concepts**: Physical modeling, material design, mathematical proof, scientific discovery acceleration, multimodal foundation models
+- **Practical Significance**: AI will transform from an information processing tool to the core engine of scientific research, potentially producing revolutionary breakthroughs in new materials, drug design, clean energy, etc.
 
-#### 机器人行业将面临现实冲击与分化
+#### Robotics Industry Will Face Reality Shock and Differentiation
 
-- **核心内容**：2026年将看到人形和半人形机器人的小规模部署，但不是所有产品都能完美工作，导致投资情绪分化。类似自动驾驶经历的15-17年发展过程，机器人需要时间解决所有问题。Tesla的Optimus和Waymo可能成为主要赢家，中国公司也将是全球竞争者。
-- **关键概念**：人形机器人、自动驾驶技术迁移、硬件制造、供应链整合、中美竞争
-- **实际意义**：机器人投资需要长期视角，硬件密集型特性将有利于有资本和制造能力的大公司，但仍有初创公司机会。
+- **Core Content**: 2026 will see small-scale deployments of humanoid and semi-humanoid robots, but not all products will work perfectly, leading to investment sentiment differentiation. Similar to the 15-17 year autonomous driving development process, robots need time to solve all problems. Tesla's Optimus and Waymo may become main winners, with Chinese companies also being global competitors.
+- **Key Concepts**: Humanoid robots, autonomous driving technology transfer, hardware manufacturing, supply chain integration, China-US competition
+- **Practical Significance**: Robotics investment requires a long-term perspective. Hardware-intensive characteristics will favor large companies with capital and manufacturing capabilities, but opportunities for startups still exist.
 
-#### 自动驾驶将成为2026年主流话题
+#### Autonomous Driving Will Become a Mainstream Topic in 2026
 
-- **核心内容**：2026年自动驾驶将真正开始产生影响，包括个人汽车、Waymo和Tesla的出租车服务。这将是机器人技术领域最大的突破。自动驾驶本质上是"一个非常复杂的单一用例机器人"，主要处理运动规划和预测。
-- **关键概念**：自动驾驶出租车、运动规划、单一用例机器人、Waymo扩张、Tesla FSD
-- **实际意义**：交通出行行业将迎来根本性变革，城市规划、保险、物流等相关行业都将受到重大影响。
+- **Core Content**: In 2026, autonomous driving will truly begin to have an impact, including personal cars, Waymo and Tesla taxi services. This will be the biggest breakthrough in robotics technology. Autonomous driving is essentially a "very complex single-use case robot" primarily handling motion planning and prediction.
+- **Key Concepts**: Autonomous driving taxis, motion planning, single-use case robots, Waymo expansion, Tesla FSD
+- **Practical Significance**: The transportation and travel industry will undergo fundamental transformation, with significant impacts on urban planning, insurance, logistics, and related industries.
 
-#### AI IPO市场将迎来爆发期
+#### AI IPO Market Will Experience Explosion
 
-- **核心内容**：如果主要AI公司之一公开上市，将表现极佳并引发跟风上市潮。零售投资者急于参与AI革命，机构投资者因业绩压力必须买入，即使对公司基本面有质疑。这为AI实验室提供了筹集巨额资金的绝佳机会。
-- **关键概念**：AI纯概念股、零售投资热情、机构被迫跟进、基准业绩压力、巨额融资
-- **实际意义**：AI公司将获得前所未有的资本支持，但也可能导致估值泡沫和市场过热。
+- **Core Content**: If one of the major AI companies goes public, it will perform extremely well and trigger an IPO wave. Retail investors are eager to participate in the AI revolution, and institutional investors must buy in due to performance pressure, even if they have doubts about the company's fundamentals. This provides AI laboratories with an excellent opportunity to raise huge funds.
+- **Key Concepts**: AI pure-concept stocks, retail investment enthusiasm, institutional forced follow-up, benchmark performance pressure, massive fundraising
+- **Practical Significance**: AI companies will receive unprecedented capital support, but this may also lead to valuation bubbles and market overheating.
 
-#### 消费级AI应用将出现魔法般的体验
+#### Consumer-Level AI Applications Will Offer Magical Experiences
 
-- **核心内容**：尽管过去几年消费级AI创新有限，2026年将出现真正不同的消费代理软件，提供magical experiences。许多公司目前处于隐身模式，更多产品人员和模型公司将进行实验。挑战在于避免被大型科技公司复制。
-- **关键概念**：消费代理、magical experiences、产品创新、大厂威胁、网络效应、分发优势
-- **实际意义**：消费者将首次体验到真正智能的个人助手，改变人机交互范式，但需要建立强大护城河避免被巨头复制。
+- **Core Content**: Despite limited consumer AI innovation in recent years, 2026 will see truly different consumer agent software offering magical experiences. Many companies are currently in stealth mode, with more product people and model companies experimenting. The challenge is avoiding replication by big tech companies.
+- **Key Concepts**: Consumer agents, magical experiences, product innovation, big tech threats, network effects, distribution advantages
+- **Practical Significance**: Consumers will first experience truly intelligent personal assistants, changing human-machine interaction paradigms, but need to establish strong moats to avoid big tech replication.
 
-#### 新一代研究实验室资金充足但面临资本集中化
+#### New Generation Research Labs Well-Funded but Facing Capital Centralization
 
-- **核心内容**：2024年涌现了多家新的AI研究实验室（Neolabs），获得大量资金投入不同研究方向如扩散模型、自我改进、数据效率、情商等。但规模效应意味着资本最终会向最有效的方法集中，形成少数几个主导者。
-- **关键概念**：Neolabs、替代架构、研究多样化、资本集中化、规模效应
-- **实际意义**：AI研究将经历多元化探索期，但最终向头部实验室集中，可能出现技术路径锁定。
+- **Core Content**: In 2024, multiple new AI research laboratories (Neolabs) emerged, receiving large funds for different research directions like diffusion models, self-improvement, data efficiency, emotional intelligence, etc. However, scale effects mean capital will ultimately concentrate towards the most effective methods, forming a few dominant players.
+- **Key Concepts**: Neolabs, alternative architectures, research diversification, capital centralization, scale effects
+- **Practical Significance**: AI research will go through a period of diverse exploration but ultimately concentrate towards top laboratories, potentially leading to technological path locking.
 
-#### 生物学启发的演化AI系统将成为未来方向
+#### Biology-Inspired Evolutionary AI Systems as Future Direction
 
-- **核心内容**：未来AI可能采用类似生物进化的系统，包含专门处理视觉、记忆、移情等不同功能的模块。就像蛋白质设计从解析设计转向进化方法获得更好结果，AI也可能通过自演化加上代码自举实现快速提升。
-- **关键概念**：模块化AI、进化算法、蛋白质设计类比、自举系统、功能专化
-- **实际意义**：AI架构可能从单一大模型转向专业模块组合，实现更高效率和更强能力。
+- **Core Content**: Future AI might adopt systems similar to biological evolution, containing modules specialized for different functions like vision, memory, empathy. Just as protein design shifted from analytical design to evolutionary methods for better results, AI might achieve rapid improvement through self-evolution and code bootstrapping.
+- **Key Concepts**: Modular AI, evolutionary algorithms, protein design analogy, bootstrapping systems, functional specialization
+- **Practical Significance**: AI architectures might shift from single large models to professional module combinations, achieving higher efficiency and stronger capabilities.
 
-#### 国防科技将加速无人机和自主系统部署
+#### Defense Technology Will Accelerate Drone and Autonomous System Deployment
 
-- **核心内容**：国防领域将加速向无人机为基础的自主系统转变，彻底改变战争和国防思维。Trump政府的态度和足够密度的国防科技初创公司将推动这一转变。虽然当前处于炒作周期，但影响被低估。
-- **关键概念**：无人机系统、国防科技初创、自主武器、军事变革、政府采购
-- **实际意义**：军事工业将迎来根本性变革，传统军工企业面临初创公司挑战，国际军事平衡可能改变。
+- **Core Content**: The defense sector will accelerate towards drone-based autonomous systems, fundamentally changing warfare and defense thinking. The Trump administration's attitude and sufficient density of defense tech startups will drive this transformation. While currently in a hype cycle, the impact is underestimated.
+- **Key Concepts**: Drone systems, defense tech startups, autonomous weapons, military transformation, government procurement
+- **Practical Significance**: The military-industrial complex will undergo fundamental transformation, with traditional military enterprises facing startup challenges, potentially changing international military balance.
 
-#### GLP-1等生物技术将产生深远连锁效应
+#### GLP-1 and Other Biotechnologies Will Generate Far-Reaching Cascading Effects
 
-- **核心内容**：GLP-1减肥药物的成功证明了工程化肽类药物的巨大潜力，将推动更多肽类和激素疗法投资。生物黑客社区已开始使用各种肽类药物，这通常是大规模采用的早期指标。药物递送的重要性得到广泛认知。
-- **关键概念**：GLP-1、肽类药物、生物黑客、药物递送、连锁效应、投资热潮
-- **实际意义**：生物技术投资将向肽类药物倾斜，可能出现多个类似GLP-1的突破性药物，改变健康和医疗行业。
-
-## 🏢 提及的公司/产品
-
-| 公司名 | 讨论语境 | 重要性 |
-|--------|----------|--------|
-| Tesla/Optimus | 机器人和自动驾驶领域的主要竞争者、最可能的赢家 | ⭐⭐⭐ |
-| Waymo | 自动驾驶技术领导者、可能扩展到机器人领域 | ⭐⭐⭐ |
-| OpenAI/ChatGPT | AI应用突破的代表、消费级AI的标杆 | ⭐⭐⭐ |
-| Google/Gemini | 基础模型竞争者、强势回归的大厂代表 | ⭐⭐⭐ |
-| Nvidia | GPU市场主导者、微塑料joke的对象 | ⭐⭐⭐ |
-| Harvey | 法律科技整合的代表性公司 | ⭐⭐ |
-| Bridge/OpenEvidence | 医疗AI临床决策支持的代表 | ⭐⭐ |
-| Loop | Sarah朋友的无微塑料水品牌 | ⭐ |
-| SpaceX/Starlink | 太空通信技术的突破者 | ⭐⭐ |
-
-## 💬 经典金句
-
-> "传统上最不愿意采用技术的人现在正在快速采用AI——这包括医生、律师、某些会计师类型。这实际上非常引人注目。"
-> — Sarah
-
-> "我认为我们现在80%都是微塑料，而且还在不断增加微塑料的摄入量。"
-> — Elad
-
-> "如果你是大型公共市场投资者，你就像...硅太多了。"
-> — Sarah
-
-> "也许在全世界，只有几百个真正优秀的消费产品人才。"
-> — 知名消费公司创始人
-
-> "这是研究的时代。"
-> — Ilia Sutskever
-
-## 👤 主要人物
-
-#### Sarah（Sarah Guo）
-
-**身份**：No Priors 播客主持人；Conviction Partners 创始合伙人；前Greylock Partners 合伙人
-**背景**：知名AI投资人，专注于企业级AI应用投资，对AI采用周期和市场动态有深刻洞察。曾在斯坦福组织学生团队开发消费级AI应用实验项目。
-**核心观点**：强调保守行业（医生、律师）快速采用AI的paradox现象，认为2026年将出现真正magic的消费级AI体验，同时警告机器人投资的现实挑战。
-
-#### Elad（Elad Gil）
-
-**身份**：No Priors 播客主持人；天使投资人和顾问；前Google VP
-**背景**：连续创业者和投资人，参与了Airbnb、Coinbase、Figma、Pinterest等公司的早期投资。曾在Google担任VP，对技术周期和创业生态有丰富经验。
-**核心观点**：预测AI将经历典型的技术炒作周期，强调Tesla等具备制造能力的公司在机器人领域的优势，认为演化式AI系统将是未来方向。对微塑料问题表现出幽默的担忧。
-
-## 📺 视频类型判断
-
-**访谈对话**：两位主持人的年终预测讨论，包含多位业界专家的预测片段
-
----
-
-## 📝 完整翻译
-
-### (0:00 - 15:00) Part 1
-
-主持人：大家好，欢迎收听 No Priors 播客。我们该如何总结这一年呢？AI 领域已经突破到主流，成为政策制定者关注的焦点。ChatGPT 获得了大量用户，也要求了大量资金。Gemini 和 Google 强势回归。在应用层面，AI 编程已经转向智能体，并消耗了我们所有的推理能力。医生正在大规模采用临床决策支持系统，在法律和客户服务领域，企业采用正在加速。接下来会发生什么？在研究前沿，竞赛有多个活跃的参与者，开源也在缩小差距。今年有一些新的研究实验室获得了资金。叙事正在改变。Ilya 称之为研究时代。人们正在尝试围绕扩散、自我改进、数据效率、情商、大规模亚洲协作、持续学习、能量转换器的不同想法。这比以往任何时候都更加开放。
-
-最后，我们看到很多尝试让 AI 接触现实世界，机器人技术重新焕发乐观情绪。明年，这些公司将开始与现实接触。从预测的角度来看，我个人认为我们会看到有人赚很多钱。明年会有数亿美元通过 LLMs 在市场交易中获得。这是不可避免的。所以，我们现在处在第二或第三局。市场运行有点过热和波动。热水浴池很热。所以，和我还有 Elad 一起进入吧。
-
-好的，Elad，这一年过去了。
-
-Elad：我知道。怎么样？2026，宝贝。
-
-主持人：你感受到 AGI 了吗？你感受到了好的 AI 寒冬吗？
-
-Elad：实际上我只是感受到了微塑料。我觉得我现在 80% 是微塑料，而且还在增加微塑料的摄入量。顺便说一下，我的一个朋友实际上推出了一个新的水品牌，没有微塑料。它叫 Loop，他们有玻璃瓶，瓶盖也没有塑料。
-
-主持人：它有持续检测吗？
-
-Elad：是的，为你提供持续检测。他们确实试图去除所有微塑料，所以我想装在实际瓶子里的瓶装水比塑料瓶有更多的微塑料，因为瓶盖的原因。
-
-主持人：好的，我们会在 27 年回来看看你的感受。
-
-Elad：是的。但我现在完全被塑料污染了。我真的很担心微塑料。那所有的小玻璃颗粒呢？你不担心吗？人们谈论微塑料，但不谈论微玻璃。我更担心这个。
-
-主持人：我不认为这些颗粒会永久嵌入你体内。
-
-Elad：硅。你不担心硅吗？当我去海滩时，我会想，"哦不，到处都是微塑料。"实际上我很愿意最终在我的身体里植入硅。
-
-主持人：哇，那是... 是的，我不会说什么。我们可以继续。AI 发生了什么？Elad，你在哪里，你最兴奋的是什么？
-
-Elad：是的，我想对于 26 年，有一堆我认为会很有趣的事情即将到来。我认为有大概四五件事。一是我认为人们会再次宣称 AI 没有做太多事情，它被过度炒作了，就像人们引用的那份 MIT 报告，我认为这真的不重要，技术的现实需要大约 10 年时间来传播，人们已经从 AI 中获得了巨大价值，未来他们会从中获得更多价值。你知道，所以毫无疑问明年会有这些夸大的泡沫声明，以及"嘿，AI 实际上工作得不太好"这样的声明，这在每个技术周期都会发生，我们明年会再次听到，会有专家和讨论，只是在这上面浪费时间。所以我认为这会发生。
-
-我对 26 年的另一个预测是下一组垂直领域将达到大规模。我认为今年我们看到编程整合到少数几个参与者中，医疗记录整合到少数几个参与者中，法律整合到少数几个参与者中，像 Harvey 和其他公司。所以我认为我们会看到下一组整合的垂直领域发生。这会很有趣。我可以继续说下去。我有很多这样的预测。你想接下来说吗？我们可以轮流。我刚说了两个。你为什么不说两个？
-
-主持人：也许我会回应。
-
-Elad：或者回应。
-
-主持人：我会回应然后给你两个预测。我得在回应时想我的预测。所以我很高兴至少有两个思路。是的。我认为投资界对 AI 的整体情绪是很多人对他们投入的资本数量感到压力，然后对采用周期和人们正在做的技术押注存在不确定性，他们对即将到来的第一性原理没有完全的信心。所以，我认为像任何数量的外生因素加上关于采用速度的噪音，顺便说一下，总体上看起来是盲目的，我们可以谈论约束是什么。
-
-Elad：是的。如此之快，我甚至不知道人们在谈论什么。我刚看到一份报告，来自一个叫做 off call 的组织，谈论医生对 AI 的采用，看，有许多不同类别的惊人采用，比如文档、临床决策支持，像 bridge 和 open evidence 这样的东西，显然还有通用模型，但大多数医生专业人士都有巨大的热情，我想好的，在所有被认为更保守的专业领域中。事实上有这样的渴望拥有让工作更好的东西，这似乎显然会在其他专业中继续。顺便说一下，我认为这非常少被讨论，那些倾向于成为最慢技术采用者的人喜欢 AI。那就是医生，那就是律师，那就是某些会计类型。这实际上很迷人。这是合规，你知道，所有那些总是从不采用技术的人现在正在快速采用这些东西。所以，我确实认为这非常值得注意且很少被讨论。
-
-主持人：它会继续发生。实际上有很多职业，能够推理和与非结构化数据交互是非常有用的。比如我预期会有一些负面的市场流向。你知道，如果 Nvidia 在某个季度没有大幅超越表现，每个人都会恐慌。但我认为这与根本的结构性变化几乎没有关系。
-
-Elad：是的。这与微塑料和 Nvidia 有关。这是我的两分钱。
-
-主持人：这与你说的微玻璃有关。
-
-Elad：是的，确实如此。实际上，空气中有硅。我打赌他们到处都有微玻璃。这很糟糕。如果你作为 Nvidia 的平均员工赚 2000 万美元，你的血液中也必须有微玻璃。
-
-主持人：别听这个，Jensen。Jensen 是我们的下一个嘉宾。你听不到。
-
-Elad：血液中 1% 的微玻璃。我认为第三个领域是下一代基础模型将会到来。我不是指新实验室和下一代 LLMs，这当然会发生，而是指物理、材料、科学进步的模型，数学进步，我认为会发生的是会有一两个用例，一两个案例，它在某些事情上真正有效，他们会发明一些新材料或证明一些猜想或其他什么，然后它会陷入这种夸大的炒作周期，说它会改变物理科学的一切或其他什么，那个一次性的会被夸大。从长远来看，趋势会被低估，会变得非常重要。所以这是我对明年的另一个预测，科学中会有几个轶事性的一次性事件，会让人们说："看，科学被解决了。"他们会意识到科学已经被解决了，然后后来科学真的会被解决。
-
-主持人：我有三个快速预测给你。一是明年会有一些围绕一组机器人公司的情绪崩溃。不是因为作为一个领域它实际上不会进步，而是因为你知道人们开始预测时间线，不是每个人都会在这些时间线上交付。
-
-Elad：你的时间线是什么？
-
-主持人：我认为我们会看到人形和半人形机器人在小规模环境中部署，无论是消费者还是工业，明年不是所有东西都会工作，因为围绕人权总体上有这种炒作周期，一旦有什么东西不完全工作，这是必然的，人们就会恐慌，然后会有一些关于人们投资的分化。
-
-Elad：是的，我是说我们在自动驾驶的第 15、17 年，差不多那个时间，它现在真的在工作，但机器人技术似乎应该有一个更快的曲线，但类似的曲线，对吧？需要一些时间来弄清楚所有这些东西，然后一旦弄清楚了，它就会非常有价值，对我来说机器人技术的大问题是，你知道，如果你看自动驾驶，有大概两打三打或其他合法的自动驾驶公司，真正好的团队和好的方法和所有其他的，然后可以说至少现在两个最大的赢家是 Waymo 和 Tesla，这是两个现任者，对吧？Waymo 是 Google，Tesla 就是 Tesla。所以我想知道机器人技术会发生什么。对我来说感觉像 Optimus 或某种形式的 Tesla 机器人很可能会是赢家之一，对吧？高概率。然后问题是 Waymo 是否只是将它为汽车做的事情也应用到机器人上？因为那里有一些类似的问题。是其他大工业公司吗？是初创公司吗？谁是赢家，为什么？从结构上讲，当你有很多资本需求但也有很多硬件和制造需求时，这会有利于现任者，这就是自动驾驶，对吧？我想可以说自动驾驶的其他赢家是中国公司，对吧？中国汽车公司被禁止进入美国市场，这些可能也会是机器人技术的赢家，对吧？机器人技术最可能的全球赢家将是中国加 Tesla 加其他东西的某个子集，对吧？也许也许是其中一个初创公司。
-
-主持人：我认为是对的，但那就像在大多数行业中，如果你只是把它看作一个数字游戏，现任者比初创公司更可能获胜。
-
-Elad：我不知道。是的，我不知道。我不这么认为。我认为有初创公司应该获胜的初创行业，有现任者应该获胜的现任行业，它们在市场结构、资本需求、专业知识和供应链方面有不同的特征，你知道。所以我确实认为有一些市场，现任者在定义上应该做得更好。他们不总是这样，但通常如此。然后我认为有一些市场，初创公司会做得更好。
-
-主持人：当然。但我不争论像一些市场的护城河在结构上更深，对吧？但你可能看待自动驾驶汽车的一种方式是它是一个非常复杂的单一用例机器人。
-
-Elad：它主要做运动。它做很多其他必要类型的预测、防御性驾驶，或其他什么。但它是一个单一用例机器人。
-
-主持人：是的。我们忘记了有很多这样的好东西。洗碗机是很棒的单一用途机器人。吸尘器很棒。你知道，像我们实际拥有的所有这些在家里的东西都是机器人，我们假装它们不是，对吧？我们忘记了它们是机器人。电梯是机器人。
-
-Elad：不，说真的。自动扶梯是机器人。
-
-主持人：我要使用这样的语言，对于机器人来说，要成为机器人，它必须有些智能，对吧？所以洗碗机不算作为一个家电。自动驾驶汽车确实算作机器人，不只是...
-
-Elad：对你来说智能的边界在哪里？我认为这可能是某种程度的泛化，对吧？它可以在不同环境中工作。它可以处理不同任务。它可以处理不同对象。否则...
-
-主持人：自动驾驶汽车是可以的。是的，我不知道。我没有那么复杂的定义。我只是把它定义为会为你做某些预编程类型劳动的东西。但也许我有一个更好的定义。让我查一下机器人的定义。一台能够自动执行复杂动作系列的机器，特别是当可由计算机编程时。但你知道，现在所有这些东西都有芯片。你的洗碗机里有芯片，对吧？或者其中的计算机。
-
-Elad：好的。是的。但我会争论说，没有智能的机器人技术就不是一个有趣的创新领域。所以这是对也许你和我以及许多寻找快速变化事物的人来说相关的集合。
-
-主持人：是的，很酷。我是说，我确实认为在机器人话题上，2026 年 100% 最大的趋势之一或许是自动驾驶将真正开始发挥作用，这将体现在你自己的汽车上，体现在 Waymo 和 Tesla 出租车上。我认为这将是明年谈论的大事之一。所以，我认为在机器人团队中这是大事件。
-
-Elad：我认为如果你看除了自动驾驶之外的机器人的所有潜在用例，我是说 Optimus 团队实际上证明了这一点，如果你拿一个为 Tesla 自动驾驶提供动力的模型，把它放在 Optimus 中，它可以做运动但不能做许多其他事情，你仍然必须做硬件，对吧，比如操作。所以我认为这里的优势不像你认为的那样强。而且像初创公司，一些初创公司...
-
-主持人：最可怕的竞争是中国人，但我确实认为这里有机会。
-
-Elad：哦，我完全认为初创公司有机会。不要误解我。我只是认为这不仅仅是你有一个模型或基础模型的事实。你有构建模型的专业知识，但然后你也有所有的供应链。我认为这真的很重要，因为你需要使用的很多相同传感器都在那里，你知道如何思考实际采购和扩展事物是在那里的，你知道在一些其他技能集方面有很好的重叠，这些技能集是需要的，通常在初创公司需要很长时间构建或构建起来有点痛苦，人们会做到的，这很好，这不是...我是说 SpaceX 做到了，你知道所有这些公司都做到了，这是额外的东西，所以这是有道理的。我确实认为一些初创公司会在这里成功，我只是试图思考除了初创公司之外谁会很大，然后我也认为有一两个像现任者的位置会默认发生，除非发生一些非常奇怪的事情，你知道人们可能争论这应该在基础模型中发生，Google 应该有一个默认位置，最终它确实做到了，对吧？它到达了那里，我认为这是非常可预测的，Google 模型会变好，我认为我甚至可能在大约两三年前写了一篇关于这个的帖子，Google 会是相关的，对吧？因为他们只是拥有成为一个真正重要的基础模型公司所需的所有资产，他们显然发明了 transformers，但他们有所有数据，他们有所有资本，他们有 TPUs 和 GPUs，有最好的人做各种事情或一些人。所以，感觉是不可避免的，我认为这对我来说感觉是一样的。这并不意味着它是对的。
-
-你想谈论 IP 作为明年的 M&A 吗？你认为那里会发生什么？我认为那是另一个大的第四、第五主题，我想。你知道，第三是不同类型的模型，第四是机器人和自动驾驶，然后第五是 IPOs 和 M&A。你怎么想？更多 IPOs，更少 IPOs，更多 M&A，更少 M&A，不同类型的 M&A？
-
-主持人：这取决于 AI 市场的底部是否会在某个时候跌落，对吧？但我认为无论如何...
-
-Elad：你说底部跌落是什么意思？那翻译成什么？
-
-主持人：我认为人们只是对这里的周期感到紧张，人们害怕什么？他们担心需求不是真实的，AI 的需求不足以支持资本支出周期，有系统性风险，人们在谁实际负责资本支出建设和这些信贷协议方面传球，对吧？或者你知道，数据中心和芯片的按交付付款合同。他们还害怕什么，他们害怕像微塑料，也就是在 Nvidia 和少数其他参与者中过度集中。如果你是一个大的公开市场投资者，你只是觉得，你知道，太多硅了。
-
-### (15:00 - 30:00) Part 2
-
-主持人：太多硅了。进退两难。我和一位经营大型科技对冲基金的朋友聊过，他们已经是多个重要实验室的基金模型投资者，这些实验室可能在未来几年上市。他们说："好吧，问题是，你会买IPO吗？"他们的博弈论观点是："实际上，无论我对此怎么想，我都必须这样做，因为散户会想要它，因为他们想成为AI革命的一部分。"然后如果你是对冲基金，你会根据年度表现进行基准测试，因为散户的热情和一些投资者想要购买它作为纯粹的投资，你会想："哦，我不能错过它，就像我错过了Nvidia一样。"然后你必须购买它。所以他的观点是，无论你对公司的基本面观点如何，你都会购买IPO。我想，"哇，这不是我知道怎么做的投资工作。"
-
-Elad：你认为会发生什么？
-
-主持人：我认为明年肯定会有更多IPO。我认为如果主要的AI公司之一上市，根据定价情况，可能会表现得非常好。显然，如果他们过于激进，就不会，但总的来说，我认为除了Nvidia之外，散户对实际参与AI有如此大的胃口。然后这只会让很多其他人上市，成为追随者。所以，我确实预期会有很多这样的公司，只要有一家上市。这也是为这些实验室筹集大量资金的好方法。所以，看看那里发生什么会很有趣。对26年还有其他预测吗？我认为我不相信我们会看到那么多独特的消费者体验，除了像ChatGPT这样的。我认为我们会看到一系列消费者硬件，大部分会失败，但我仍然对此持开放态度。然后实际上我仍然需要看看这些是否能扩展，但我正在看到一些真正不同的消费者代理软件的神奇体验，我实际上想要并会使用。我认为人们才刚刚开始，这些公司现在还在隐秘模式，但我确实认为明年会有更多的产品人员和模型公司来尝试这个。所以我对此相当乐观。
-
-Elad：我100%同意这一点。我认为一个大问题是什么最终会成为突破性的初创公司，毫无疑问会有一些，然后什么会是一个快速增长的初创公司，然后它会被主要实验室/谷歌复制，然后就被整合到核心产品中。有趣的是，除非一家公司真正达到逃逸速度并建立网络效应或其他真正可防御的东西，通常现任者可以在两三年后推出并追赶上。所以如果他们有分发渠道，他们有核心产品，但你知道，正如你所说，我认为这非常令人兴奋，我已经等待这个有一段时间了。我认为两三年前，当时在我团队的David Song在斯坦福进行了两个季度的项目，我们让工程项目的不同团队使用AI构建消费者应用，因为我们说这波AI如此迷人，为什么没有人构建任何消费者产品，所以我们基本上只是给人们免费的GPU去尝试东西，他们没有义务做任何事情，在我们参与方面。就是去做酷的东西，因为这是一个如此好的游乐场，正在原型化的体验真的很棒，然后我只是震惊于几年来在真正有趣的消费者产品方面什么都没有发生。所以我同意你的观点，有很大的空间，我总是想知道是否因为有不同一代的创始人不想从事消费者工作或者已经忘记了怎么做，因为大的消费者公司已经过时了。是否现任者太可怕？到底是什么，为什么在AI的消费者端实际上创新如此之少？我仍然不太理解问题是什么。
-
-主持人：好的，让我们列出原因。我确实认为现任者相当可怕。任何经历过上一代有趣消费者想法的人实际上都看到了这些想法被吞并到现有平台中，就像你提到的。所以有这个原因。我还认为我从创始人那里看到的第一个本能是基本上用这一代技术构建上一代体验的更好版本，结果不是那么有趣。所以我实际上认为你必须要么非常接近研究，要么相当有创造性的野心来构建非常不同的、有任何机会的东西。所以我认为没有那么多人有那种经验或创造力，现在我们将看到它。
-
-Elad：我认为这相当令人兴奋。另一个事情是我和一位非常知名的消费者创始人交谈过，他经营着一家巨大的上市公司，他的观点是，也许在整个世界上只有几百个伟大的消费者产品人员，至少在实际从事这方面工作的人中。显然有巨大的人类潜力，不从事消费者产品工作的人也可以，但在从事消费者产品的人中，他认为最多有几百个例外的人可以实际想出并推出他们自己的、有趣或好的产品，所以你也可以说，鉴于已经在做这件事的人群中的人类潜力，也许这些东西能存在多少只是有限制的，我认为这是一个有趣的论点，我不知道我是否同意，但我认为这是他提出的一个有趣的论点。
-
-主持人：如果这也是了解现在可能的情况的人群，我会限制自己在那个数字内。如果你有很好的消费者产品直觉，但你在现有产品的第50次迭代上努力工作...
-
-Elad：是的，你在Gmail的小订阅按钮上工作，而不是实际上去做这个，100%。
-
-主持人：酷。我们还应该谈论其他什么吗？对26年有其他大预测吗？我觉得今年发生的一个非常大的新兴事情是像Neolabs这样的实验室三到八的令人惊讶的资助。你对此有什么看法？你对替代架构有什么看法？比如你对让强化学习变得更通用的持续学习的所有努力有任何观点吗？一些研究方向...
-
-Elad：我认为有大量真正有趣的研究正在进行。所以，有很多方式可以从这些模型中榨取果汁，我认为这真的很令人兴奋。最终这些东西成为某些类型方法或模型的资本收益，因为我们知道规模真的很重要，这意味着最终你必须塌缩成少数几个参与者，因为资本会聚集到最有效的东西上。它们正在产生收入，所以问题是那些东西是什么？在什么时候，由于某种原因，事物从使用角度被锁定？你可以想象随着时间的推移针对某些模型构建这个的各种方式。所以我认为这很有趣，很令人兴奋，我们会看看它如何发展。
-
-主持人：我认为要阐述新研究方向的论点，比如Ilia最近做了这个采访，他将其描述为研究时代。总结一下，他基本上说是的，我当然相信扩展，但你知道，有一些不是无限的计算底线，我们可以大规模测试想法。然后如果我们有关于如何获得更快速或更计算高效改进的秘密想法，那么实际上这不仅仅是直接的资源战斗，今天的竞争确实有点像这样。我认为你可以采取的另一个论点实际上是多种架构，人们已经对此做了一些研究，但多种架构在大领域的有用性中真的很相关。它们只是没有被扩展，对吧？有足够的资本来测试它们，无论是扩散还是SSM或其他。这将在明年发生。然后我认为有一个资源焦点论点，对吧？如果Ilia描述一些实验室有大量计算，但他们今天必须在推理上花费很多计算，那么你在特定研究方向上花费多少，无论是自我改进还是训练后或情感智能或非常大规模的代理东西。
-
-Elad：这取决于你在做什么，因为推理最终为你筹集资金来支付其他一切，因为你正在产生收入。所以我认为这实际上是你引导进入越来越大规模的方式。所以，我一直认为，也许错误地，我实际上可能认为这是错误的，但我一直认为最终你会得到进化系统，这真的是你构建AI的方式，因为也许我过度推断了生物学，你知道，实际上你的大脑有一系列具有不同功能或任务的模块，对吧？你有一个视觉系统，预先连接来非常有效地处理视觉。你有不同的高级思维和学习区域。你有记忆。你有涉及同理心的镜像神经元。你的大脑在某些方面实际上非常专业化。虽然显然有人出生时只有半个大脑半球，大脑重新连接并覆盖所有功能。但有一些著名的案例。但你知道，从根本上说，你有很多进化成非常专业化任务的东西。这几乎像AE或什么的。问题是当你进一步开发AI时，你重现它的程度。什么时候你开始产生一堆某种东西的实例，只是有一些效用函数对此进化，然后你有一些选择和重组以及所有其他你做的东西来尝试让其中一些工作，相对于多少是更分析的方法或更实验和迭代的方法，或者以定向的方式。所以我认为问这个问题真的很有趣，因为如果你再次看生物学作为潜在的先例，虽然可能是一个非常糟糕的先例。你看蛋白质设计，很长时间有这些超级分析设计的蛋白质，然后他们想出了所有这些系统，你知道像相位显示和诱变扫描以及各种给你比你只是坐着思考更好结果的东西。现在当然我们用AI解决了它，你有所有这些3D结构预测，实际上非常好，那是AlphaFold和其他几个真正突破的东西。所以感觉在AI的背景下，也许我们最终也会到达那里，对吧，你只是涉及这些系统，然后那可能是一个非常不同类型的方法和训练，那可能是我认为事物真正有有趣突破的地方，这就是为什么人们如此专注于代码的原因之一，因为代码可以说是引导进入AGI开发更快移动的引导，但我认为这是代码加上自我进化真的是潜在的真正有趣的方法来获得一些真正快速的起飞，但也许不是，对吧？我们会看到的。
-
-主持人：你对26年的一个与AI无关的预测是什么？
-
-Elad：你还想其他事情吗，Sarah？
-
-主持人：我想。
-
-Elad：我开玩笑的。真的？我是说，顺便说一下，另一个与AI有关的预测是，我确实认为防务会加速，在初创公司和防务技术方面，以及向自主或非自主但基于无人机系统的转变，对如何思考战争和防务的大规模重新设计，我认为这将是一个我们会看到今年进展更快的转变。我认为这部分加速是因为Trump政府如何处理它以及战争部长和那里的每个人如何思考它，但我认为部分只是你现在有足够密度的初创公司做有趣的事情，所以我认为这是另一个像巨大转变的事情，你知道现在是一个炒作周期，我实际上认为再次有点被低估，因为它将如此巨大。在AI之外，我是说我认为太空中有明显真正有趣的事情发生，SpaceX和Starlink，我想到通信和电话，这是一个巨大的转变。在能源和采矿方面有真正有趣的事情，我认为世界上发生了很多事情。
-
-主持人：我同意防务，有一些担心，你知道我们必须等待预算实际上从合同转移到主要承包商到大规模的一些新公司。但需求，在一个日益自主驱动的世界中保持竞争力的需要是如此明显，我认为你知道炒作周期和繁荣是好的，因为它们带来很多人到桌面，你知道资本、创始人、想在行业工作的人，所以你可以在短时间内取得很大进展，即使很多公司死亡，在很短的时间内有更多的热情，所以我同意这一点。我也不认为这一定是坏的，对吧？
-
-Elad：你的高预测是什么？
-
-主持人：我认为我不是唯一一个，但我认为GLP-1这个东西，尽管有所有的热情，对它产生的影响仍然被低估，对吧？所以我认为这些的持续采用是不可阻挡的。我实际上认为它为其他肽和激素疗法创造了一个有趣的路径。我认为它如此有效的事实有很多二阶效应，从人们减重的直接影响和愿意研究其他工程肽，我认为每个人现在都明白传递很重要。有这些真正不可思议的药物，我认为这的影响将推动对任何看起来像那种机会类型的东西的更多投资，所以我认为这很令人兴奋。
-
-Elad：是的，我实际上认为你提到的一件事真的很有趣，如果你看生物黑客社区，现在有很多不同肽的使用，你知道不同的肽会做不同的事情，有人会有一些慢性身体问题，他们会飞到迪拜注射肽或其他，通常那些是潜在更大规模社会采用的早期指标，所以我认为这是现在一般肽及其用途的一个真正有趣的趋势。有肽的Hims吗？那里会有什么，所以我认为这超级有趣。我也认为正如你说的生物黑客社区，那些真正非常早期的标外GLP-1采用者，对长寿神经调节感兴趣，用超声波干细胞注射，比如那一直是一个边缘小社区，我认为它会变得不那么边缘。
-
-### (30:00 - End) Part 3
-
-我认为它会变得不那么边缘。
-
-很多这些东西在传统上10年前都来自健身界，对吧？健身界有肌酸和所有这些现在更广泛使用的东西，但也有其他用于睡眠辅助或其他的东西，你知道，镁和所有这些东西。
-
-为了完善这个年终节目，我们询问了一些朋友对2026年的预测。我很好奇。我对明年的预测是推理系统将直接转化为更加多功能、更加稳健的AI，推理将不仅革命性地改变语言模型，还将影响从生物学到自动驾驶汽车再到机器人技术的每一个行业。所以我认为推理是一个巨大的突破，将转变很多不同的应用和行业。
-
-在2026年，AI将不再是等待我们提示的被动工具。相反，它将变得非常主动，深度集成到我们的工作生活中。它会跟随我们去任何地方，听到我们听到的，知道我们需要处理的任务，实际上大多数时候在我们甚至要求之前就为我们完成这些任务。它将成为帮助我们提高技能的教练。它将成为帮助我们优先安排工作和管理时间的经理。简而言之，它将成为我们可以期望的最好的工作伙伴。
-
-我对明年主要的AI预测是我认为上下文将成为每个产品最重要的部分。老实说，到目前为止我体验过的最好的经验就是ChatGPT的记忆功能。我认为将会有更多功能，其目标基本上是提取用户意图，减少用户的负担，给模型或系统或产品更多上下文。换句话说，如何让产品承担从用户那里实际提取这些信息的责任，而不是让用户必须预先做所有工作？
-
-我对2026年的预测是将会有一整套基于更快推理运行的全新产品体验。
-
-我对2026年的预测是我们将最终停止复制粘贴内容到聊天框。相反，我认为我们将拥有更好地使用屏幕分享和跨最重要来源的上下文管理的应用。
-
-对2026年的一个预测，现在有很多关于智能体的讨论，已经持续了一段时间，但没有人真正创造出大规模的消费者智能体AI。我认为今天的模型已经使这成为可能。在2026年，我们将看到找出正确接口、系统和产品的团队，创造出像聊天首次出现时那样大的阶跃函数和整体体验。我认为这个领域远没有人们认为的那样被实验室垄断。这真的是任何人的球赛。
-
-你好，我是Aaron。首先，我在拍自拍视频时会很尴尬。这是我这个视频的第九次拍摄。希望一切顺利，但我对2026年的预测是这肯定将是AI智能体的第二年，特别是企业中深度垂直或特定领域的AI智能体。我认为这将是我们真正将AI模型中看到的所有进展实际交付到企业中的主要方式。你必须能够与组织的工作流程绑定。你必须能够访问他们拥有的数据。你必须有正确的上下文工程来使智能体真正工作。然后你必须进行变更管理，使智能体有效。所以这将是我们开始看到这种模式越来越多出现的一年。这同样意味着我们需要确保在智能体框架方面有更多进展。向Aorvosu和Dex致敬。但这绝对将是智能体框架年，看看如何通过在模型周围有所有正确的脚手架来获得模型能力的数量级改进。最后这将是经济上有用评估的一年。真正开始弄清楚这些模型如何在经济中做更多知识工作者任务。我们将在2026年看到更多这样的情况。我们今年通过Apex和GDP Val以及其他一些看到了预览。我们将看到更多这样的情况。所以这些是预测，我们2026年见。
-
-我认为2026年对于美国开放模型将是非常有趣的一年。在过去一年中，开放智能的前沿从美国转向中国，始于2024年底Deep Seek的发布。美国机构对美国在开放智能领域领导力的这种侵蚀反应缓慢，但我认为他们在过去半年中以重大方式注意到了这一点，无论是从政府层面还是企业层面，一些真正有趣的新实验室开始以开放智能作为他们的指令出现，不只是reflection，这些公司开始生产一些非常有趣的小型开放模型，明年我认为我们将看到美国在最大规模的开放权重前沿重新获得领导地位，我真的很兴奋看到这一点。
-
-嘿，大家，我对2026年的预测是我认为我们将看到AI变得更加政治化。我认为我们将看到它成为2026年中期选举的主要讨论点，一些人将强烈反对它。一些人将支持它。我不确定哪一方会获胜。
-
-2025年标志着AI药物发现的不可思议的一年。仅在过去一年中，我们就从能够在计算机上设计简单分子发展到设计简单抗体，现在最近是在计算机上零样本设计具有药物样特性的全长抗体。如果2025年是AI药物发现的研究年，2026年将是部署年。模型最终进入了一个对药物发现真正有用的时代。它们不仅让事情变得更快，还允许我们追求传统技术传统上非常困难的真正具有挑战性的目标。我真的很兴奋看到接下来会发生什么，因为模型没有放缓的迹象。
-
-好的，我对2026年的预测是这将是YOLO死亡的一年。我们将开始从"你只活一次"转变为"不要死"。我认为现在我们有点像自杀物种。我们做非常原始的事情。我们用我们吃的东西毒害自己。我们设计我们的生活让我们慢慢杀死自己。公司通过让我们上瘾和痛苦来获利。我们摧毁我们唯一的家。不知何故我们将这些事情作为美德来庆祝。我认为这一切都是倒退的。我认为有一天我们会回顾并对我们这样的行为感到非常惊讶。我认为即将到来的转变将是简单而激进的，我们对生命说是，对死亡说不。这很简单，但我认为这可能是对AI进步的回应。我们违抗地这样做作为一种统一形式。我认为这确实需要我们很大的勇气说我们认识到我们存在的神圣性。我们不想丢弃它，我们想用我们所有的勇气和力量来保护它，因为它是如此珍贵。我认为这将是我们结束YOLO并开始"不要死"的一年。
-
-明年最引人注目的事情是其他形式的知识工作将经历软件工程师现在感受到的，他们从年初输入大部分代码行到年底几乎不输入任何代码行。我认为这就像所有形式知识工作的Claude Code体验。我也认为持续学习可能以令人满意的方式解决，我们看到家用机器人的第一次测试部署，软件工程本身明年将变得完全疯狂。
-
-我对2026年的预测是这是每个人的认知都会翻转的一年。目前，每个人都相信你只能在Google之外使用NVIDIA，这显然不是事实。目前，大约三分之一的美国人讨厌AI并认为它很糟糕。这个数字会增加。目前，大多数美国人认为AI没用。这也会翻转。所以，每个人的先验观念都会翻转。这是因为AI的变革性使用将如此普遍。它的明显效用将如此之高，没有人的先验观念能够...认知失调将被消除。
-
-嘿，我是Ben Spectre。
-
-我是Ash Spectre。
-
-我们的预测是2026年是节能AI的一年。数据中心建筑主要受能源、电力可用性、强大互连、高压设备等约束。这就是为什么XAI的Colossus最初由现场天然气发电机供电。问题是对计算增长的需求。实验室，像我们和Kurser这样的新实验室对训练和计算都有相当显著的无法满足的需求。这种需求目前超过了我们将大量负载推送到电网的能力。这意味着在2026年，从每瓦特中榨取每一个可用的计算能力将非常重要。也就是说，从长期来看，芯片可能比电力更重要，因为芯片的折旧速度比底层电力基础设施快得多。
-
-例如，在每千瓦时10美元的数据中心电源成本下，芯片在5年折旧周期中的成本比电力高一个数量级。
-
-所以在2026年，我们认为每瓦特的智能非常重要，要从每单位能量中榨取尽可能多的智能。但从长远来看，我们认为芯片更重要。
-
-节日快乐。
-
-新年快乐。
-
-感谢这一年。2026年快乐。
-
-2026年快乐，听众们。谢谢。
-
-在Twitter上关注我们@no_priors_pod。如果你想看到我们的面孔，请订阅我们的YouTube频道。在Apple Podcasts、Spotify或任何你收听的地方关注节目。这样，你每周都能获得新剧集。在no-priors.com注册邮件或查找每集的文字稿。
-
----
-
-*生成时间: 2025-12-21 20:09:27*
-*由 YouTube Monitor & Translator (Claude CLI) 生成*
+- **Core Content**: The success of GLP-1 weight loss drugs proves the massive potential of engineered peptide drugs, driving investment in more peptide and hormone therapies. The biohacking community has already begun using various peptide drugs, which is often an early indicator of large-scale adoption. The importance of drug delivery is widely recognized.
+- **Key Concepts**: GLP-1, peptide drugs, biohacking, drug delivery, cascading effects, investment surge
+- **Practical Significance**: Biotechnology investment will tilt towards peptide drugs, potentially producing multiple breakthrough drugs similar to GLP-1, changing the health and medical industry.
