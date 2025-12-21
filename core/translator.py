@@ -1,16 +1,17 @@
 """
-Multi-language translation engine using AI CLI.
+Multi-language translation engine using Claude CLI.
 
 Based on working implementation from /home/sunj11/youtube_monitor/process_ai.py
 """
 
 import logging
+import subprocess
 import time
-from typing import Any, List, Optional, Tuple
+from typing import List, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
 
-from core.ai_client import run_ai_prompt
+from core.ai_analyzer import get_claude_cli_path, CLAUDE_CLI
 from utils.srt_parser import format_time, get_segment_text, get_last_lines
 
 logger = logging.getLogger(__name__)
@@ -32,11 +33,10 @@ def call_claude_translate(
     params: dict,
     prompt_file: Path,
     timeout: int = 300,
-    model: str = None,
-    config: Any = None
+    model: str = None
 ) -> str:
     """
-    Call AI CLI for translation with placeholder replacement.
+    Call Claude CLI for translation with placeholder replacement.
 
     Args:
         params: Dict with video_type, speakers, chapter_title, time_range,
@@ -66,9 +66,39 @@ def call_claude_translate(
     prompt = prompt.replace("{{PREVIOUS_ORIGINAL}}", params.get("previous_original", ""))
     prompt = prompt.replace("{{PREVIOUS_TRANSLATION}}", params.get("previous_translation", ""))
 
-    logger.info(f"Calling AI CLI for translation" + (f" (model: {model})" if model else ""))
-    result = run_ai_prompt(prompt, config, timeout=timeout, model=model)
-    return result.strip() if result else ""
+    logger.info(f"Calling Claude CLI for translation" + (f" (model: {model})" if model else ""))
+
+    try:
+        cmd = [
+            str(CLAUDE_CLI),
+            "-p", prompt,
+            "--output-format", "text"
+        ]
+        if model:
+            cmd.extend(["--model", model])
+
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=timeout
+        )
+
+        if result.returncode != 0:
+            logger.error(f"Claude CLI error: {result.stderr}")
+            return ""
+
+        return result.stdout.strip()
+
+    except subprocess.TimeoutExpired:
+        logger.error(f"Claude CLI timeout after {timeout}s")
+        return ""
+    except FileNotFoundError:
+        logger.error("Claude CLI not found.")
+        return ""
+    except Exception as e:
+        logger.error(f"Claude CLI error: {e}")
+        return ""
 
 
 def translate_chapter(
@@ -84,8 +114,7 @@ def translate_chapter(
     timeout: int = 300,
     model: str = None,
     max_retries: int = 2,
-    retry_delay: int = 5,
-    config: Any = None
+    retry_delay: int = 5
 ) -> TranslationResult:
     """
     Translate a single chapter with retry mechanism.
@@ -123,7 +152,7 @@ def translate_chapter(
     # Retry logic
     for attempt in range(max_retries + 1):
         try:
-            translated = call_claude_translate(params, prompt_file, timeout, model, config=config)
+            translated = call_claude_translate(params, prompt_file, timeout, model)
 
             if translated:
                 return TranslationResult(
@@ -177,11 +206,10 @@ def translate_chapters(
     model: str = None,
     context_lines: int = 5,
     max_retries: int = 2,
-    retry_delay: int = 5,
-    config: Any = None
+    retry_delay: int = 5
 ) -> Tuple[List[str], List[dict]]:
     """
-    Translate all chapters using AI CLI.
+    Translate all chapters using Claude CLI.
 
     Args:
         summary: AI generated summary (not used directly, for reference)
@@ -231,8 +259,7 @@ def translate_chapters(
             timeout=timeout,
             model=model,
             max_retries=max_retries,
-            retry_delay=retry_delay,
-            config=config
+            retry_delay=retry_delay
         )
 
         if result.success:
@@ -262,8 +289,7 @@ def translate_all_chapters(
     model: str = None,
     context_lines: int = 5,
     max_retries: int = 2,
-    retry_delay: int = 5,
-    config: Any = None
+    retry_delay: int = 5
 ) -> Tuple[List[TranslationResult], List[int]]:
     """
     Translate all chapters and return structured results.
@@ -325,8 +351,7 @@ def translate_all_chapters(
             timeout=timeout,
             model=model,
             max_retries=max_retries,
-            retry_delay=retry_delay,
-            config=config
+            retry_delay=retry_delay
         )
 
         results.append(result)

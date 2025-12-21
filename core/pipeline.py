@@ -40,7 +40,7 @@ def process_video(
     1. Fetch video info (metadata)
     2. Download subtitles
     3. Process subtitles
-    4. Analyze with AI CLI (summary, chapters)
+    4. Analyze with Claude CLI (summary, chapters)
     5. Translate chapters
     6. Generate markdown output
     7. Archive result
@@ -57,7 +57,6 @@ def process_video(
     from core.content_fetcher import fetch_video_info, download_subtitle, sanitize_filename
     from core.subtitle_processor import process_subtitle_file, check_minimum_duration, get_duration_from_entries
     from core.ai_analyzer import generate_summary, parse_chapters_from_summary, detect_video_type, extract_speakers
-    from core.ai_client import get_ai_model, get_ai_timeout, get_ai_provider
     from core.translator import translate_chapters
     from core.output_generator import generate_markdown, save_output
     from utils.srt_parser import parse_srt
@@ -135,17 +134,13 @@ def process_video(
         logger.info(f"[{video_id}] ✓ Processed subtitles ({len(srt_entries)} entries)")
 
         # Stage 4: AI Analysis
-        logger.info(f"[{video_id}] Stage 4: Analyzing video with AI CLI...")
-
-        ai_model = get_ai_model(config)
-        ai_timeout = get_ai_timeout(config)
+        logger.info(f"[{video_id}] Stage 4: Analyzing video with Claude CLI...")
 
         summary = generate_summary(
             clean_file,
             prompt_summary,
-            timeout=ai_timeout,
-            model=ai_model,
-            config=config
+            timeout=config.claude_timeout_seconds,
+            model=config.claude_model
         )
 
         if not summary:
@@ -178,12 +173,11 @@ def process_video(
             video_type=video_type,
             speakers=speakers,
             prompt_file=prompt_translate,
-            timeout=ai_timeout,
-            model=ai_model,
+            timeout=config.claude_timeout_seconds,
+            model=config.claude_model,
             context_lines=config.context_lines,
             max_retries=config.translation_max_retries,
-            retry_delay=config.translation_retry_delay,
-            config=config
+            retry_delay=config.translation_retry_delay
         )
 
         logger.info(f"[{video_id}] ✓ Translation complete ({len(translations)}/{len(chapters)} successful)")
@@ -200,8 +194,7 @@ def process_video(
             duration_sec=duration_sec,
             summary=summary,
             translations=translations,
-            failed_chapters=failed_chapters,
-            ai_provider=get_ai_provider(config)
+            failed_chapters=failed_chapters
         )
 
         # Stage 6.5: Review and restructure (optional)
@@ -215,8 +208,7 @@ def process_video(
                 markdown_content,
                 restructure=True,
                 remove_garbage=remove_garbage,
-                timeout=120,
-                config=config
+                timeout=120
             )
 
             if reviewed_content:

@@ -62,8 +62,7 @@ def generate_markdown(
     duration_sec: int,
     summary: str,
     translations: List[str],
-    failed_chapters: Optional[List[dict]] = None,
-    ai_provider: str = "claude"
+    failed_chapters: Optional[List[dict]] = None
 ) -> str:
     """
     Generate complete markdown document.
@@ -139,8 +138,7 @@ def generate_markdown(
     lines.append("---")
     lines.append("")
     lines.append(f"*生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*")
-    provider_label = "Claude CLI" if ai_provider == "claude" else "OpenAI CLI"
-    lines.append(f"*由 YouTube Monitor & Translator ({provider_label}) 生成*")
+    lines.append("*由 YouTube Monitor & Translator (Claude CLI) 生成*")
 
     return "\n".join(lines)
 
@@ -196,8 +194,7 @@ def combine_summary_and_translation(
     upload_date: str,
     video_url: str,
     duration_sec: int,
-    failed_chapters: Optional[List[dict]] = None,
-    ai_provider: str = "claude"
+    failed_chapters: Optional[List[dict]] = None
 ) -> str:
     """
     Combine summary and translations into a single markdown document.
@@ -225,8 +222,7 @@ def combine_summary_and_translation(
         duration_sec=duration_sec,
         summary=summary,
         translations=translations,
-        failed_chapters=failed_chapters,
-        ai_provider=ai_provider
+        failed_chapters=failed_chapters
     )
 
 

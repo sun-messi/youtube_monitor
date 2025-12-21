@@ -32,18 +32,8 @@ class Config:
     subtitle_merge_interval: int
 
     # AI configuration
-    ai_provider: str
     claude_model: str
     claude_timeout_seconds: int
-    claude_cli_command: str
-    claude_cli_use_stdin: bool
-    openai_model: str
-    openai_timeout_seconds: int
-    openai_cli_command: str
-    openai_cli_args: str
-    openai_cli_use_stdin: bool
-    openai_cli_output_json_path: str
-    review_model: str
 
     # Chapter optimization
     min_chapter_duration: int
@@ -138,18 +128,8 @@ def load_config(
             min_duration_minutes=config_data["min_duration_minutes"],
             subtitle_language=config_data["subtitle_language"],
             subtitle_merge_interval=config_data["subtitle_merge_interval"],
-            ai_provider=config_data.get("ai_provider", "claude"),
             claude_model=config_data["claude_model"],
             claude_timeout_seconds=config_data["claude_timeout_seconds"],
-            claude_cli_command=config_data.get("claude_cli_command", "claude"),
-            claude_cli_use_stdin=config_data.get("claude_cli_use_stdin", False),
-            openai_model=config_data.get("openai_model", ""),
-            openai_timeout_seconds=config_data.get("openai_timeout_seconds", config_data["claude_timeout_seconds"]),
-            openai_cli_command=config_data.get("openai_cli_command", "openai"),
-            openai_cli_args=config_data.get("openai_cli_args", "responses create -m {model} -i -"),
-            openai_cli_use_stdin=config_data.get("openai_cli_use_stdin", True),
-            openai_cli_output_json_path=config_data.get("openai_cli_output_json_path", ""),
-            review_model=config_data.get("review_model", ""),
             min_chapter_duration=config_data["min_chapter_duration"],
             max_chapter_duration=config_data["max_chapter_duration"],
             context_lines=config_data["context_lines"],
@@ -203,8 +183,6 @@ def validate_config(config: Config) -> bool:
     if config.claude_timeout_seconds <= 0:
         errors.append("claude_timeout_seconds must be positive")
 
-    if config.openai_timeout_seconds <= 0:
-        errors.append("openai_timeout_seconds must be positive")
 
     if config.min_chapter_duration <= 0:
         errors.append("min_chapter_duration must be positive")
@@ -239,14 +217,6 @@ def validate_config(config: Config) -> bool:
     if not config.claude_model:
         errors.append("claude_model must not be empty")
 
-    if config.ai_provider not in ("claude", "openai"):
-        errors.append("ai_provider must be 'claude' or 'openai'")
-
-    if config.ai_provider == "openai":
-        if not config.openai_model:
-            errors.append("openai_model must not be empty when ai_provider is openai")
-        if not config.openai_cli_command:
-            errors.append("openai_cli_command must not be empty when ai_provider is openai")
 
     if not config.output_dir:
         errors.append("output_dir must not be empty")

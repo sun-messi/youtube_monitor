@@ -8,10 +8,11 @@ Reviewer Module - 审核和重组翻译内容
 
 import re
 import logging
-from typing import Any, List, Tuple, Optional
+import subprocess
+from typing import List, Tuple, Optional
 from pathlib import Path
 
-from core.ai_client import run_ai_prompt
+from core.ai_analyzer import CLAUDE_CLI
 
 logger = logging.getLogger(__name__)
 
@@ -178,7 +179,30 @@ def replace_translation_section(markdown_content: str, new_translation: str) -> 
         return markdown_content
 
 
-def remove_ai_garbage(text: str, timeout: int = 120, config: Any = None) -> Optional[str]:
+def remove_fine_timestamps(markdown_content: str) -> str:
+    """
+    删除细分时间戳，只保留章节标题时间戳
+
+    删除格式: **(0:00 - 1:20)**
+    保留格式: ### (0:00 - 5:30) 章节标题
+
+    这样避免细分时间戳与章节时间戳冲突
+    """
+    # 匹配细分时间戳行: **(MM:SS - MM:SS)** 后面可能有空行
+    # 注意不要匹配章节标题 ### (...)
+    pattern = r'\*\*\(\d{1,2}:\d{2}(?::\d{2})?\s*[-–]\s*\d{1,2}:\d{2}(?::\d{2})?\)\*\*\s*\n\s*\n?'
+
+    original_len = len(markdown_content)
+    result = re.sub(pattern, '', markdown_content)
+    removed_count = (original_len - len(result)) // 20  # 估算删除的时间戳数量
+
+    if removed_count > 0:
+        logger.info(f"删除了约 {removed_count} 个细分时间戳")
+
+    return result
+
+
+def remove_ai_garbage(text: str, timeout: int = 120) -> Optional[str]:
     """
     用 Claude haiku 删除 AI 生成的废话
 
@@ -216,26 +240,48 @@ def remove_ai_garbage(text: str, timeout: int = 120, config: Any = None) -> Opti
 
 """ + text
 
-    cleaned = run_ai_prompt(prompt, config, timeout=timeout, purpose="review")
+    try:
+        cmd = [
+            str(CLAUDE_CLI),
+            "-p", prompt,
+            "--model", "claude-3-5-haiku-latest",
+            "--output-format", "text"
+        ]
 
-    if cleaned:
-        # 简单验证：清理后的文本不应该比原文短太多
-        if len(cleaned) > len(text) * 0.5:
-            logger.info("AI 废话清理完成")
-            return cleaned
-        logger.warning("清理结果过短，放弃使用")
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=timeout
+        )
+
+        if result.returncode == 0 and result.stdout.strip():
+            cleaned = result.stdout.strip()
+            # 简单验证：清理后的文本不应该比原文短太多
+            if len(cleaned) > len(text) * 0.5:
+                logger.info("AI 废话清理完成")
+                return cleaned
+            else:
+                logger.warning("清理结果过短，放弃使用")
+                return None
+        else:
+            logger.error(f"haiku 调用失败: {result.stderr}")
+            return None
+
+    except subprocess.TimeoutExpired:
+        logger.error(f"haiku 调用超时 ({timeout}s)")
         return None
-
-    logger.error("AI 清理调用失败或无输出")
-    return None
+    except Exception as e:
+        logger.error(f"haiku 调用错误: {e}")
+        return None
 
 
 def review_content(
     markdown_content: str,
     restructure: bool = True,
     remove_garbage: bool = True,
-    timeout: int = 120,
-    config: Any = None
+    remove_timestamps: bool = True,
+    timeout: int = 120
 ) -> str:
     """
     审核并优化翻译内容
@@ -244,6 +290,7 @@ def review_content(
         markdown_content: 原始 Markdown 内容
         restructure: 是否重组章节（Python 代码）
         remove_garbage: 是否删除 AI 废话（haiku）
+        remove_timestamps: 是否删除细分时间戳（保留章节标题时间戳）
         timeout: haiku 调用超时时间
 
     Returns:
@@ -251,15 +298,20 @@ def review_content(
     """
     result = markdown_content
 
-    # 1. 章节重组（Python 代码，可靠）
+    # 1. 删除细分时间戳（避免与章节时间戳冲突）
+    if remove_timestamps:
+        logger.info("删除细分时间戳...")
+        result = remove_fine_timestamps(result)
+
+    # 2. 章节重组（Python 代码，可靠）
     if restructure:
         logger.info("开始章节重组...")
         result = restructure_translation(result)
 
-    # 2. 删除 AI 废话（haiku，可选）
+    # 3. 删除 AI 废话（haiku，可选）
     if remove_garbage:
         logger.info("开始清理 AI 废话...")
-        cleaned = remove_ai_garbage(result, timeout, config=config)
+        cleaned = remove_ai_garbage(result, timeout)
         if cleaned:
             result = cleaned
         else:
