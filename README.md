@@ -76,6 +76,37 @@ youtube-monitor-translator/
 └── channels.json            # Channel list
 ```
 
+## Claude Code Integration
+
+### Agent
+
+Use the specialized agent for analyzing tech investment content:
+
+```bash
+claude --agent tech-investment-analyst
+```
+
+**tech-investment-analyst**: AI PhD + VC background video analysis expert
+- Deep understanding of AI technology (LLM, Transformer, Inference)
+- Familiar with VC investment logic (valuation, ARR, funding stages)
+- Covers: a16z, All-In, 20VC, No Priors, Acquired
+
+### Skills
+
+| Skill | Content |
+|-------|---------|
+| `ai-knowledge` | AI/ML terminology, companies, papers, tech trends |
+| `investment-knowledge` | VC terminology, investors, analysis frameworks |
+| `skill-creator` | Tool for creating new Skills |
+
+### Commands
+
+| Command | Function |
+|---------|----------|
+| `/sync` | Sync changes to GitHub |
+
+---
+
 ## Processing Pipeline
 
 ```

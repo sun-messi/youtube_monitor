@@ -140,6 +140,69 @@ youtube-monitor-translator/
 
 ---
 
+## 🤖 Claude Code 扩展
+
+### Agent 架构
+
+```
+用户请求 → Agent (tech-investment-analyst)
+              ↓
+         加载 Skills:
+         ├── ai-knowledge
+         └── investment-knowledge
+              ↓
+         执行任务
+```
+
+### 文件结构
+
+```
+.claude/
+├── agents/
+│   └── tech-investment-analyst.md    # AI PhD + VC 专家 Agent
+│
+├── skills/
+│   ├── ai-knowledge/                 # AI/ML 知识库
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── terminology.md        # 术语词典
+│   │       ├── papers.md             # 经典论文
+│   │       ├── architectures.md      # 模型架构
+│   │       └── companies.md          # 公司/人物
+│   │
+│   ├── investment-knowledge/         # VC/投资知识库
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── terminology.md        # 投资术语
+│   │       ├── investors.md          # 投资人信息
+│   │       └── frameworks.md         # 分析框架
+│   │
+│   └── skill-creator/                # Skill 创建工具
+│       └── SKILL.md
+│
+└── commands/
+    └── sync.md                       # /sync 命令
+```
+
+### 使用方式
+
+```bash
+# 启动专业 Agent
+claude --agent tech-investment-analyst
+
+# 使用 /sync 命令同步到 GitHub
+/sync
+```
+
+### Agent 能力
+
+**tech-investment-analyst**:
+- **AI 技术**: 深度理解 LLM、Foundation Model、Inference、Training
+- **投资视角**: 熟悉 VC 投资逻辑、估值框架、市场分析
+- **覆盖频道**: a16z, All-In, 20VC, No Priors, Acquired
+
+---
+
 ## 🗺️ 开发路线图
 
 ### Phase 1: 基础设施搭建 🏗️

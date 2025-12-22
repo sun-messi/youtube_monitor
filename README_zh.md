@@ -76,6 +76,37 @@ youtube-monitor-translator/
 └── channels.json            # 频道列表
 ```
 
+## Claude Code 集成
+
+### Agent
+
+使用专业 Agent 分析科技投资内容：
+
+```bash
+claude --agent tech-investment-analyst
+```
+
+**tech-investment-analyst**: AI PhD + VC 背景的视频分析专家
+- 深度理解 AI 技术（LLM, Transformer, Inference）
+- 熟悉 VC 投资逻辑（估值, ARR, 融资阶段）
+- 覆盖频道: a16z, All-In, 20VC, No Priors, Acquired
+
+### Skills
+
+| Skill | 内容 |
+|-------|------|
+| `ai-knowledge` | AI/ML 术语、公司、论文、技术趋势 |
+| `investment-knowledge` | VC 术语、投资人、分析框架 |
+| `skill-creator` | 创建新 Skill 的工具 |
+
+### Commands
+
+| 命令 | 功能 |
+|------|------|
+| `/sync` | 同步更改到 GitHub |
+
+---
+
 ## 处理流程
 
 ```
