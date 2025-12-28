@@ -56,6 +56,14 @@ class Config:
     # Scheduling
     check_interval_hours: int
 
+    # Agent configuration
+    use_agent: bool
+    agent_name: str
+
+    # Review configuration
+    review_enabled: bool
+    review_remove_ai_garbage: bool
+
     # Channel list
     channels: List[ChannelConfig]
 
@@ -139,14 +147,19 @@ def load_config(
             output_dir=config_data["output_dir"],
             filename_max_length=config_data["filename_max_length"],
             archive_file=config_data["archive_file"],
-            email_enabled=config_data["email_enabled"],
-            check_interval_hours=config_data["check_interval_hours"],
+            email_enabled=config_data.get("email_enabled", False),
+            check_interval_hours=config_data.get("check_interval_hours", 0),
+            use_agent=config_data.get("use_agent", False),
+            agent_name=config_data.get("agent_name", "tech-investment-analyst"),
+            review_enabled=config_data.get("review_enabled", False),
+            review_remove_ai_garbage=config_data.get("review_remove_ai_garbage", False),
             channels=channels,
         )
 
         logger.info(
-            f"Config loaded successfully: {len(channels)} channels, "
-            f"model={config.claude_model}"
+            f"Config loaded: {len(channels)} channels, "
+            f"model={config.claude_model}, "
+            f"use_agent={config.use_agent}"
         )
         return config
 

@@ -1,6 +1,10 @@
 """
 Multi-language translation engine using Claude CLI.
 
+Supports two modes:
+1. Direct Claude CLI call (default)
+2. Agent-based call using tech-investment-analyst (for specialized translation)
+
 Based on working implementation from /home/sunj11/youtube_monitor/process_ai.py
 """
 
@@ -12,6 +16,7 @@ from pathlib import Path
 from dataclasses import dataclass
 
 from core.ai_analyzer import get_claude_cli_path, CLAUDE_CLI
+from core.agent_caller import call_agent, AGENT_TECH_INVESTMENT
 from utils.srt_parser import format_time, get_segment_text, get_last_lines
 
 logger = logging.getLogger(__name__)
@@ -27,6 +32,55 @@ class TranslationResult:
     translated_text: str
     success: bool
     error_message: Optional[str] = None
+
+
+def _build_translation_prompt(params: dict, prompt_file: Path) -> str:
+    """Build translation prompt from template and params."""
+    if not prompt_file.exists():
+        logger.error(f"Prompt file not found: {prompt_file}")
+        return ""
+
+    with open(prompt_file, "r", encoding="utf-8") as f:
+        prompt_template = f.read()
+
+    # Replace placeholders with actual values
+    prompt = prompt_template
+    prompt = prompt.replace("{{VIDEO_TYPE}}", params.get("video_type", ""))
+    prompt = prompt.replace("{{SPEAKERS}}", params.get("speakers", ""))
+    prompt = prompt.replace("{{CHAPTER_TITLE}}", params.get("chapter_title", ""))
+    prompt = prompt.replace("{{TIME_RANGE}}", params.get("time_range", ""))
+    prompt = prompt.replace("{{SEGMENT_TEXT}}", params.get("segment_text", ""))
+    prompt = prompt.replace("{{PREVIOUS_ORIGINAL}}", params.get("previous_original", ""))
+    prompt = prompt.replace("{{PREVIOUS_TRANSLATION}}", params.get("previous_translation", ""))
+
+    return prompt
+
+
+def call_agent_translate(
+    params: dict,
+    prompt_file: Path,
+    timeout: int = 300,
+    agent_name: str = AGENT_TECH_INVESTMENT
+) -> str:
+    """
+    Call Claude Agent for translation.
+
+    Args:
+        params: Dict with video_type, speakers, chapter_title, time_range,
+                segment_text, previous_original, previous_translation
+        prompt_file: Path to yt-translate.md template
+        timeout: Timeout in seconds
+        agent_name: Agent name to use
+
+    Returns:
+        Translated text
+    """
+    prompt = _build_translation_prompt(params, prompt_file)
+    if not prompt:
+        return ""
+
+    logger.info(f"Calling agent '{agent_name}' for translation")
+    return call_agent(agent_name, prompt, timeout)
 
 
 def call_claude_translate(
@@ -48,23 +102,9 @@ def call_claude_translate(
     Returns:
         Translated text
     """
-    # Read prompt template
-    if not prompt_file.exists():
-        logger.error(f"Prompt file not found: {prompt_file}")
+    prompt = _build_translation_prompt(params, prompt_file)
+    if not prompt:
         return ""
-
-    with open(prompt_file, "r", encoding="utf-8") as f:
-        prompt_template = f.read()
-
-    # Replace placeholders with actual values
-    prompt = prompt_template
-    prompt = prompt.replace("{{VIDEO_TYPE}}", params.get("video_type", ""))
-    prompt = prompt.replace("{{SPEAKERS}}", params.get("speakers", ""))
-    prompt = prompt.replace("{{CHAPTER_TITLE}}", params.get("chapter_title", ""))
-    prompt = prompt.replace("{{TIME_RANGE}}", params.get("time_range", ""))
-    prompt = prompt.replace("{{SEGMENT_TEXT}}", params.get("segment_text", ""))
-    prompt = prompt.replace("{{PREVIOUS_ORIGINAL}}", params.get("previous_original", ""))
-    prompt = prompt.replace("{{PREVIOUS_TRANSLATION}}", params.get("previous_translation", ""))
 
     logger.info(f"Calling Claude CLI for translation" + (f" (model: {model})" if model else ""))
 
@@ -114,7 +154,9 @@ def translate_chapter(
     timeout: int = 300,
     model: str = None,
     max_retries: int = 2,
-    retry_delay: int = 5
+    retry_delay: int = 5,
+    use_agent: bool = False,
+    agent_name: str = AGENT_TECH_INVESTMENT
 ) -> TranslationResult:
     """
     Translate a single chapter with retry mechanism.
@@ -133,6 +175,8 @@ def translate_chapter(
         model: Claude model to use
         max_retries: Maximum retry attempts
         retry_delay: Delay between retries in seconds
+        use_agent: If True, use specialized agent for translation
+        agent_name: Agent name to use (default: tech-investment-analyst)
 
     Returns:
         TranslationResult object
@@ -147,12 +191,18 @@ def translate_chapter(
         "previous_translation": previous_translation or "(First segment)"
     }
 
-    logger.info(f"Translating chapter: {time_range} - {chapter_title}")
+    if use_agent:
+        logger.info(f"Translating chapter with Agent '{agent_name}': {time_range} - {chapter_title}")
+    else:
+        logger.info(f"Translating chapter: {time_range} - {chapter_title}")
 
     # Retry logic
     for attempt in range(max_retries + 1):
         try:
-            translated = call_claude_translate(params, prompt_file, timeout, model)
+            if use_agent:
+                translated = call_agent_translate(params, prompt_file, timeout, agent_name)
+            else:
+                translated = call_claude_translate(params, prompt_file, timeout, model)
 
             if translated:
                 return TranslationResult(
@@ -206,10 +256,12 @@ def translate_chapters(
     model: str = None,
     context_lines: int = 5,
     max_retries: int = 2,
-    retry_delay: int = 5
+    retry_delay: int = 5,
+    use_agent: bool = False,
+    agent_name: str = AGENT_TECH_INVESTMENT
 ) -> Tuple[List[str], List[dict]]:
     """
-    Translate all chapters using Claude CLI.
+    Translate all chapters using Claude CLI or Agent.
 
     Args:
         summary: AI generated summary (not used directly, for reference)
@@ -223,6 +275,8 @@ def translate_chapters(
         context_lines: Number of context lines to include
         max_retries: Maximum retry attempts
         retry_delay: Delay between retries
+        use_agent: If True, use specialized agent for translation
+        agent_name: Agent name to use (default: tech-investment-analyst)
 
     Returns:
         Tuple of (translations list, failed chapters list)
@@ -259,7 +313,9 @@ def translate_chapters(
             timeout=timeout,
             model=model,
             max_retries=max_retries,
-            retry_delay=retry_delay
+            retry_delay=retry_delay,
+            use_agent=use_agent,
+            agent_name=agent_name
         )
 
         if result.success:

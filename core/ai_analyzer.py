@@ -1,6 +1,10 @@
 """
 AI video analysis using Claude CLI.
 
+Supports two modes:
+1. Direct Claude CLI call (default)
+2. Agent-based call using tech-investment-analyst (for specialized analysis)
+
 Based on working implementation from /home/sunj11/youtube_monitor/process_ai.py
 """
 
@@ -12,6 +16,8 @@ import tempfile
 from typing import List, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
+
+from core.agent_caller import call_agent, call_agent_with_file, AGENT_TECH_INVESTMENT
 
 logger = logging.getLogger(__name__)
 
@@ -287,7 +293,9 @@ def analyze_video(
     subtitle_text: str,
     prompt_file: Optional[Path] = None,
     timeout: int = 300,
-    model: str = None
+    model: str = None,
+    use_agent: bool = False,
+    agent_name: str = AGENT_TECH_INVESTMENT
 ) -> Optional[AnalysisResult]:
     """
     Analyze video content using Claude CLI.
@@ -297,15 +305,23 @@ def analyze_video(
         prompt_file: Path to yt-summary.md prompt
         timeout: Timeout in seconds
         model: Claude model to use
+        use_agent: If True, use specialized agent for analysis
+        agent_name: Agent name to use (default: tech-investment-analyst)
 
     Returns:
         AnalysisResult or None if failed
     """
     try:
-        logger.info("Analyzing video content with Claude CLI")
+        logger.info(f"Analyzing video content {'with agent ' + agent_name if use_agent else 'with Claude CLI'}")
 
-        # Use provided prompt or default
-        if prompt_file and prompt_file.exists():
+        # Use agent-based analysis
+        if use_agent:
+            if prompt_file and prompt_file.exists():
+                summary = call_agent_with_file(agent_name, prompt_file, subtitle_text, timeout)
+            else:
+                summary = call_agent(agent_name, _build_analysis_prompt(subtitle_text), timeout)
+        # Use direct Claude CLI call
+        elif prompt_file and prompt_file.exists():
             summary = call_claude_with_prompt(prompt_file, subtitle_text, timeout, model)
         else:
             # Direct prompt if no file provided
@@ -344,6 +360,23 @@ def analyze_video(
         return None
 
 
+def _build_analysis_prompt(subtitle_text: str) -> str:
+    """Build the analysis prompt for agent-based or direct calls."""
+    return f"""你是一个专业的视频内容分析专家。请分析以下 YouTube 视频字幕，完成以下任务：
+
+1. **生成视频摘要**（200-300 字，中文，清晰简洁）
+2. **提取/生成章节时间轴**（表格格式：| 时间 | 标题 | 概括 |）
+3. **检测视频类型**（访谈对话/演讲独白/教程操作/新闻播报）
+4. **提取说话人信息**（如果是访谈或多人对话）
+5. **提取核心要点**（TL;DR 列表）
+
+字幕内容：
+
+{subtitle_text}
+
+请用 Markdown 格式输出。"""
+
+
 def _call_claude_direct(
     subtitle_text: str,
     timeout: int = 300,
@@ -360,19 +393,7 @@ def _call_claude_direct(
     Returns:
         Claude's response
     """
-    prompt = f"""你是一个专业的视频内容分析专家。请分析以下 YouTube 视频字幕，完成以下任务：
-
-1. **生成视频摘要**（200-300 字，中文，清晰简洁）
-2. **提取/生成章节时间轴**（表格格式：| 时间 | 标题 | 概括 |）
-3. **检测视频类型**（访谈对话/演讲独白/教程操作/新闻播报）
-4. **提取说话人信息**（如果是访谈或多人对话）
-5. **提取核心要点**（TL;DR 列表）
-
-字幕内容：
-
-{subtitle_text}
-
-请用 Markdown 格式输出。"""
+    prompt = _build_analysis_prompt(subtitle_text)
 
     try:
         cmd = [

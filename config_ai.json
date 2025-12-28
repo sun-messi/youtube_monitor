@@ -1,7 +1,13 @@
 {
   "lookback_hours": 48,
+  "min_duration_minutes": 10,
+  "subtitle_language": "en",
+  "subtitle_merge_interval": 30,
+
   "output_dir": "./ai_output",
   "archive_file": "./youtube_archive.json",
+  "filename_max_length": 50,
+
   "claude_timeout_seconds": 600,
   "claude_model": "claude-sonnet-4-20250514",
   "_model_options": {
@@ -10,11 +16,21 @@
     "balanced": "claude-sonnet-4-20250514 (推荐，平衡质量与成本)",
     "fast": "claude-3-5-haiku-latest (快速但质量较差)"
   },
+
+  "min_chapter_duration": 180,
+  "max_chapter_duration": 900,
+  "context_lines": 5,
+  "translation_max_tokens": 4000,
+  "translation_max_retries": 2,
+  "translation_retry_delay": 5,
+
   "email_enabled": true,
-  "subtitle_merge_interval": 30,
-  "min_duration_minutes": 10,
   "check_interval_hours": 5,
   "_comment_loop": "持续运行模式：每隔 X 小时检测一次新视频。设为 0 表示只运行一次不循环",
+
+  "use_agent": true,
+  "agent_name": "tech-investment-analyst",
+  "_comment_agent": "Agent 模式：use_agent 启用专业 Agent，agent_name 指定使用的 Agent（需在 .claude/agents/ 中定义）",
 
   "review_enabled": true,
   "review_remove_ai_garbage": true,

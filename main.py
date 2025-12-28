@@ -154,7 +154,7 @@ def load_archive(archive_file: str):
 
 def process_single_video(video_id: str, config, archive) -> int:
     """
-    Process a single video.
+    Process a single video (skips duration and date filters).
 
     Args:
         video_id: YouTube video ID
@@ -165,17 +165,31 @@ def process_single_video(video_id: str, config, archive) -> int:
         int: Exit code (0 for success, 1 for failure)
     """
     from core.pipeline import process_video
+    from infrastructure.notifier import send_update_email
 
     logger.info(f"Processing single video: {video_id}")
+    logger.info(f"(skip_filters=True: ignoring duration/date limits)")
     logger.info("-" * 60)
 
-    result = process_video(video_id, config, archive)
+    result = process_video(video_id, config, archive, skip_filters=True)
 
     if result.success:
         if result.output_path:
             logger.info(f"Video processed successfully")
             logger.info(f"   Output: {result.output_path}")
             logger.info(f"   Time: {result.processing_time:.1f}s")
+
+            # Send email notification
+            video_info = {
+                'file_path': result.output_path,
+                'channel': result.channel,
+                'title': result.title,
+                'url': f'https://www.youtube.com/watch?v={video_id}'
+            }
+            if send_update_email([video_info]):
+                logger.info(f"   Email sent successfully")
+            else:
+                logger.warning(f"   Email sending failed")
         else:
             logger.info(f"Video skipped: {result.error}")
         return 0

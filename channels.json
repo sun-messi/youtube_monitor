@@ -95,6 +95,12 @@
       "handle": "@Alex.kantrowitz",
       "url": "https://www.youtube.com/@Alex.kantrowitz",
       "channel_id": "UCye1YedIypHffYb8k6Gp9wg"
+    },
+    {
+      "name": "Anthropic",
+      "handle": "@anthropic-ai",
+      "url": "https://www.youtube.com/@anthropic-ai",
+      "channel_id": "UCrDwWp7EBBv4NwvScIpBDOA"
     }
   ],
   "_disabled_channels": []

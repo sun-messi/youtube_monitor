@@ -31,7 +31,8 @@ def process_video(
     video_id: str,
     config,
     archive,
-    prompts_dir: Optional[Path] = None
+    prompts_dir: Optional[Path] = None,
+    skip_filters: bool = False
 ) -> PipelineResult:
     """
     Process a single video through the complete pipeline.
@@ -50,13 +51,14 @@ def process_video(
         config: Config object with system settings
         archive: Archive object for tracking processed videos
         prompts_dir: Path to prompts directory (default: ./prompts)
+        skip_filters: If True, skip duration and date filters (for --video mode)
 
     Returns:
         PipelineResult with processing outcome
     """
     from core.content_fetcher import fetch_video_info, download_subtitle, sanitize_filename
     from core.subtitle_processor import process_subtitle_file, check_minimum_duration, get_duration_from_entries
-    from core.ai_analyzer import generate_summary, parse_chapters_from_summary, detect_video_type, extract_speakers
+    from core.ai_analyzer import generate_summary, analyze_video, parse_chapters_from_summary, detect_video_type, extract_speakers
     from core.translator import translate_chapters
     from core.output_generator import generate_markdown, save_output
     from utils.srt_parser import parse_srt
@@ -92,11 +94,11 @@ def process_video(
 
         logger.info(f"[{video_id}] ✓ Downloaded subtitles: {srt_path}")
 
-        # Check minimum duration
+        # Check minimum duration (skip if skip_filters is True)
         srt_entries = parse_srt(raw_srt)
         is_long_enough, duration_str = check_minimum_duration(srt_entries, config.min_duration_minutes)
 
-        if not is_long_enough:
+        if not is_long_enough and not skip_filters:
             logger.info(f"[{video_id}] Skipping: duration {duration_str} < minimum {config.min_duration_minutes} min")
             archive.mark_skipped(video_id, video_info.title, f"Duration too short: {duration_str}")
             return PipelineResult(
@@ -109,6 +111,8 @@ def process_video(
                 stage_failed=None,
                 processing_time=(datetime.now() - start_time).total_seconds()
             )
+        elif not is_long_enough and skip_filters:
+            logger.info(f"[{video_id}] Duration {duration_str} < minimum, but skip_filters=True, continuing...")
 
         # Stage 3: Process subtitles
         logger.info(f"[{video_id}] Stage 3: Processing subtitles...")
@@ -134,14 +138,39 @@ def process_video(
         logger.info(f"[{video_id}] ✓ Processed subtitles ({len(srt_entries)} entries)")
 
         # Stage 4: AI Analysis
-        logger.info(f"[{video_id}] Stage 4: Analyzing video with Claude CLI...")
+        use_agent = getattr(config, 'use_agent', False)
+        agent_name = getattr(config, 'agent_name', 'tech-investment-analyst')
 
-        summary = generate_summary(
-            clean_file,
-            prompt_summary,
+        if use_agent:
+            logger.info(f"[{video_id}] Stage 4: Analyzing video with Agent '{agent_name}'...")
+        else:
+            logger.info(f"[{video_id}] Stage 4: Analyzing video with Claude CLI...")
+
+        # Read subtitle content for analysis
+        with open(clean_file, 'r', encoding='utf-8') as f:
+            subtitle_content = f.read()
+
+        # Use analyze_video which supports agent mode
+        analysis_result = analyze_video(
+            subtitle_text=subtitle_content,
+            prompt_file=prompt_summary,
             timeout=config.claude_timeout_seconds,
-            model=config.claude_model
+            model=config.claude_model,
+            use_agent=use_agent,
+            agent_name=agent_name
         )
+
+        if not analysis_result:
+            # Fallback to direct generate_summary if analyze_video fails
+            logger.warning(f"[{video_id}] analyze_video failed, trying generate_summary...")
+            summary = generate_summary(
+                clean_file,
+                prompt_summary,
+                timeout=config.claude_timeout_seconds,
+                model=config.claude_model
+            )
+        else:
+            summary = analysis_result.raw_markdown
 
         if not summary:
             return _create_failed_result(video_id, "Failed to generate summary", "ai_analysis", start_time, video_info.title)
@@ -164,7 +193,10 @@ def process_video(
         logger.info(f"[{video_id}] ✓ Analysis complete ({len(chapters)} chapters, type: {video_type})")
 
         # Stage 5: Translation
-        logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters...")
+        if use_agent:
+            logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters with Agent '{agent_name}'...")
+        else:
+            logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters...")
 
         translations, failed_chapters = translate_chapters(
             summary=summary,
@@ -177,7 +209,9 @@ def process_video(
             model=config.claude_model,
             context_lines=config.context_lines,
             max_retries=config.translation_max_retries,
-            retry_delay=config.translation_retry_delay
+            retry_delay=config.translation_retry_delay,
+            use_agent=use_agent,
+            agent_name=agent_name
         )
 
         logger.info(f"[{video_id}] ✓ Translation complete ({len(translations)}/{len(chapters)} successful)")

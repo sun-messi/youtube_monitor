@@ -125,7 +125,15 @@ def send_update_email(video_infos: list) -> bool:
         # 创建邮件对象
         msg = MIMEMultipart()
         msg['From'] = email_config.EMAIL_SENDER
-        msg['To'] = email_config.EMAIL_RECEIVER
+
+        # 支持单个收件人或多个收件人列表
+        if isinstance(email_config.EMAIL_RECEIVER, list):
+            msg['To'] = ', '.join(email_config.EMAIL_RECEIVER)
+            receivers = email_config.EMAIL_RECEIVER
+        else:
+            msg['To'] = email_config.EMAIL_RECEIVER
+            receivers = [email_config.EMAIL_RECEIVER]
+
         msg['Date'] = formatdate(localtime=True)
 
         # 邮件主题
@@ -143,13 +151,13 @@ def send_update_email(video_infos: list) -> bool:
 
         # 发送邮件
         logger.info(f"\n{'='*60}")
-        logger.info(f"📧 发送邮件到: {email_config.EMAIL_RECEIVER}")
+        logger.info(f"📧 发送邮件到: {', '.join(receivers)}")
         logger.info(f"   视频数: {len(video_infos)} 个")
 
         server = smtplib.SMTP(email_config.SMTP_SERVER, email_config.SMTP_PORT)
         server.starttls()
         server.login(email_config.EMAIL_SENDER, email_config.EMAIL_PASSWORD)
-        server.send_message(msg)
+        server.sendmail(email_config.EMAIL_SENDER, receivers, msg.as_string())
         server.quit()
 
         logger.info(f"✅ 邮件发送成功")
