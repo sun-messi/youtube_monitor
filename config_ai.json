@@ -9,7 +9,7 @@
   "filename_max_length": 50,
 
   "claude_timeout_seconds": 600,
-  "claude_model": "claude-sonnet-4-20250514",
+  "claude_model": "claude-opus-4-20250514",
   "_model_options": {
     "_comment": "可选模型列表",
     "best_quality": "claude-opus-4-20250514 (最佳质量，最贵)",
