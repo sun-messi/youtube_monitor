@@ -44,10 +44,14 @@
 ### 训练阶段
 | 术语 | 中文 | 解释 |
 |------|------|------|
-| Pre-training | 预训练 | 在大规模语料上的初始训练 |
+| Pre-training | 预训练 | 在数万亿 token 上进行下一词预测，学习语言结构 |
 | Post-training | 后训练 | 预训练后的优化阶段（SFT + RLHF） |
 | Fine-tuning | 微调 | 在特定任务数据上继续训练 |
-| SFT (Supervised Fine-Tuning) | 监督微调 | 使用标注数据微调 |
+| SFT (Supervised Fine-Tuning) | 监督微调 | 教授具体任务格式，学习"做什么" |
+| Preference Alignment | 偏好对齐 | 通过 RLHF 注入人类价值观，学习"不做什么" |
+| Intermediate Training | 中间训练 | 预训练和微调之间的精选数据训练阶段 |
+| Continual Learning | 持续学习 | 模型不断学习新知识而不遗忘旧知识 |
+| Catastrophic Forgetting | 灾难性遗忘 | 学习新任务时忘记旧任务的现象 |
 | Instruction Tuning | 指令微调 | 使用指令-回复对训练 |
 | Continual Pre-training | 持续预训练 | 在新数据上继续预训练 |
 
@@ -57,10 +61,15 @@
 | Alignment | 对齐 | 使模型行为符合人类意图 |
 | RLHF (Reinforcement Learning from Human Feedback) | 基于人类反馈的强化学习 | 使用人类偏好训练 |
 | DPO (Direct Preference Optimization) | 直接偏好优化 | 无需 RM 的对齐方法 |
-| PPO (Proximal Policy Optimization) | 近端策略优化 | RLHF 常用的 RL 算法 |
-| Reward Model | 奖励模型 | 评估回复质量的模型 |
+| PPO (Proximal Policy Optimization) | 近端策略优化 | RLHF 常用的 RL 算法，使用价值函数 |
+| GRPO (Group Relative Policy Optimization) | 组相对策略优化 | 无价值函数的策略优化，特别适合推理任务 |
+| Reward Model | 奖励模型 | 评估回复质量的模型，通过 Bradley-Terry 公式训练 |
+| Bradley-Terry Model | Bradley-Terry 模型 | 偏好对比较的数学框架 |
+| Value Function | 价值函数 | PPO 中估计状态/动作价值的网络 |
+| Verifiable Reward | 可验证奖励 | 可自动验证的奖励信号，如数学题正确性 |
 | Constitutional AI | 宪法 AI | Anthropic 提出的自我改进方法 |
 | RLAIF | 基于 AI 反馈的强化学习 | 用 AI 代替人类提供反馈 |
+| GRPO-DT | GRPO-去偏版本 | 解决 GRPO 长度偏差问题的改进版本 |
 
 ### 训练参数
 | 术语 | 中文 | 解释 |
@@ -161,12 +170,16 @@
 ### RAG 与检索
 | 术语 | 中文 | 解释 |
 |------|------|------|
-| RAG (Retrieval-Augmented Generation) | 检索增强生成 | 结合检索和生成 |
+| RAG (Retrieval-Augmented Generation) | 检索增强生成 | 结合检索和生成，解决知识截止和幻觉问题 |
 | Embedding | 嵌入向量 | 文本的向量表示 |
 | Vector Database | 向量数据库 | 存储和检索嵌入的数据库 |
 | Semantic Search | 语义搜索 | 基于含义的搜索 |
 | Chunking | 分块 | 将文档切分为小块 |
+| Bi-Encoder | 双编码器 | RAG 第一阶段：快速候选召回 |
+| Cross-Encoder | 交叉编码器 | RAG 第二阶段：精确重排序 |
 | Reranking | 重排序 | 对检索结果二次排序 |
+| Knowledge Cutoff | 知识截止 | 模型训练数据的时间截止点 |
+| Top-K Retrieval | Top-K 检索 | 返回相似度最高的 K 个文档 |
 
 ### Agent 与工具
 | 术语 | 中文 | 解释 |

@@ -1,7 +1,7 @@
 """Configuration management for YouTube Monitor & Translator system."""
 
 from dataclasses import dataclass
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import json
 import os
 import logging
@@ -17,6 +17,15 @@ class ChannelConfig:
     handle: str
     url: str
     channel_id: str
+    tags: Optional[List[str]] = None  # 新增：频道标签
+
+    def has_tag(self, tag: str) -> bool:
+        """检查频道是否有特定标签"""
+        return self.tags is not None and tag in self.tags
+
+    def is_academic(self) -> bool:
+        """检查是否为学术频道"""
+        return self.has_tag("academic")
 
 
 @dataclass
@@ -120,6 +129,7 @@ def load_config(
                     handle=ch["handle"],
                     url=ch["url"],
                     channel_id=ch["channel_id"],
+                    tags=ch.get("tags", None),  # 新增：读取 tags，默认 None
                 )
             )
         except KeyError as e:

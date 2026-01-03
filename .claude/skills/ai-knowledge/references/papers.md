@@ -181,8 +181,9 @@
 ### o1 (2024) ⭐
 - **作者**: OpenAI
 - **意义**: **推理能力飞跃**，测试时计算扩展
-- **关键技术**: Chain-of-Thought 内置, 思考 token
+- **关键技术**: Chain-of-Thought 内置, 思考 token, GRPO 训练
 - **影响**: 开启 Inference-time Scaling 时代
+- **训练方法**: 使用 GRPO（Group Relative Policy Optimization）替代传统 PPO，无需价值函数，特别适合可验证奖励任务（如数学、代码）
 
 ### Llama 3 (2024)
 - **作者**: Meta
@@ -193,6 +194,46 @@
 - **作者**: Google DeepMind
 - **意义**: 原生多模态 + Agent 能力
 - **关键技术**: 实时视频，Project Astra
+
+### Vision Transformer (ViT) (2020) ⭐
+- **论文**: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+- **作者**: Alexey Dosovitskiy et al. (Google Research)
+- **意义**: 将 Transformer 成功应用于计算机视觉，证明注意力机制的通用性
+- **关键技术**: Patch Embedding（16x16 图像块转换为 token 序列），CLS token 用于分类
+- **创新点**: 降低归纳偏置，让模型从数据中学习视觉模式而非依赖卷积操作
+- **影响**: 在大规模数据上超越传统 CNN，开启多模态 Transformer 时代，催生 CLIP、DALL-E 等视觉-语言模型
+
+### LLaVA (2023)
+- **论文**: "Visual Instruction Tuning"
+- **作者**: Microsoft, University of Wisconsin
+- **意义**: 开源视觉语言模型的里程碑
+- **关键技术**: 将 Vision Encoder 的 image tokens 与文本 tokens 连接后输入 LLM
+- **影响**: 推动开源 VLM 生态发展
+
+### Bradley-Terry Model
+- **意义**: 偏好对比较的数学基础，奖励模型训练的核心
+- **应用**: RLHF 中的成对偏好比较
+- **公式**: P(i > j) = exp(r_i) / (exp(r_i) + exp(r_j))
+- **关键**: 模型输出两个分数并以成对方式训练，推理时只给一个输出
+
+### GRPO (2024)
+- **论文**: "Group Relative Policy Optimization"
+- **意义**: 推理模型训练的关键算法，o1、DeepSeek 等模型的核心技术
+- **关键优势**:
+  - 无需训练价值函数（Value Function），简化训练流程
+  - 特别适合可验证奖励任务（数学、代码等有标准答案的问题）
+  - 只需保留策略模型和参考模型，降低资源消耗
+- **改进版本**: GRPO Done Right（移除归一化项，解决长度偏差问题），DAPO（针对推理模型的变体）
+- **对比 PPO**: PPO 需要价值函数估计基线，GRPO 使用组内相对优势直接对比
+
+### Masked Diffusion Models (MDM) (2024+)
+- **意义**: 将图像扩散模型范式迁移到文本生成，实现并行生成
+- **核心思想**: 将图像噪声替换为文本掩码 token，固定步数（如 10 步）并行去掩码
+- **关键优势**:
+  - 推理速度提升 10 倍（相比自回归逐 token 生成）
+  - 特别适合代码补全等"填空"任务
+- **代表公司**: Inception（商业化先锋）
+- **对比自回归**: 训练仍可并行，但推理时必须顺序生成；扩散模型训练和推理都可并行
 
 ---
 
@@ -205,12 +246,16 @@
 2017  Transformer    - 现代 AI 基石 ⭐
 2018  BERT/GPT       - 预训练时代
 2020  GPT-3          - 大模型时代 ⭐
+2020  Vision Transformer - Transformer 进入视觉 ⭐
 2020  Scaling Laws   - 理论基础 ⭐
 2022  InstructGPT    - RLHF + ChatGPT ⭐
 2022  Chain-of-Thought - 推理突破 ⭐
 2023  GPT-4          - 多模态前沿 ⭐
 2023  LLaMA          - 开源爆发 ⭐
+2023  LLaVA          - 开源 VLM 里程碑
 2024  o1             - 推理革命 ⭐
+2024  GRPO           - 推理模型训练算法
+2024+ Masked Diffusion - 并行文本生成
 ```
 
 ---

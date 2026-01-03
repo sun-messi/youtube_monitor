@@ -4,109 +4,177 @@
       "name": "Pioneer Works",
       "handle": "@PioneerWorksVideo",
       "url": "https://www.youtube.com/@PioneerWorksVideo",
-      "channel_id": "UCvz10aafWdDEvO_4ehcr0jQ"
+      "channel_id": "UCvz10aafWdDEvO_4ehcr0jQ",
+      "tags": []
     },
     {
       "name": "20VC",
       "handle": "@20VC",
       "url": "https://www.youtube.com/@20VC",
-      "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA"
+      "channel_id": "UCf0PBRjhf0rF8fWBIxTuoWA",
+      "tags": [
+        "investment",
+        "vc"
+      ]
     },
     {
       "name": "a16z",
       "handle": "@a16z",
       "url": "https://www.youtube.com/@a16z",
-      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA"
+      "channel_id": "UC9cn0TuPq4dnbTY-CBsm8XA",
+      "tags": [
+        "investment",
+        "ai",
+        "tech"
+      ]
     },
     {
       "name": "Dwarkesh Patel",
       "handle": "@DwarkeshPatel",
       "url": "https://www.youtube.com/@DwarkeshPatel",
-      "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA"
+      "channel_id": "UCXl4i9dYBrFOabk0xGmbkRA",
+      "tags": [
+        "investment",
+        "ai"
+      ]
     },
     {
       "name": "No Priors",
       "handle": "@NoPriorsPodcast",
       "url": "https://www.youtube.com/@NoPriorsPodcast",
-      "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw"
+      "channel_id": "UCSI7h9hydQ40K5MJHnCrQvw",
+      "tags": [
+        "ai",
+        "tech"
+      ]
     },
     {
       "name": "Nikhil Kamath",
       "handle": "@nikhil.kamath",
       "url": "https://www.youtube.com/@nikhil.kamath",
-      "channel_id": "UCnC8SAZzQiBGYVSKZ_S3y4Q"
+      "channel_id": "UCnC8SAZzQiBGYVSKZ_S3y4Q",
+      "tags": [
+        "business"
+      ]
     },
     {
       "name": "Latent Space",
       "handle": "@LatentSpacePod",
       "url": "https://www.youtube.com/@LatentSpacePod",
-      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+      "tags": [
+        "ai",
+        "technical"
+      ]
     },
     {
       "name": "All-In Podcast",
       "handle": "@allin",
       "url": "https://www.youtube.com/@allin",
-      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg"
+      "channel_id": "UCESLZhusAkFfsNsApnjF_Cg",
+      "tags": [
+        "investment",
+        "tech",
+        "business"
+      ]
     },
     {
       "name": "Lenny's Podcast",
       "handle": "@LennysPodcast",
       "url": "https://www.youtube.com/@LennysPodcast",
-      "channel_id": "UC6t1O76G0jYXOAoYCm153dA"
+      "channel_id": "UC6t1O76G0jYXOAoYCm153dA",
+      "tags": [
+        "product",
+        "business"
+      ]
     },
     {
       "name": "Machine Learning Street Talk",
       "handle": "@MachineLearningStreetTalk",
       "url": "https://www.youtube.com/@MachineLearningStreetTalk",
-      "channel_id": "UCMLtBahI5DMrt0NPvDSoIRQ"
+      "channel_id": "UCMLtBahI5DMrt0NPvDSoIRQ",
+      "tags": [
+        "academic",
+        "ai",
+        "technical"
+      ]
     },
     {
       "name": "Eye on AI",
       "handle": "@eyeonai3425",
       "url": "https://www.youtube.com/@eyeonai3425",
-      "channel_id": "UC-o9u9QL4zXzBwjvT1gmzNg"
+      "channel_id": "UC-o9u9QL4zXzBwjvT1gmzNg",
+      "tags": [
+        "ai",
+        "technical"
+      ]
     },
     {
       "name": "Acquired",
       "handle": "@acquiredFM",
       "url": "https://www.youtube.com/@acquiredFM",
-      "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw"
+      "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw",
+      "tags": [
+        "investment",
+        "business"
+      ]
     },
     {
       "name": "The Knowledge Project",
       "handle": "@tkppodcast",
       "url": "https://www.youtube.com/@tkppodcast",
-      "channel_id": "UCLtTf_uKt0Itd0NG7txrwXA"
+      "channel_id": "UCLtTf_uKt0Itd0NG7txrwXA",
+      "tags": [
+        "business"
+      ]
     },
     {
       "name": "Invest Like The Best",
       "handle": "@ILTB_Podcast",
       "url": "https://www.youtube.com/@ILTB_Podcast",
-      "channel_id": "UCpQBb0fToph3jrDulwz1iUQ"
+      "channel_id": "UCpQBb0fToph3jrDulwz1iUQ",
+      "tags": [
+        "investment"
+      ]
     },
     {
       "name": "Lex Fridman",
       "handle": "@lexfridman",
       "url": "https://www.youtube.com/@lexfridman",
-      "channel_id": "UCSHZKyawb77ixDdsGog4iWA"
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+      "tags": [
+        "tech"
+      ]
     },
     {
       "name": "Alex Kantrowitz",
       "handle": "@Alex.kantrowitz",
       "url": "https://www.youtube.com/@Alex.kantrowitz",
-      "channel_id": "UCye1YedIypHffYb8k6Gp9wg"
+      "channel_id": "UCye1YedIypHffYb8k6Gp9wg",
+      "tags": [
+        "tech",
+        "business"
+      ]
     },
     {
       "name": "Anthropic",
       "handle": "@anthropic-ai",
       "url": "https://www.youtube.com/@anthropic-ai",
-      "channel_id": "UCrDwWp7EBBv4NwvScIpBDOA"
+      "channel_id": "UCrDwWp7EBBv4NwvScIpBDOA",
+      "tags": [
+        "ai",
+        "tech"
+      ]
     },
     {
       "name": "AI Dot Engineer",
       "handle": "@aiDotEngineer",
       "url": "https://www.youtube.com/@aiDotEngineer",
-      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA",
+      "tags": [
+        "ai",
+        "tech"
+      ]
     }
   ],
   "_disabled_channels": []

@@ -152,7 +152,7 @@ def load_archive(archive_file: str):
     return Archive(archive_file)
 
 
-def process_single_video(video_id: str, config, archive) -> int:
+def process_single_video(video_id: str, config, archive, channel_name: Optional[str] = None) -> int:
     """
     Process a single video (skips duration and date filters).
 
@@ -160,6 +160,7 @@ def process_single_video(video_id: str, config, archive) -> int:
         video_id: YouTube video ID
         config: Config object
         archive: Archive object
+        channel_name: Optional channel name to select appropriate prompts
 
     Returns:
         int: Exit code (0 for success, 1 for failure)
@@ -169,9 +170,39 @@ def process_single_video(video_id: str, config, archive) -> int:
 
     logger.info(f"Processing single video: {video_id}")
     logger.info(f"(skip_filters=True: ignoring duration/date limits)")
+
+    # Find channel config if channel name provided
+    channel_config = None
+    if channel_name:
+        from infrastructure.config import load_config as load_full_config, ChannelConfig
+        full_config = load_full_config()
+
+        # First try to find exact channel name match
+        for ch in full_config.channels:
+            if ch.name == channel_name:
+                channel_config = ch
+                logger.info(f"使用频道: {ch.name}, tags: {ch.tags}")
+                break
+
+        # If not found, check if it's a tag type (academic/investment/etc)
+        if not channel_config:
+            tag_lower = channel_name.lower()
+            if tag_lower in ['academic', 'investment', 'vc', 'ai', 'tech', 'business', 'technical', 'product']:
+                # Create a temporary ChannelConfig with the specified tag
+                channel_config = ChannelConfig(
+                    name=f"Manual-{channel_name}",
+                    handle="",
+                    url="",
+                    channel_id="",
+                    tags=[tag_lower]
+                )
+                logger.info(f"使用手动指定的类型: {channel_name}, tags: [{tag_lower}]")
+            else:
+                logger.warning(f"频道或类型 '{channel_name}' 未找到，使用默认 prompts")
+
     logger.info("-" * 60)
 
-    result = process_video(video_id, config, archive, skip_filters=True)
+    result = process_video(video_id, config, archive, skip_filters=True, channel_config=channel_config)
 
     if result.success:
         if result.output_path:
@@ -263,13 +294,23 @@ def main() -> int:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Process single video
+  # Process single video (default prompts)
   python main.py --video dQw4w9WgXcQ
 
-  # Process all new videos
+  # Specify channel name (from channels.json)
+  python main.py --video Q86qzJ1K1Ss --channel "Machine Learning Street Talk"
+
+  # Specify content type directly (for videos not in channels.json)
+  python main.py --video abc123 --channel academic      # 使用学术 prompts
+  python main.py --video xyz789 --channel investment    # 使用默认 prompts
+  python main.py --video def456 --channel vc            # 使用默认 prompts
+
+  # Supported types: academic, investment, vc, ai, tech, business, technical, product
+
+  # Process all new videos (auto-detects channel type from channels.json)
   python main.py
 
-  # Continuous monitoring
+  # Continuous monitoring (auto-detects channel type)
   python main.py --loop
   nohup python main.py --loop >> output.log 2>&1 &
     # To stop the loop (Linux)
@@ -284,6 +325,12 @@ Examples:
         "--video",
         metavar="VIDEO_ID",
         help="Process single video by ID",
+    )
+
+    parser.add_argument(
+        "--channel",
+        metavar="CHANNEL_OR_TYPE",
+        help="（配合 --video）指定频道名称或内容类型。可以是：1) channels.json 中的频道名（如 'Machine Learning Street Talk'），或 2) 内容类型标签（academic/investment/vc/ai/tech 等）。academic 类型使用学术 prompts",
     )
 
     parser.add_argument(
@@ -318,7 +365,7 @@ Examples:
     # Execute appropriate mode
     try:
         if args.video:
-            return process_single_video(args.video, config, archive)
+            return process_single_video(args.video, config, archive, channel_name=args.channel)
         elif args.loop:
             # Loop mode defaults to sending email (use --no-email to disable)
             return run_loop(email_enabled=True)

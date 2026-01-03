@@ -32,7 +32,8 @@ def process_video(
     config,
     archive,
     prompts_dir: Optional[Path] = None,
-    skip_filters: bool = False
+    skip_filters: bool = False,
+    channel_config: Optional['ChannelConfig'] = None
 ) -> PipelineResult:
     """
     Process a single video through the complete pipeline.
@@ -69,8 +70,29 @@ def process_video(
     if prompts_dir is None:
         prompts_dir = Path("./prompts")
 
-    prompt_summary = prompts_dir / "yt-summary.md"
-    prompt_translate = prompts_dir / "yt-translate.md"
+    # 🎯 Prompt selection logic based on channel tags
+    is_academic = False
+    use_agent_override = None
+
+    if channel_config and channel_config.is_academic():
+        # Academic channel: use academic prompts, force disable agent
+        prompt_summary = prompts_dir / "yt-summary-academic.md"
+        prompt_translate = prompts_dir / "yt-translate-academic.md"
+        is_academic = True
+        use_agent_override = False  # Force disable agent for academic content
+        logger.info(f"[{video_id}] 检测到学术频道 tags={channel_config.tags}，使用学术 prompts")
+    else:
+        # Default: use investment/general prompts
+        prompt_summary = prompts_dir / "yt-summary.md"
+        prompt_translate = prompts_dir / "yt-translate.md"
+
+    # Fallback mechanism: if prompt file doesn't exist, use default
+    if not prompt_summary.exists():
+        logger.warning(f"Prompt not found: {prompt_summary}, falling back to default")
+        prompt_summary = prompts_dir / "yt-summary.md"
+    if not prompt_translate.exists():
+        logger.warning(f"Prompt not found: {prompt_translate}, falling back to default")
+        prompt_translate = prompts_dir / "yt-translate.md"
 
     logger.info(f"[{video_id}] Starting pipeline processing...")
 
@@ -138,13 +160,15 @@ def process_video(
         logger.info(f"[{video_id}] ✓ Processed subtitles ({len(srt_entries)} entries)")
 
         # Stage 4: AI Analysis
-        use_agent = getattr(config, 'use_agent', False)
+        # Academic content overrides agent setting
+        use_agent = use_agent_override if use_agent_override is not None else getattr(config, 'use_agent', False)
         agent_name = getattr(config, 'agent_name', 'tech-investment-analyst')
 
         if use_agent:
             logger.info(f"[{video_id}] Stage 4: Analyzing video with Agent '{agent_name}'...")
         else:
-            logger.info(f"[{video_id}] Stage 4: Analyzing video with Claude CLI...")
+            mode = "Academic Mode" if is_academic else "Standard Mode"
+            logger.info(f"[{video_id}] Stage 4: Analyzing video with Claude CLI ({mode})...")
 
         # Read subtitle content for analysis
         with open(clean_file, 'r', encoding='utf-8') as f:
@@ -338,9 +362,21 @@ def run_pipeline(
 
             logger.info(f"Found {len(new_videos)}/{len(videos)} new videos")
 
+            # Find matching ChannelConfig
+            channel_config = None
+            for ch_cfg in config.channels:
+                if ch_cfg.channel_id == channel.get("channel_id"):
+                    channel_config = ch_cfg
+                    break
+
             # Process each video
             for video in new_videos:
-                result = process_video(video.video_id, config, archive)
+                result = process_video(
+                    video.video_id,
+                    config,
+                    archive,
+                    channel_config=channel_config
+                )
                 if result.success and result.output_path:
                     successful.append(result)
                 elif not result.success:
