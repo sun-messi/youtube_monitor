@@ -40,7 +40,7 @@
       "name": "Latent Space",
       "handle": "@LatentSpacePod",
       "url": "https://www.youtube.com/@LatentSpacePod",
-      "channel_id": "UCzJpE2zKwAFZ8JwMerlNquw"
+      "channel_id": "UCxBcwypKK-W3GHd_RZ9FZrQ"
     },
     {
       "name": "All-In Podcast",
@@ -68,9 +68,9 @@
     },
     {
       "name": "Acquired",
-      "handle": "@AcquiredFM",
-      "url": "https://www.youtube.com/@AcquiredFM",
-      "channel_id": "UC0w4AA42ItXQEb9aZld87-w"
+      "handle": "@acquiredFM",
+      "url": "https://www.youtube.com/@acquiredFM",
+      "channel_id": "UCyFqFYfTW2VoIQKylJ04Rtw"
     },
     {
       "name": "The Knowledge Project",
@@ -101,6 +101,12 @@
       "handle": "@anthropic-ai",
       "url": "https://www.youtube.com/@anthropic-ai",
       "channel_id": "UCrDwWp7EBBv4NwvScIpBDOA"
+    },
+    {
+      "name": "AI Dot Engineer",
+      "handle": "@aiDotEngineer",
+      "url": "https://www.youtube.com/@aiDotEngineer",
+      "channel_id": "UCLKPca3kwwd-B59HNr-_lvA"
     }
   ],
   "_disabled_channels": []

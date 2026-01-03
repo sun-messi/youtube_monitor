@@ -271,6 +271,9 @@ Examples:
 
   # Continuous monitoring
   python main.py --loop
+  nohup python main.py --loop >> output.log 2>&1 &
+    # To stop the loop (Linux)
+  pkill -f "main.py --loop"
 
   # With email notification
   python main.py --email

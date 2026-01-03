@@ -80,10 +80,11 @@ def parse_chapter_table(markdown_content: str) -> List[Tuple[int, int, str, str]
 
 def parse_translation_blocks(markdown_content: str) -> List[Tuple[int, int, str]]:
     """
-    解析翻译内容中的细分时间戳块
+    解析翻译内容中的时间戳块
 
-    格式: **(0:00 - 1:20)**
-          翻译内容...
+    支持两种格式:
+    1. 细分时间戳: **(0:00 - 1:20)**
+    2. 章节标题: ### (0:00 - 15:00) Part 1
 
     返回: [(start_sec, end_sec, content), ...]
     """
@@ -97,22 +98,35 @@ def parse_translation_blocks(markdown_content: str) -> List[Tuple[int, int, str]
 
     translation_content = translation_match.group(1)
 
-    # 匹配时间戳块: **(0:00 - 1:20)** 或 **(0:00 - 1:20)**\n内容
-    # 使用前瞻来分割每个时间戳块
-    block_pattern = r'\*\*\((\d{1,2}:\d{2}(?::\d{2})?)\s*[-–]\s*(\d{1,2}:\d{2}(?::\d{2})?)\)\*\*\s*\n(.*?)(?=\*\*\(\d{1,2}:\d{2}|\Z)'
+    # 先尝试匹配细分时间戳格式: **(0:00 - 1:20)**
+    fine_pattern = r'\*\*\((\d{1,2}:\d{2}(?::\d{2})?)\s*[-–]\s*(\d{1,2}:\d{2}(?::\d{2})?)\)\*\*\s*\n(.*?)(?=\*\*\(\d{1,2}:\d{2}|\Z)'
+    matches = re.findall(fine_pattern, translation_content, re.DOTALL)
 
-    matches = re.findall(block_pattern, translation_content, re.DOTALL)
+    if matches:
+        # 找到细分时间戳
+        for match in matches:
+            start_time, end_time, content = match
+            start_sec = parse_time_to_seconds(start_time)
+            end_sec = parse_time_to_seconds(end_time)
+            content = content.strip()
+            if content:
+                blocks.append((start_sec, end_sec, content))
+        logger.info(f"解析到 {len(blocks)} 个细分时间戳块")
+    else:
+        # 尝试匹配章节标题格式: ### (0:00 - 15:00) ... 或 ### (15:00 - End) ...
+        chapter_pattern = r'###\s*\((\d{1,2}:\d{2}(?::\d{2})?)\s*[-–]\s*(\d{1,2}:\d{2}(?::\d{2})?|End)\)\s*[^\n]*\n+(.*?)(?=###\s*\(|\Z)'
+        matches = re.findall(chapter_pattern, translation_content, re.DOTALL)
 
-    for match in matches:
-        start_time, end_time, content = match
-        start_sec = parse_time_to_seconds(start_time)
-        end_sec = parse_time_to_seconds(end_time)
-        content = content.strip()
+        for match in matches:
+            start_time, end_time_str, content = match
+            start_sec = parse_time_to_seconds(start_time)
+            # 如果是 "End"，使用一个很大的数字（例如 999999）
+            end_sec = 999999 if end_time_str == "End" else parse_time_to_seconds(end_time_str)
+            content = content.strip()
+            if content:
+                blocks.append((start_sec, end_sec, content))
+        logger.info(f"解析到 {len(blocks)} 个章节翻译块")
 
-        if content:
-            blocks.append((start_sec, end_sec, content))
-
-    logger.info(f"解析到 {len(blocks)} 个翻译块")
     return blocks
 
 
@@ -244,7 +258,7 @@ def remove_ai_garbage(text: str, timeout: int = 120) -> Optional[str]:
         cmd = [
             str(CLAUDE_CLI),
             "-p", prompt,
-            "--model", "claude-3-5-haiku-latest",
+            "--model", "claude-sonnet-4-20250514",
             "--output-format", "text"
         ]
 
@@ -281,7 +295,7 @@ def review_content(
     restructure: bool = True,
     remove_garbage: bool = True,
     remove_timestamps: bool = True,
-    timeout: int = 120
+    timeout: int = 300
 ) -> str:
     """
     审核并优化翻译内容
@@ -298,17 +312,17 @@ def review_content(
     """
     result = markdown_content
 
-    # 1. 删除细分时间戳（避免与章节时间戳冲突）
-    if remove_timestamps:
-        logger.info("删除细分时间戳...")
-        result = remove_fine_timestamps(result)
-
-    # 2. 章节重组（Python 代码，可靠）
+    # 1. 章节重组（Python 代码，可靠）- 必须在删除时间戳之前执行
     if restructure:
         logger.info("开始章节重组...")
         result = restructure_translation(result)
 
-    # 3. 删除 AI 废话（haiku，可选）
+    # 2. 删除细分时间戳（重组完成后删除，避免与章节时间戳冲突）
+    if remove_timestamps:
+        logger.info("删除细分时间戳...")
+        result = remove_fine_timestamps(result)
+
+    # 3. 删除 AI 废话（sonnet-4，可选）
     if remove_garbage:
         logger.info("开始清理 AI 废话...")
         cleaned = remove_ai_garbage(result, timeout)
