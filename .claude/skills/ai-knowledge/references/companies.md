@@ -216,6 +216,13 @@
 | **Pika** | Pika 1.0 | 视频生成 |
 | **Black Forest Labs** | FLUX | SD 团队新作 |
 
+### AI 推理与生成
+
+| 公司 | 产品 | 说明 |
+|------|------|------|
+| **DeepSeek** | DeepSeek-R1 | 推理模型，GRPO 训练，数学和代码能力强 |
+| **Inception** | Masked Diffusion | 文本扩散模型商业化先锋，并行文本生成 |
+
 ### 语音 AI
 
 | 公司 | 产品 | 说明 |
@@ -299,8 +306,9 @@
 | **Ashish Vaswani** | Transformer 论文一作 |
 | **Noam Shazeer** | Transformer 作者 → Character.AI → Google |
 | **François Chollet** | Keras 创始人，ARC 评估 (Google) |
-| **Andrej Karpathy** | Tesla AI 前负责人 |
 | **Jim Fan** | NVIDIA 具身 AI 研究 |
+| **Alexey Dosovitskiy** | Vision Transformer 论文一作 (Google Research) |
+| **Tri Dao** | Flash Attention 作者 (Stanford) |
 
 ---
 

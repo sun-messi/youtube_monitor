@@ -10,10 +10,13 @@
 
   "claude_timeout_seconds": 600,
   "claude_model": "claude-sonnet-4-20250514",
+  "claude_model_summary": "claude-opus-4-20250514",
+  "claude_model_translate": "claude-sonnet-4-20250514",
+  "claude_thinking_budget": 20000,
   "_model_options": {
     "_comment": "可选模型列表",
-    "best_quality": "claude-opus-4-20250514 (最佳质量，最贵)",
-    "balanced": "claude-sonnet-4-20250514 (推荐，平衡质量与成本)",
+    "summary": "claude-opus-4-20250514 + thinking (高质量摘要分析)",
+    "translate": "claude-sonnet-4-20250514 (翻译，平衡质量与成本)",
     "fast": "claude-3-5-haiku-latest (快速但质量较差)"
   },
 

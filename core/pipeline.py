@@ -74,13 +74,24 @@ def process_video(
     is_academic = False
     use_agent_override = None
 
-    if channel_config and channel_config.is_academic():
+    # Check if academic channel (handle both ChannelConfig objects and dicts)
+    def check_is_academic(cfg):
+        if cfg is None:
+            return False
+        if hasattr(cfg, 'is_academic'):
+            return cfg.is_academic()
+        # It's a dict
+        tags = cfg.get('tags', []) or []
+        return 'academic' in tags
+
+    if channel_config and check_is_academic(channel_config):
         # Academic channel: use academic prompts, force disable agent
         prompt_summary = prompts_dir / "yt-summary-academic.md"
         prompt_translate = prompts_dir / "yt-translate-academic.md"
         is_academic = True
         use_agent_override = False  # Force disable agent for academic content
-        logger.info(f"[{video_id}] 检测到学术频道 tags={channel_config.tags}，使用学术 prompts")
+        tags = channel_config.tags if hasattr(channel_config, 'tags') else channel_config.get('tags', [])
+        logger.info(f"[{video_id}] 检测到学术频道 tags={tags}，使用学术 prompts")
     else:
         # Default: use investment/general prompts
         prompt_summary = prompts_dir / "yt-summary.md"
@@ -174,12 +185,18 @@ def process_video(
         with open(clean_file, 'r', encoding='utf-8') as f:
             subtitle_content = f.read()
 
+        # Get model configs (support both old and new config format)
+        model_summary = getattr(config, 'claude_model_summary', None) or getattr(config, 'claude_model', 'claude-opus-4-20250514')
+        model_translate = getattr(config, 'claude_model_translate', None) or getattr(config, 'claude_model', 'claude-sonnet-4-20250514')
+        thinking_budget = getattr(config, 'claude_thinking_budget', 0)
+
         # Use analyze_video which supports agent mode
         analysis_result = analyze_video(
             subtitle_text=subtitle_content,
             prompt_file=prompt_summary,
             timeout=config.claude_timeout_seconds,
-            model=config.claude_model,
+            model=model_summary,
+            thinking_budget=thinking_budget,
             use_agent=use_agent,
             agent_name=agent_name
         )
@@ -191,7 +208,7 @@ def process_video(
                 clean_file,
                 prompt_summary,
                 timeout=config.claude_timeout_seconds,
-                model=config.claude_model
+                model=model_summary
             )
         else:
             summary = analysis_result.raw_markdown
@@ -230,7 +247,7 @@ def process_video(
             speakers=speakers,
             prompt_file=prompt_translate,
             timeout=config.claude_timeout_seconds,
-            model=config.claude_model,
+            model=model_translate,
             context_lines=config.context_lines,
             max_retries=config.translation_max_retries,
             retry_delay=config.translation_retry_delay,
@@ -352,22 +369,34 @@ def run_pipeline(
     logger.info(f"Processing {len(target_channels)} channel(s)...")
 
     for channel in target_channels:
-        channel_name = channel.get("name", "Unknown")
+        # Handle both ChannelConfig objects and dicts
+        if hasattr(channel, 'name'):
+            # It's a ChannelConfig object
+            channel_name = channel.name
+            channel_id = channel.channel_id
+            channel_dict = {
+                "name": channel.name,
+                "handle": channel.handle,
+                "url": channel.url,
+                "channel_id": channel.channel_id,
+                "tags": getattr(channel, 'tags', None)
+            }
+            channel_config = channel
+        else:
+            # It's a dict
+            channel_name = channel.get("name", "Unknown")
+            channel_id = channel.get("channel_id")
+            channel_dict = channel
+            channel_config = channel  # Use the dict directly
+
         logger.info(f"Checking channel: {channel_name}")
 
         try:
             # Fetch new videos from RSS
-            videos = fetch_channel_videos_rss(channel, config.lookback_hours, channels_file)
+            videos = fetch_channel_videos_rss(channel_dict, config.lookback_hours, channels_file)
             new_videos = filter_new_videos_rss(videos, archive)
 
             logger.info(f"Found {len(new_videos)}/{len(videos)} new videos")
-
-            # Find matching ChannelConfig
-            channel_config = None
-            for ch_cfg in config.channels:
-                if ch_cfg.channel_id == channel.get("channel_id"):
-                    channel_config = ch_cfg
-                    break
 
             # Process each video
             for video in new_videos:

@@ -61,7 +61,9 @@ def load_config():
         min_duration_minutes: int = 10
         subtitle_language: str = "en"
         subtitle_merge_interval: int = 30
-        claude_model: str = "claude-sonnet-4-20250514"
+        claude_model_summary: str = "claude-opus-4-20250514"
+        claude_model_translate: str = "claude-sonnet-4-20250514"
+        claude_thinking_budget: int = 10000
         claude_timeout_seconds: int = 600
         min_chapter_duration: int = 180
         max_chapter_duration: int = 900

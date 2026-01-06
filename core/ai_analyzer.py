@@ -74,7 +74,8 @@ def call_claude_with_prompt(
     prompt_file: Path,
     input_content: str,
     timeout: int = 300,
-    model: str = None
+    model: str = None,
+    thinking_budget: int = 0
 ) -> str:
     """
     Call Claude CLI with a local prompt file.
@@ -84,6 +85,7 @@ def call_claude_with_prompt(
         input_content: Content to append to the prompt
         timeout: Timeout in seconds
         model: Claude model to use
+        thinking_budget: Token budget for extended thinking (0 = disabled)
 
     Returns:
         Claude's output text
@@ -107,7 +109,8 @@ def call_claude_with_prompt(
         tmp.write(full_prompt)
         tmp_path = tmp.name
 
-    logger.info(f"Calling Claude CLI with prompt: {prompt_file.name}" + (f" (model: {model})" if model else ""))
+    thinking_info = f", thinking: {thinking_budget}" if thinking_budget > 0 else ""
+    logger.info(f"Calling Claude CLI with prompt: {prompt_file.name}" + (f" (model: {model}{thinking_info})" if model else ""))
 
     try:
         # Pass the full prompt directly to Claude CLI
@@ -118,6 +121,7 @@ def call_claude_with_prompt(
         ]
         if model:
             cmd.extend(["--model", model])
+        # Note: --thinking-budget is not supported by Claude CLI, skipping
 
         result = subprocess.run(
             cmd,
@@ -294,6 +298,7 @@ def analyze_video(
     prompt_file: Optional[Path] = None,
     timeout: int = 300,
     model: str = None,
+    thinking_budget: int = 0,
     use_agent: bool = False,
     agent_name: str = AGENT_TECH_INVESTMENT
 ) -> Optional[AnalysisResult]:
@@ -305,6 +310,7 @@ def analyze_video(
         prompt_file: Path to yt-summary.md prompt
         timeout: Timeout in seconds
         model: Claude model to use
+        thinking_budget: Token budget for extended thinking (0 = disabled)
         use_agent: If True, use specialized agent for analysis
         agent_name: Agent name to use (default: tech-investment-analyst)
 
@@ -312,7 +318,8 @@ def analyze_video(
         AnalysisResult or None if failed
     """
     try:
-        logger.info(f"Analyzing video content {'with agent ' + agent_name if use_agent else 'with Claude CLI'}")
+        thinking_info = f" with thinking budget {thinking_budget}" if thinking_budget > 0 else ""
+        logger.info(f"Analyzing video content {'with agent ' + agent_name if use_agent else 'with Claude CLI'}{thinking_info}")
 
         # Use agent-based analysis
         if use_agent:
@@ -322,7 +329,7 @@ def analyze_video(
                 summary = call_agent(agent_name, _build_analysis_prompt(subtitle_text), timeout)
         # Use direct Claude CLI call
         elif prompt_file and prompt_file.exists():
-            summary = call_claude_with_prompt(prompt_file, subtitle_text, timeout, model)
+            summary = call_claude_with_prompt(prompt_file, subtitle_text, timeout, model, thinking_budget)
         else:
             # Direct prompt if no file provided
             summary = _call_claude_direct(subtitle_text, timeout, model)

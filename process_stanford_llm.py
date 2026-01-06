@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 PLAYLIST_URL = "https://youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy"
-WAIT_TIME_MINUTES = 30
+WAIT_TIME_MINUTES = 300  # 5 hours = 300 minutes
 WAIT_TIME_SECONDS = WAIT_TIME_MINUTES * 60
 
 
@@ -112,7 +112,8 @@ def main():
     logger.info("Stanford LLM Course Playlist Processor")
     logger.info("=" * 60)
     logger.info(f"Playlist: {PLAYLIST_URL}")
-    logger.info(f"Wait time between videos: {WAIT_TIME_MINUTES} minutes")
+    logger.info(f"Wait time between videos: {WAIT_TIME_MINUTES} minutes (5 hours)")
+    logger.info("Starting from: Lecture 3 (skipping Lecture 1 & 2)")
     logger.info("=" * 60)
 
     # Step 1: Extract video IDs
@@ -122,7 +123,9 @@ def main():
         logger.warning("No videos found in playlist")
         sys.exit(1)
 
-    # Step 2: Process each video
+    # Step 2: Process each video (skip first two videos, start from Lecture 3)
+    logger.info("⏭️  Skipping first two videos (Lecture 1 & 2)")
+    video_ids = video_ids[2:]  # Skip first two videos
     total = len(video_ids)
     successful = 0
     failed = 0

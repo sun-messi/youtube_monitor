@@ -186,7 +186,9 @@ def replace_translation_section(markdown_content: str, new_translation: str) -> 
     pattern = r'## 📝 完整翻译\s*\n.*?(?=\n---\s*\n\*生成时间|\Z)'
 
     if re.search(pattern, markdown_content, re.DOTALL):
-        result = re.sub(pattern, new_translation + "\n", markdown_content, flags=re.DOTALL)
+        # 转义替换字符串中的反斜杠，避免被解释为正则表达式转义序列
+        escaped_translation = new_translation.replace('\\', r'\\')
+        result = re.sub(pattern, escaped_translation + "\n", markdown_content, flags=re.DOTALL)
         return result
     else:
         logger.warning("未找到翻译部分，无法替换")
