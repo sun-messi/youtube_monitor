@@ -3,7 +3,7 @@ Reviewer Module - 审核和重组翻译内容
 
 功能：
 1. 章节重组：利用章节导航表时间戳重新划分翻译内容（Python 代码）
-2. 删除 AI 废话：用 haiku 删除无关内容（可选，只删不改）
+2. 删除 AI 废话：用 Sonnet 4 删除无关内容（可选，只删不改）
 """
 
 import re
@@ -220,7 +220,7 @@ def remove_fine_timestamps(markdown_content: str) -> str:
 
 def remove_ai_garbage(text: str, timeout: int = 120) -> Optional[str]:
     """
-    用 Claude haiku 删除 AI 生成的废话
+    用 Claude Sonnet 4 删除 AI 生成的废话
 
     严格限制：只删除，不添加，不改写
 
@@ -281,14 +281,14 @@ def remove_ai_garbage(text: str, timeout: int = 120) -> Optional[str]:
                 logger.warning("清理结果过短，放弃使用")
                 return None
         else:
-            logger.error(f"haiku 调用失败: {result.stderr}")
+            logger.error(f"Sonnet 4 调用失败: {result.stderr}")
             return None
 
     except subprocess.TimeoutExpired:
-        logger.error(f"haiku 调用超时 ({timeout}s)")
+        logger.error(f"Sonnet 4 调用超时 ({timeout}s)")
         return None
     except Exception as e:
-        logger.error(f"haiku 调用错误: {e}")
+        logger.error(f"Sonnet 4 调用错误: {e}")
         return None
 
 
@@ -305,9 +305,9 @@ def review_content(
     Args:
         markdown_content: 原始 Markdown 内容
         restructure: 是否重组章节（Python 代码）
-        remove_garbage: 是否删除 AI 废话（haiku）
+        remove_garbage: 是否删除 AI 废话（Sonnet 4）
         remove_timestamps: 是否删除细分时间戳（保留章节标题时间戳）
-        timeout: haiku 调用超时时间
+        timeout: Sonnet 4 调用超时时间
 
     Returns:
         审核后的 Markdown 内容

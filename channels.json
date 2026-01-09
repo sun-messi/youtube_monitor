@@ -175,6 +175,16 @@
         "ai",
         "tech"
       ]
+    },
+    {
+      "name": "Veritasium",
+      "handle": "@veritasium",
+      "url": "https://www.youtube.com/@veritasium",
+      "channel_id": "UCHnyfMqiRRG1u-2MsSQLbXA",
+      "tags": [
+        "academic",
+        "science"
+      ]
     }
   ],
   "_disabled_channels": []
