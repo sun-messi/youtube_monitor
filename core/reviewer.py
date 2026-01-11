@@ -314,23 +314,23 @@ def review_content(
     """
     result = markdown_content
 
-    # 1. 章节重组（Python 代码，可靠）- 必须在删除时间戳之前执行
-    if restructure:
-        logger.info("开始章节重组...")
-        result = restructure_translation(result)
+    # 1. 章节重组（暂时跳过）
+    # if restructure:
+    #     logger.info("开始章节重组...")
+    #     result = restructure_translation(result)
 
-    # 2. 删除细分时间戳（重组完成后删除，避免与章节时间戳冲突）
-    if remove_timestamps:
-        logger.info("删除细分时间戳...")
-        result = remove_fine_timestamps(result)
+    # 2. 删除细分时间戳（暂时跳过）
+    # if remove_timestamps:
+    #     logger.info("删除细分时间戳...")
+    #     result = remove_fine_timestamps(result)
 
-    # 3. 删除 AI 废话（sonnet-4，可选）
-    if remove_garbage:
-        logger.info("开始清理 AI 废话...")
-        cleaned = remove_ai_garbage(result, timeout)
-        if cleaned:
-            result = cleaned
-        else:
-            logger.warning("AI 废话清理失败，使用原内容")
+    # 3. 删除 AI 废话（暂时跳过）
+    # if remove_garbage:
+    #     logger.info("开始清理 AI 废话...")
+    #     cleaned = remove_ai_garbage(result, timeout)
+    #     if cleaned:
+    #         result = cleaned
+    #     else:
+    #         logger.warning("AI 废话清理失败，使用原内容")
 
     return result

@@ -185,6 +185,17 @@
         "academic",
         "science"
       ]
+    },
+    {
+      "name": "Y Combinator",
+      "handle": "@ycombinator",
+      "url": "https://www.youtube.com/@ycombinator",
+      "channel_id": "UCcefcZRL2oaA_uBNeo5UOWg",
+      "tags": [
+        "investment",
+        "startup",
+        "tech"
+      ]
     }
   ],
   "_disabled_channels": []
