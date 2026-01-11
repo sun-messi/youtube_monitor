@@ -468,13 +468,13 @@ def validate_analysis(analysis: AnalysisResult) -> Tuple[bool, List[str]]:
     return is_valid, issues
 
 
-def generate_fallback_chapters(total_duration_sec: int, interval_sec: int = 900) -> List[Tuple[int, str]]:
+def generate_fallback_chapters(total_duration_sec: int, interval_sec: int = 300) -> List[Tuple[int, str]]:
     """
     Generate fallback chapters based on time intervals.
 
     Args:
         total_duration_sec: Total video duration in seconds
-        interval_sec: Interval between chapters (default 15 minutes)
+        interval_sec: Interval between chapters (default 5 minutes)
 
     Returns:
         List of (seconds, title) tuples

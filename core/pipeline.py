@@ -225,11 +225,12 @@ def process_video(
         if not chapters:
             logger.warning(f"[{video_id}] No chapters found, using fallback")
             duration_sec = get_duration_from_entries(srt_entries)
+            interval = config.fallback_chapter_interval
             chapters = [(0, "完整视频")]
-            if duration_sec > 900:
+            if duration_sec > interval:
                 chapters = []
-                for i in range(0, duration_sec, 900):
-                    chapters.append((i, f"Part {i // 900 + 1}"))
+                for i in range(0, duration_sec, interval):
+                    chapters.append((i, f"Part {i // interval + 1}"))
 
         logger.info(f"[{video_id}] ✓ Analysis complete ({len(chapters)} chapters, type: {video_type})")
 

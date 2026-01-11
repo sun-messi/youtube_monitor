@@ -14,7 +14,9 @@
   "claude_model_translate": "claude-sonnet-4-20250514",
 
   "min_chapter_duration": 180,
-  "max_chapter_duration": 900,
+  "max_chapter_duration": 300,
+  "fallback_chapter_interval": 300,
+  "_comment_chapter": "章节配置：min 最小时长，max 最大时长，fallback_interval 无章节时的分割间隔（秒，300=5分钟）",
   "context_lines": 5,
   "translation_max_tokens": 4000,
   "translation_max_retries": 2,

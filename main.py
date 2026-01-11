@@ -66,7 +66,8 @@ def load_config():
         claude_thinking_budget: int = 10000
         claude_timeout_seconds: int = 600
         min_chapter_duration: int = 180
-        max_chapter_duration: int = 900
+        max_chapter_duration: int = 300
+        fallback_chapter_interval: int = 300
         context_lines: int = 5
         translation_max_tokens: int = 4000
         translation_max_retries: int = 2

@@ -47,6 +47,7 @@ class Config:
     # Chapter optimization
     min_chapter_duration: int
     max_chapter_duration: int
+    fallback_chapter_interval: int
 
     # Translation configuration
     context_lines: int
@@ -150,6 +151,7 @@ def load_config(
             claude_timeout_seconds=config_data["claude_timeout_seconds"],
             min_chapter_duration=config_data["min_chapter_duration"],
             max_chapter_duration=config_data["max_chapter_duration"],
+            fallback_chapter_interval=config_data.get("fallback_chapter_interval", 300),
             context_lines=config_data["context_lines"],
             translation_max_tokens=config_data["translation_max_tokens"],
             translation_max_retries=config_data["translation_max_retries"],
