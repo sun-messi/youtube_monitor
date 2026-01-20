@@ -188,7 +188,6 @@ def process_video(
         # Get model configs (support both old and new config format)
         model_summary = getattr(config, 'claude_model_summary', None) or getattr(config, 'claude_model', 'claude-opus-4-20250514')
         model_translate = getattr(config, 'claude_model_translate', None) or getattr(config, 'claude_model', 'claude-sonnet-4-20250514')
-        thinking_budget = getattr(config, 'claude_thinking_budget', 0)
 
         # Use analyze_video which supports agent mode
         analysis_result = analyze_video(
@@ -196,7 +195,6 @@ def process_video(
             prompt_file=prompt_summary,
             timeout=config.claude_timeout_seconds,
             model=model_summary,
-            thinking_budget=thinking_budget,
             use_agent=use_agent,
             agent_name=agent_name
         )

@@ -130,6 +130,8 @@ def extract_text_from_markdown(md_path: str) -> str:
         # 处理普通段落
         # 去掉 Markdown 格式
         text = stripped
+        # 去掉时间戳标记 **(0:00 - 1:15)** 格式
+        text = re.sub(r'\*\*\([\d:]+\s*-\s*[\d:]+\)\*\*', '', text)
         text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)  # 加粗
         text = re.sub(r'\*([^*]+)\*', r'\1', text)       # 斜体
         text = re.sub(r'`([^`]+)`', r'\1', text)         # 代码
@@ -232,8 +234,8 @@ def main():
     parser.add_argument("-o", "--output", help="输出的 MP3 文件路径")
     parser.add_argument(
         "-v", "--voice",
-        default="xiaoxiao",
-        help="语音名称 (xiaoxiao/yunxi/xiaoyi/yunjian 或完整语音ID)"
+        default="yunjian",
+        help="语音名称 (xiaoxiao/yunxi/xiaoyi/yunjian 或完整语音ID)，默认 yunjian"
     )
     parser.add_argument("--list-voices", action="store_true", help="列出可用语音")
 
