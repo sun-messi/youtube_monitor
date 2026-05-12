@@ -1,0 +1,33 @@
+# TSLA Gap Trading Strategy Backtest Configuration
+
+# Data settings
+data:
+  ticker: "TSLA"
+  start_date: "2010-06-29"  # TSLA IPO date
+  end_date: "2026-05-12"
+  cache_file: "data/tsla.parquet"
+
+# Strategy parameters
+strategy:
+  gap_thresholds: [0.005, 0.01, 0.02, 0.03]  # 0.5%, 1%, 2%, 3%
+  holding_periods: ["T+0_intraday", "T+1_close", "T+3_close", "T+5_close"]
+  trend_filters: ["none", "sma50", "sma200"]
+  direction: "both"  # "long", "short", or "both"
+
+# Backtest settings
+backtest:
+  slippage_bps: 5  # 5 basis points per side
+  commission: 0.0  # Commission-free
+  initial_capital: 100000
+
+# Monte Carlo settings
+monte_carlo:
+  n_simulations: 1000
+  random_seed: 42
+
+# Output settings
+output:
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+  summary_file: "reports/summary.md"
+  results_file: "reports/results.csv"

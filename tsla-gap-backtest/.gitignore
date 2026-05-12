@@ -1,0 +1,19 @@
+# Data cache
+data/
+
+# Generated reports
+reports/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+venv/
