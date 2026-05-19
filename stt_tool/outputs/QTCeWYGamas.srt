@@ -1,0 +1,1283 @@
+1
+00:00:00,000 --> 00:00:07,780
+So one of the biggest things coming out of Lemonade's Q1 results was the increase in stock-based compensation expenses.
+
+2
+00:00:09,060 --> 00:00:14,339
+And I think a lot of people are interested in knowing, does this derail the thesis?
+
+3
+00:00:14,820 --> 00:00:18,600
+Is this a huge deal? Is this a nothing burger? Is it something in between?
+
+4
+00:00:19,420 --> 00:00:24,699
+What are the details of what share dilution could be for Lemonade going forward?
+
+5
+00:00:25,140 --> 00:00:27,060
+A lot of questions like that circling around.
+
+6
+00:00:27,059 --> 00:00:35,579
+So I'm going to try and answer some of those questions here in this video and give some clarity to what's going on with Lemonade's stock-based compensation.
+
+7
+00:00:36,179 --> 00:00:47,299
+So their guidance for stock-based compensation, this is from the Q1 letter, increased to $24 million in Q2 and $95 million for the whole year, 2026.
+
+8
+00:00:47,299 --> 00:00:53,820
+If we flip back one quarter, this was the same guidance given then for 2026.
+
+9
+00:00:53,960 --> 00:00:56,859
+The whole year was only $75 million.
+
+10
+00:00:57,060 --> 00:01:05,240
+So $75 million jumped up to $20 million increase in stock-based compensation.
+
+11
+00:01:05,579 --> 00:01:07,020
+So what's going on?
+
+12
+00:01:07,379 --> 00:01:13,879
+If we read a few snippets from the earnings call, Tim Bixby, the CFO, he said,
+
+13
+00:01:13,879 --> 00:01:19,420
+the year-on-year increase in G&A was driven primarily by increase in stock-based compensation.
+
+14
+00:01:20,300 --> 00:01:21,800
+And interest and expense are expected.
+
+15
+00:01:21,980 --> 00:01:25,079
+Stock compensation expense for the year is to be around $95 million.
+
+16
+00:01:25,460 --> 00:01:26,879
+So somewhat higher than our previous guidance.
+
+17
+00:01:27,060 --> 00:01:32,060
+It's primarily due to a multi-year equity grants given to our two founders.
+
+18
+00:01:32,840 --> 00:01:33,000
+Okay.
+
+19
+00:01:33,299 --> 00:01:36,960
+And then later on in the call, somebody had asked a bit more about that.
+
+20
+00:01:37,359 --> 00:01:41,960
+And he gave, these grants are, you know, have an eight-year view, the thoughtful vesting pattern.
+
+21
+00:01:42,620 --> 00:01:47,240
+So these are the one time for a multi-year view.
+
+22
+00:01:47,659 --> 00:01:52,500
+If you think about our stock-based compensation, kind of zoom out a little bit and look over, say, the last five years or so,
+
+23
+00:01:52,500 --> 00:01:56,620
+which gives a better picture and takes away some of the noise involved.
+
+24
+00:01:57,060 --> 00:01:58,060
+So we're going to look at the volatility.
+
+25
+00:01:58,060 --> 00:02:00,079
+You look at our actual effective burn rate or dilution rate.
+
+26
+00:02:00,519 --> 00:02:05,219
+And the thing that financially we're concerned about, it's right on target with best in class.
+
+27
+00:02:05,340 --> 00:02:11,240
+It's sort of 2-ish percent number, one point something to two point something over that very long-term period.
+
+28
+00:02:11,759 --> 00:02:13,340
+That's really the focus number for us.
+
+29
+00:02:13,379 --> 00:02:15,819
+We expect over time that will continue to be the case.
+
+30
+00:02:15,879 --> 00:02:23,819
+So he's kind of suggesting maybe around 2% as an overall average and going out into the future.
+
+31
+00:02:24,879 --> 00:02:27,000
+On top of saying there's these larger gains.
+
+32
+00:02:27,060 --> 00:02:29,060
+So what were these larger grants?
+
+33
+00:02:29,060 --> 00:02:29,879
+Let's peek at those.
+
+34
+00:02:29,879 --> 00:02:34,020
+So there was a couple form fours filed March 18th.
+
+35
+00:02:34,520 --> 00:02:40,500
+One for, this one's for Shai and the other co-founder, CEO, Daniel.
+
+36
+00:02:40,960 --> 00:02:44,219
+And this one was, they're both the same.
+
+37
+00:02:44,300 --> 00:02:52,560
+They're 820,000 shares of Lemonade that they would get, receive as compensation over the next eight years.
+
+38
+00:02:53,020 --> 00:02:56,840
+And then 180,000 shares as a performance award.
+
+39
+00:02:57,060 --> 00:03:04,479
+And the performance reward, essentially they would get those shares, the extra 180,000 shares,
+
+40
+00:03:05,280 --> 00:03:12,920
+if the stock price sustains a closing price of $110 for at least 30 consecutive,
+
+41
+00:03:12,920 --> 00:03:18,480
+I'll zoom in a bit more here, at least 30 consecutive trading days within 24 months of the grant date.
+
+42
+00:03:19,099 --> 00:03:25,379
+So 30 consecutive trading days is like a month and, you know, whatever,
+
+43
+00:03:25,379 --> 00:03:27,039
+maybe a month and a third.
+
+44
+00:03:27,060 --> 00:03:28,259
+Something like that.
+
+45
+00:03:28,259 --> 00:03:29,060
+Months and a half.
+
+46
+00:03:30,060 --> 00:03:38,819
+And so it has to sustain, be above, close above 110 for that time period within 24 months.
+
+47
+00:03:38,819 --> 00:03:41,159
+So before March of 2028.
+
+48
+00:03:42,539 --> 00:03:52,280
+Which it'd be nicer if there was more performance awards that were maybe more stretched out over a number of years over the next, say, you know, eight years.
+
+49
+00:03:52,780 --> 00:03:55,819
+And that was more of more sort of pressure.
+
+50
+00:03:55,819 --> 00:03:56,860
+And maybe you could have.
+
+51
+00:03:57,060 --> 00:03:58,620
+a little bit of a change in the way the price goes.
+
+52
+00:03:58,620 --> 00:04:03,259
+Maybe some other metrics beyond just share price I think could have been potentially better for this bonus.
+
+53
+00:04:03,259 --> 00:04:12,020
+But this is only, you know, most of the compensation is in, is tied up here in these shares that will automatically,
+
+54
+00:04:12,020 --> 00:04:18,040
+they will get but over the next eight years time, and they kind of give some vesting details here.
+
+55
+00:04:19,680 --> 00:04:25,939
+Also, my, for example, you know, other executives had, or are receiving share, share plans.
+
+56
+00:04:25,939 --> 00:04:26,459
+Right.
+
+57
+00:04:26,459 --> 00:04:26,939
+Ooh.
+
+58
+00:04:27,060 --> 00:04:32,459
+plans as well. The Maya, you know, is going to get 181,000 shares over the next eight years as well.
+
+59
+00:04:33,459 --> 00:04:38,939
+But I had a nice conversation with Grok about some of these details. And you can see here,
+
+60
+00:04:39,319 --> 00:04:45,139
+you know, the 800,000 shares, 820,000 shares, for example, that they're getting,
+
+61
+00:04:45,600 --> 00:04:49,579
+here's the breakdown that they'll get. So we had 5% of those in the first year,
+
+62
+00:04:49,939 --> 00:04:55,980
+and then 10% in the next year, 15, and then your four and five or 20%, your six is 15,
+
+63
+00:04:55,980 --> 00:05:02,840
+your seven is 10, your eight is five. I mean, it is good, because this is the bulk of their
+
+64
+00:05:02,840 --> 00:05:11,400
+of what they're being there of their of their compensation. This is the bulk of their
+
+65
+00:05:11,400 --> 00:05:17,819
+compensation for both Daniel and shy. And their course, it's coming in shares, they're going to
+
+66
+00:05:17,819 --> 00:05:23,720
+be incentivized that the company does well beyond just it being their company, their startup, their
+
+67
+00:05:23,720 --> 00:05:25,319
+baby, they wanted to succeed.
+
+68
+00:05:25,980 --> 00:05:29,840
+Of course, all that they want to change the world and make insurance better. I really believe that.
+
+69
+00:05:30,500 --> 00:05:34,520
+But then on top of that, they are heavily financially incentivized.
+
+70
+00:05:35,200 --> 00:05:39,000
+When you're getting paid out these levels of shares, and you're also incentivized to stick
+
+71
+00:05:39,000 --> 00:05:44,480
+around, I would say at least for five years, because you're getting the bulk of a large
+
+72
+00:05:44,480 --> 00:05:48,439
+portion of your shares, you know, you're getting 70% of your shares over the next five years.
+
+73
+00:05:48,920 --> 00:05:55,220
+And on your four and five, you're getting 20% each. So you're getting huge payouts of shares
+
+74
+00:05:55,220 --> 00:05:55,960
+in those years.
+
+75
+00:05:55,980 --> 00:06:01,420
+And of course, shares at, you know, 50 some dollars a share now could be significantly higher
+
+76
+00:06:01,420 --> 00:06:06,340
+for five years from now. But you're still getting paid those still chunk those chunks of shares.
+
+77
+00:06:06,540 --> 00:06:11,060
+And then they're still getting that. And they still have the potential the next two years.
+
+78
+00:06:11,540 --> 00:06:18,900
+If the stock, you know, goes significantly higher, say and can sustain an above closing
+
+79
+00:06:18,900 --> 00:06:25,160
+price above 110 for 30 consecutive trading days, well, then you're going to get another bonus of
+
+80
+00:06:25,160 --> 00:06:25,960
+another 180.
+
+81
+00:06:25,980 --> 00:06:32,660
+80,000 shares each. So maybe you could argue, yeah, it could have been the whole plan could have
+
+82
+00:06:32,660 --> 00:06:39,560
+been had more performance, things triggered to that you could have adjusted, you bit of metrics
+
+83
+00:06:39,560 --> 00:06:45,180
+tied to that net profit, metrics tied to that you have customer count, you know, you have a number
+
+84
+00:06:45,180 --> 00:06:49,780
+of things you could kind of track or be incentivizing for rather than just share price.
+
+85
+00:06:51,580 --> 00:06:55,780
+But you know, the share price in a sense would probably track,
+
+86
+00:06:55,980 --> 00:06:56,480
+you know, the share price in a sense would probably track, you know, the share price in a sense would probably
+
+87
+00:06:56,480 --> 00:07:02,500
+be the number one thing that investors would really care about at the end of the day.
+
+88
+00:07:02,500 --> 00:07:10,860
+So, yeah, anyway, so that's, that's the structure. That's what's really in these forms were filed in
+
+89
+00:07:10,860 --> 00:07:17,560
+March. That's why they weren't here in the last earning last guidance for the year was 75 million.
+
+90
+00:07:17,560 --> 00:07:22,800
+And then it's kind of like surprise, we're adding 20 million to that. Because we're paying Daniel
+
+91
+00:07:22,800 --> 00:07:25,520
+and shy quite a bit more. And just note, though, that's not the only thing that we're going to be
+
+92
+00:07:25,520 --> 00:07:25,960
+talking about. We're going to be talking about the last year's earnings and the last year's earnings.
+
+93
+00:07:25,980 --> 00:07:30,580
+So that was that was a year that payout per year is exactly the same for both Daniel and shy and the
+
+94
+00:07:30,580 --> 00:07:37,140
+same bonus, same amount of shares, everything, my even the same vesting schedule would follow the
+
+95
+00:07:37,140 --> 00:07:41,360
+same sort of pattern. So she's incentivized to be around for at least five years. And then if you
+
+96
+00:07:41,360 --> 00:07:49,300
+look at at this, you know, Daniel and shy and the current current price tag for lemonade shares
+
+97
+00:07:49,300 --> 00:07:54,580
+might be worth, you know, 60 million over eight years, on top of
+
+98
+00:07:55,980 --> 00:08:03,160
+salaries, potential bonuses, you know, you could be looking at easily kind of eight or 9 million per
+
+99
+00:08:03,160 --> 00:08:10,680
+year for both Daniel and shy in total compensation for the next number of years. And, of course, even
+
+100
+00:08:10,680 --> 00:08:16,379
+if if lemonade stock goes up significantly, this could be worth even substantially more. But in
+
+101
+00:08:16,379 --> 00:08:21,840
+order to do that lemonade stock, you don't need to rise. So but if you compare this, I had to compare
+
+102
+00:08:21,840 --> 00:08:25,140
+this to other insure tech companies.
+
+103
+00:08:25,980 --> 00:08:34,060
+You know, before the grants, they were like, about 6.1 million total compensation each. If you look at Alex
+
+104
+00:08:34,060 --> 00:08:45,180
+Tim of root haze. But I guess there's about 8.2 million hippos, number 6 million, true companion for 4.4
+
+105
+00:08:45,180 --> 00:08:53,440
+million. So like, they're definitely a little higher, they're more like Alex Tim's root level. It's not
+
+106
+00:08:53,440 --> 00:08:55,960
+like they're way, way, way higher than Alex Tim.
+
+107
+00:08:55,980 --> 00:09:04,039
+than anybody else. In terms of sort of what their compensation could look like, though, of course, if this if the share
+
+108
+00:09:04,039 --> 00:09:10,620
+price appreciates significantly, this could go up. But then you could sort of argue, hey, they were successful in that
+
+109
+00:09:11,259 --> 00:09:21,159
+share appreciation, and they should be paid appropriately for that. And I also had Grok compare this to other just CEOs
+
+110
+00:09:22,060 --> 00:09:25,139
+in general in the tech world.
+
+111
+00:09:25,159 --> 00:09:25,960
+And if you look at
+
+112
+00:09:25,980 --> 00:09:36,659
+sort of S&P 500, overall median, so much, much larger companies and sort of you're looking at, and there's sort of 1617 $18 million range, so
+
+113
+00:09:36,700 --> 00:09:47,940
+definitely higher. The tech sector leaving a little bit higher 19 to 25 million, super large tax, they're saying they can be 50 to 270 to 100 million
+
+114
+00:09:47,940 --> 00:09:54,539
+maybe is potential, you know, probably all depends how their stock does.
+
+115
+00:09:55,980 --> 00:10:04,139
+If it's not great, it's really not if it's key California by the way. If you could see if you've watched October 4th we're like I'm D
+
+116
+00:10:04,139 --> 00:10:19,340
+for a year now if we're ahead, if it's you know, almost like we're in 1996 where we're at right now here's our
+
+117
+00:10:19,360 --> 00:10:19,620
+prices.
+
+118
+00:10:19,620 --> 00:10:20,039
+Now let's.
+
+119
+00:10:20,039 --> 00:10:28,039
+say in year four and five when they're getting 20 of that vesting um awards each year and then um
+
+120
+00:10:28,039 --> 00:10:34,919
+yeah so lemonade's more like eight or nine million on like a conservative kind of basis versus um
+
+121
+00:10:34,919 --> 00:10:43,860
+this whole um um the whole sort of tech scene as a whole you know and so my takeaway from this
+
+122
+00:10:43,860 --> 00:10:51,159
+is that it's not like we're underpaying um the ceos daniel and shy but it's not it's not i don't
+
+123
+00:10:51,159 --> 00:10:55,919
+think they're ridiculous numbers either i mean they are ridiculous for any normal person these
+
+124
+00:10:55,919 --> 00:11:00,539
+are it's a ridiculous amount of money to be paid you know a million up to a million shares over the
+
+125
+00:11:00,539 --> 00:11:07,340
+next eight years including the bonus um that's a ridiculous amount of you know wealth that's there
+
+126
+00:11:07,340 --> 00:11:13,259
+but um but you know if to if you are successful in that and
+
+127
+00:11:13,860 --> 00:11:19,080
+you're you're building an insurance company that could dramatically change insurance for the whole
+
+128
+00:11:19,080 --> 00:11:26,159
+world and so there are you know there there is deserving rewards in that and you want your
+
+129
+00:11:26,159 --> 00:11:31,500
+leaders to be you know to be to have all every incentive in the world to make that succeed i
+
+130
+00:11:31,500 --> 00:11:39,080
+think beyond that i believe i really do believe daniel and shy are it's not just i believe that
+
+131
+00:11:39,080 --> 00:11:43,800
+they they they want to change this is like they're driven by
+
+132
+00:11:43,800 --> 00:11:43,840
+more of a
+
+133
+00:11:43,860 --> 00:11:48,899
+more than just money that this is their baby this is their legacy that they're building this company
+
+134
+00:11:48,899 --> 00:11:57,180
+and they want us to see it truly you know be phenomenally successful but if we can align even
+
+135
+00:11:57,180 --> 00:12:03,560
+push within that their own financial incentives i think that's even that's fantastic i'm even
+
+136
+00:12:03,560 --> 00:12:09,519
+more excited so my takeaway is it's not that we're underpaying them but i don't think we're
+
+137
+00:12:09,519 --> 00:12:13,600
+it it's not over the top either and um
+
+138
+00:12:13,860 --> 00:12:18,139
+and if they're wildly successful then we're all going to be wildly successful in that
+
+139
+00:12:18,139 --> 00:12:25,320
+um yeah i know if you think about maybe moving on then think about what all this means for
+
+140
+00:12:25,320 --> 00:12:33,379
+uh dilution for lemonade so i've looked at this um a few ways yeah added down here
+
+141
+00:12:33,379 --> 00:12:43,180
+for first of all grok did its own prediction for me based on all um expecting based on
+
+142
+00:12:43,860 --> 00:12:50,680
+um all these grants and their sort of investing schedules that they're they're seeing um across
+
+143
+00:12:50,680 --> 00:12:57,960
+all lemonade executives and you can see sort of dilution per year um they're looking at about
+
+144
+00:12:57,960 --> 00:13:03,340
+four point something four points i'm through the next several years and then tapering down slowly
+
+145
+00:13:03,340 --> 00:13:09,420
+into the three point something so their average dilution over the next eight years is about 3.89
+
+146
+00:13:09,420 --> 00:13:13,659
+percent um is what um grok is
+
+147
+00:13:13,659 --> 00:13:13,840
+estimating and i think that's a good way to put it i think that's a good way to put it i think that's a good way to put it
+
+148
+00:13:13,860 --> 00:13:20,039
+estimating i also asked the same question or essentially the same question to claude and it
+
+149
+00:13:20,039 --> 00:13:27,639
+came up with a little bit lower 2.5 percent and part of that though was they were predicting that
+
+150
+00:13:27,639 --> 00:13:37,080
+they do share buybacks um in late i sort of starting in 2030 onwards um yeah buybacks offset
+
+151
+00:13:37,080 --> 00:13:42,840
+by a stock-based comp so you're starting then partly the low numbers skewed lower because
+
+152
+00:13:42,840 --> 00:13:43,659
+they're using some of the the the the the the the the the the the the the the the the the the the
+
+153
+00:13:43,659 --> 00:13:49,799
+some of the income lemonade would be extra income lemmings generating to do to do some buybacks so
+
+154
+00:13:49,799 --> 00:13:56,279
+that's sort of uh claude's analysis i also chat gpt asked them i asked it and it was saying a little
+
+155
+00:13:56,279 --> 00:14:05,279
+bit lower 2.7 2.8 per year so somewhere between you know that if you take you think it could be
+
+156
+00:14:05,279 --> 00:14:08,959
+it probably is going to be something like this a little bit higher especially like four or five
+
+157
+00:14:08,959 --> 00:14:09,759
+years from now where you have those bigger um vesting periods um and you know that say longer
+
+158
+00:14:10,240 --> 00:14:12,159
+where you have those bigger um uh vesting periods
+
+159
+00:14:12,159 --> 00:14:13,620
+and several years later when up and down the stock pricesweed or stock prices exceed and
+
+160
+00:14:13,659 --> 00:14:16,419
+And then it could, you think, taper down.
+
+161
+00:14:16,500 --> 00:14:30,120
+You also sort of think as Lemonade, if they become super, super efficient and they have more and more, less and less employees that do more and more and more with the help of AI and automation,
+
+162
+00:14:30,879 --> 00:14:42,179
+then you think as a whole employee base, you should see some operating leverage within stock-based compensation.
+
+163
+00:14:42,179 --> 00:14:45,419
+Now, if you think about now, maybe they do so phenomenally well.
+
+164
+00:14:45,579 --> 00:14:48,439
+They kind of think, hey, we can just pay everyone more.
+
+165
+00:14:49,539 --> 00:14:51,019
+And at some level, that's probably true.
+
+166
+00:14:51,159 --> 00:14:58,779
+But also at some level, you should see, you'd think you should see as shareholders, you'd want to see some operating leverage within that.
+
+167
+00:14:58,919 --> 00:15:06,659
+So you think the dilution rate should trend down and maybe we get back to that 2%, 1% to 2% as a longer term thing.
+
+168
+00:15:06,659 --> 00:15:12,159
+But for the next eight years, 10 years, you're probably in that, you know, probably higher than Tim's saying.
+
+169
+00:15:12,199 --> 00:15:17,679
+And 2.5% would be kind of the minimum up to maybe 3.5%, 4%.
+
+170
+00:15:17,679 --> 00:15:21,259
+So then the bigger question is, what does this do to the model?
+
+171
+00:15:21,319 --> 00:15:23,139
+What does this do to the thesis, to the numbers?
+
+172
+00:15:23,299 --> 00:15:25,159
+So I've pulled up my Lemonade model.
+
+173
+00:15:25,620 --> 00:15:32,019
+If you're new here, if you want to get access to this, you can join my Patreon.
+
+174
+00:15:32,919 --> 00:15:35,419
+And it's only $5 a month to join there.
+
+175
+00:15:35,539 --> 00:15:37,339
+And then you can get access to this model.
+
+176
+00:15:38,539 --> 00:15:41,339
+And if you follow along on the channel,
+
+177
+00:15:41,339 --> 00:15:41,359
+I have a video on how to get access to this model.
+
+178
+00:15:41,359 --> 00:15:41,579
+And I have a video on how to get access to this model.
+
+179
+00:15:41,579 --> 00:15:42,159
+And I have a video on how to get access to this model.
+
+180
+00:15:42,179 --> 00:15:45,799
+And I have made some adjustments right now with what we're looking to.
+
+181
+00:15:46,139 --> 00:15:47,919
+I made some adjustments to my model.
+
+182
+00:15:48,659 --> 00:15:51,179
+And I'll just quickly explain what I adjusted.
+
+183
+00:15:51,579 --> 00:16:00,799
+Just so you get kind of a base value of where I'm coming in at for present value of Lemonade.
+
+184
+00:16:01,179 --> 00:16:08,019
+And from one of the changes, if you look at total operating expenses minus growth spend or excluding growth spend.
+
+185
+00:16:08,019 --> 00:16:11,259
+So all of their operating expenses except for what they're spending on growth spend.
+
+186
+00:16:11,259 --> 00:16:12,539
+I increased that some.
+
+187
+00:16:13,000 --> 00:16:14,700
+So the rate at which that's changing.
+
+188
+00:16:14,919 --> 00:16:17,159
+I had it more like 7%, 8%.
+
+189
+00:16:17,159 --> 00:16:20,720
+Now I have it more to 8, 9% going out into the future.
+
+190
+00:16:20,980 --> 00:16:23,679
+So that's just a little bit higher, a little more aggressive.
+
+191
+00:16:24,500 --> 00:16:29,600
+They're assuming they don't get quite as much operating leverage as I still hope they might.
+
+192
+00:16:29,779 --> 00:16:33,039
+I mean, I really hope I'm surprised and beat on all these things.
+
+193
+00:16:33,679 --> 00:16:38,259
+I also increased my dilution rate.
+
+194
+00:16:38,519 --> 00:16:39,559
+Right now I have it.
+
+195
+00:16:39,620 --> 00:16:40,740
+I'll show a few scenarios here.
+
+196
+00:16:40,799 --> 00:16:41,240
+But right now it's at about $1.5.
+
+197
+00:16:41,279 --> 00:16:43,039
+It's at 4% just ongoing.
+
+198
+00:16:43,240 --> 00:16:45,779
+4% every year ongoing dilution.
+
+199
+00:16:45,779 --> 00:17:02,679
+If I look at excess capital, what I'm calculating as even conservatively estimating what kind of extra capital Lemonade would have beyond what they need to hold for regulation in terms,
+
+200
+00:17:03,139 --> 00:17:08,619
+which is a function of how much in-force premium they are carrying or how much premiums they're underwriting.
+
+201
+00:17:09,480 --> 00:17:10,960
+You can see this really starts to take off.
+
+202
+00:17:10,960 --> 00:17:19,960
+It's going to take off in my model around 2029, 2030, where I have overall to top line growth just slowing just a hair, a little bit.
+
+203
+00:17:20,539 --> 00:17:23,240
+And then you don't have quite as much marketing expenses.
+
+204
+00:17:24,259 --> 00:17:31,680
+And then the whole business continues to really achieve phenomenal operating leverage.
+
+205
+00:17:31,980 --> 00:17:33,440
+And then your profits really soar.
+
+206
+00:17:33,440 --> 00:17:40,440
+So past that point in time, one, I've lowered my reinsurance.
+
+207
+00:17:40,960 --> 00:17:48,259
+I've lowered my reinsurance rate down from 20% down to 10% and then down to 5% ongoing.
+
+208
+00:17:48,380 --> 00:17:50,600
+So that's going to improve some of the financials.
+
+209
+00:17:50,640 --> 00:17:53,120
+That's another change that tweaks them up a little bit.
+
+210
+00:17:53,840 --> 00:17:57,480
+The other thing I've done is my gross loss ratio.
+
+211
+00:17:58,019 --> 00:18:01,039
+I had it 63%, I believe.
+
+212
+00:18:01,160 --> 00:18:08,539
+I've increased it to 64%, just a little more conservative, and have a net loss ratio of 65%.
+
+213
+00:18:08,539 --> 00:18:09,960
+And then...
+
+214
+00:18:10,960 --> 00:18:22,200
+Another thing I've thought about is as you start to become profitable and you're turning more and more profit in these next few years around 2029, 2030 and beyond,
+
+215
+00:18:22,799 --> 00:18:32,380
+then one thing I wasn't really factoring into my model is what's the value of that capital you're generating.
+
+216
+00:18:34,480 --> 00:18:40,880
+And for example, Claude's scenario was looking at, well, in those later years, we're going to buy back shares.
+
+217
+00:18:40,960 --> 00:18:45,860
+And that would be one option, lemonade, if the stock price they felt at that time was undervalued.
+
+218
+00:18:46,279 --> 00:18:49,779
+Well, they could be using that capital to buy back shares.
+
+219
+00:18:49,880 --> 00:18:58,559
+And depending on what the share price is, they could potentially be, you know, this 4% could be going to 0% or even turning positive, potentially,
+
+220
+00:18:58,860 --> 00:19:08,500
+depending on what their stock-based compensation is and how much the share price and what they're generating profits and what they want to do with that.
+
+221
+00:19:08,500 --> 00:19:10,759
+So that's the way I added to my model.
+
+222
+00:19:10,960 --> 00:19:13,079
+So that was an excess capital line.
+
+223
+00:19:13,480 --> 00:19:15,900
+And then I added excess capital per share.
+
+224
+00:19:16,380 --> 00:19:18,799
+And then I added that to my valuation.
+
+225
+00:19:18,980 --> 00:19:26,440
+So for example, in 2032, I have 16, almost $17 of excess capital per share at the end of 2032.
+
+226
+00:19:26,779 --> 00:19:31,620
+So I'm calculating an earnings per share in 2032.
+
+227
+00:19:32,340 --> 00:19:37,940
+I'm giving that a multiple based on what I think maybe what the market would assume their future growth rate would be.
+
+228
+00:19:37,940 --> 00:19:40,940
+I'm adding to that amount the 16%.
+
+229
+00:19:40,960 --> 00:19:43,120
+I'm adding to that amount the 193, which bumps it up a little bit.
+
+230
+00:19:43,640 --> 00:19:50,860
+And then it gets you all back to a present value based on that of $175 per share.
+
+231
+00:19:51,360 --> 00:19:52,840
+So that's with the 4%.
+
+232
+00:19:52,860 --> 00:19:57,160
+That's with all of these changes, which overall have been a little bit more conservative.
+
+233
+00:19:58,240 --> 00:20:08,819
+You know, aside from maybe adding in this share excess capital per share, if I remove this excess capital per share entirely from 2032,
+
+234
+00:20:09,279 --> 00:20:10,960
+and I come back down here,
+
+235
+00:20:10,960 --> 00:20:14,240
+we went from $175 to $168 a share.
+
+236
+00:20:15,460 --> 00:20:16,460
+So something in that range.
+
+237
+00:20:16,460 --> 00:20:19,340
+Now, if you think about it too, this is 4% dilution.
+
+238
+00:20:19,779 --> 00:20:27,360
+Say I think like in the next, say I think it's 4% too high, and it should be more like 3.5%.
+
+239
+00:20:28,840 --> 00:20:30,240
+Let's just punch that in.
+
+240
+00:20:31,360 --> 00:20:35,279
+Then it goes from $175 to $181 a share.
+
+241
+00:20:35,279 --> 00:20:37,420
+So it creeps up a little bit, right?
+
+242
+00:20:37,779 --> 00:20:40,759
+If I thought it should be, you know,
+
+243
+00:20:40,759 --> 00:20:46,460
+3% or maybe I think next couple years, three years, it'll be 4%.
+
+244
+00:20:46,759 --> 00:20:50,359
+And then it'll be 3.3% from then on.
+
+245
+00:20:50,660 --> 00:20:57,379
+So I'll go from 3% and punch that in and went from $175 now back to $182.
+
+246
+00:20:57,740 --> 00:21:01,400
+So there's a few scenarios there.
+
+247
+00:21:01,400 --> 00:21:09,160
+If you really think it's going to be exactly what Tim said, and it's 2% all the way across the board, just change them all to 2%.
+
+248
+00:21:09,160 --> 00:21:10,460
+Now you're $198 a share.
+
+249
+00:21:10,759 --> 00:21:13,099
+And I'm going off of the 2032.
+
+250
+00:21:13,400 --> 00:21:17,779
+And I'm giving them a multiple of 40x off their earnings in 2032.
+
+251
+00:21:18,079 --> 00:21:21,140
+As you might think, wow, that sounds too high for an insurance company.
+
+252
+00:21:21,140 --> 00:21:29,299
+I don't really, I don't necessarily think it is because in 2032, I have them at eight and a half billion of IFP.
+
+253
+00:21:29,660 --> 00:21:37,579
+There's still eight and a half billion of IFP in a within the US market, European market, probably even other markets by then.
+
+254
+00:21:38,240 --> 00:21:40,220
+They're playing in these massive markets.
+
+255
+00:21:40,220 --> 00:21:40,660
+And there's still this $185.
+
+256
+00:21:40,759 --> 00:21:41,720
+And I'm thinking, wow, that's a tiny, tiny player.
+
+257
+00:21:41,720 --> 00:21:52,779
+Like, why couldn't they grow significantly, you know, 10 times bigger than that 20, 30, 40 times bigger than that, like just be an absolutely monster of a company eventually one day.
+
+258
+00:21:53,299 --> 00:21:56,119
+So the growth potential there, I think is just still massive.
+
+259
+00:21:56,119 --> 00:22:00,700
+And so I giving them a 40x, you know, PE, if you thought, oh, 30 is more fair.
+
+260
+00:22:00,920 --> 00:22:07,339
+Well, now you're $133 a share from the same 4% dilution rate to what I was showing.
+
+261
+00:22:07,640 --> 00:22:09,140
+So that gives you some scenario.
+
+262
+00:22:09,160 --> 00:22:09,920
+I don't think.
+
+263
+00:22:09,920 --> 00:22:15,279
+The bottom line is, I don't think this, it is higher stock based compensation.
+
+264
+00:22:15,740 --> 00:22:17,539
+I don't think we're underpaying them.
+
+265
+00:22:18,080 --> 00:22:21,740
+But I don't think we're necessarily overpaying them either.
+
+266
+00:22:22,700 --> 00:22:24,980
+I don't think it's necessarily unfair.
+
+267
+00:22:25,820 --> 00:22:36,920
+And the, the, and the dilution, even if it's a higher than kind of what these other, these guys are estimating, you're still at $175 present value per share.
+
+268
+00:22:37,519 --> 00:22:39,380
+And if you think my multiple too high, and you go, oh, I'm going to go with this.
+
+269
+00:22:39,380 --> 00:22:39,480
+And if you think my multiple too high, and you go, oh, I'm going to go with this.
+
+270
+00:22:39,480 --> 00:22:39,880
+And if you think my multiple too high, and you go, oh, I'm going to go with this.
+
+271
+00:22:39,880 --> 00:22:40,180
+And if you think my multiple too high, and you go, oh, I'm going to go with this.
+
+272
+00:22:40,180 --> 00:22:42,220
+Yeah, we should be, you know, $25.
+
+273
+00:22:42,460 --> 00:22:45,460
+You're still at $112 per share fair value.
+
+274
+00:22:45,920 --> 00:22:58,440
+And that's only for, you know, that'd be a 25 X multiple on a company that's going to show a ton of operating leverage and only has by 2032, eight and a half billion of IFP.
+
+275
+00:22:58,440 --> 00:23:04,680
+So here there's, I think, I think the deserve a higher multiple by the market at that time.
+
+276
+00:23:04,760 --> 00:23:08,980
+And so that's why I think, yeah, more like 175 present value makes more sense.
+
+277
+00:23:08,980 --> 00:23:09,820
+This was a discount rate.
+
+278
+00:23:09,880 --> 00:23:10,840
+It was a discount rate of 12 and a half percent.
+
+279
+00:23:11,580 --> 00:23:15,800
+So again, if you want to get this model and play with that, you think, yeah, 15% would be better.
+
+280
+00:23:16,160 --> 00:23:19,040
+Well, now you're more like $151 per share.
+
+281
+00:23:19,160 --> 00:23:20,340
+It'd be a fair present value.
+
+282
+00:23:20,620 --> 00:23:23,760
+But we're trading at, you know, around $50 per share.
+
+283
+00:23:24,120 --> 00:23:26,360
+And so I think it's still a phenomenal deal.
+
+284
+00:23:26,680 --> 00:23:33,720
+It's, you know, I think worth something on the order of three times what the current share price is.
+
+285
+00:23:34,560 --> 00:23:39,400
+And if you're more conservative than me, you can easily tweak those adjustments and make those adjustments.
+
+286
+00:23:39,500 --> 00:23:39,860
+And still, you know, you're going to be able to make a lot of money.
+
+287
+00:23:39,860 --> 00:23:39,880
+So I think that's a great way to do it.
+
+288
+00:23:39,880 --> 00:23:45,160
+I'll say we're at least two times what the present value is, if not more.
+
+289
+00:23:46,580 --> 00:23:48,960
+And this is just with this at 4%, right?
+
+290
+00:23:49,180 --> 00:23:57,200
+And honestly, this could probably, I would not be surprised if this was a little better than 4% as the overall average.
+
+291
+00:23:57,460 --> 00:24:05,080
+I would not be surprised if the operating expenses as they grow are not, you know, 9% year over year.
+
+292
+00:24:05,200 --> 00:24:08,900
+But maybe they can get those down to 7%, something like that.
+
+293
+00:24:08,900 --> 00:24:12,900
+But I would not even be surprised, potentially, you know, they're tracking.
+
+294
+00:24:14,300 --> 00:24:18,759
+They have 90% or plus of their drivers have telematics on all the time.
+
+295
+00:24:18,900 --> 00:24:19,860
+This is great.
+
+296
+00:24:19,940 --> 00:24:23,340
+This is not normal for car insurance, the car insurance line.
+
+297
+00:24:23,960 --> 00:24:30,300
+And I would not be surprised if they could somehow have the very best prices, have the most happiest customers,
+
+298
+00:24:30,420 --> 00:24:34,000
+and still even put this loss ratio down slightly lower.
+
+299
+00:24:34,380 --> 00:24:37,780
+I mean, even there, if you think about pet product.
+
+300
+00:24:38,340 --> 00:24:38,880
+And Q3.
+
+301
+00:24:38,880 --> 00:24:39,860
+Q3 of last year.
+
+302
+00:24:40,460 --> 00:24:48,700
+Well, their pet product and their products across the board are something like the loss adjustment expenses is something like 6%.
+
+303
+00:24:48,700 --> 00:24:51,180
+And they said they could probably cut that in half.
+
+304
+00:24:51,180 --> 00:24:55,320
+So you're just driving more and more efficiency, I think, as they scale.
+
+305
+00:24:56,060 --> 00:24:59,940
+And I think this is still, you know, you could argue this is higher.
+
+306
+00:25:00,140 --> 00:25:05,340
+And so bottom line, I don't think, I think this is, the thesis is on track.
+
+307
+00:25:05,500 --> 00:25:06,560
+That's the bottom line.
+
+308
+00:25:06,840 --> 00:25:07,820
+That's what I'm trying to say.
+
+309
+00:25:07,819 --> 00:25:12,359
+The lemonade thesis, in my opinion, is on track.
+
+310
+00:25:13,339 --> 00:25:15,939
+Not financial advice, do your own due diligence.
+
+311
+00:25:16,259 --> 00:25:20,919
+And I really think, you know, the Q1 was a phenomenal quarter.
+
+312
+00:25:21,240 --> 00:25:27,539
+There was so much other things I could say about it and that we could be delighted about for it, aside from the stock-based compensation.
+
+313
+00:25:28,359 --> 00:25:31,359
+But I do hope, I hope this was very helpful for you.
+
+314
+00:25:31,500 --> 00:25:34,359
+Let me know what you think down below in the comments.
+
+315
+00:25:34,539 --> 00:25:35,200
+Appreciate it.
+
+316
+00:25:35,240 --> 00:25:36,899
+Or send me a message if you prefer that.
+
+317
+00:25:36,899 --> 00:25:37,639
+I read.
+
+318
+00:25:37,819 --> 00:25:39,159
+All those messages and comments.
+
+319
+00:25:39,519 --> 00:25:40,379
+And appreciate you all.
+
+320
+00:25:40,519 --> 00:25:41,599
+So thanks so much for watching.
+
+321
+00:25:41,679 --> 00:25:42,559
+Remember, it's in the bag.

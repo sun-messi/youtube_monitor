@@ -1,0 +1,359 @@
+1
+00:00:00,000 --> 00:00:34,000
+[Operator] Ladies and gentlemen, thank you for standing by. At this time, I would like to welcome everyone to the Tempus AI AI third quarter 2025 financial results conference call. All lines have been placed on mute to prevent any background noise. After the speaker's remarks, there will be a question-and-answer session. If you would like to ask a question during this time, simply press * followed by the number 1 on your telephone keypad. If you would like to withdraw your question, again, press the star one. I would now like to turn the conference over to Liz Krutoholow, Vice President, Investor Relations. You may begin.
+
+2
+00:00:34,000 --> 00:00:59,000
+[Elizabeth Krutoholow] Thank you. Good afternoon and welcome to Tempus AI's third quarter 2025 conference call. This afternoon, Tempus AI released results for the quarter ended September 30th, 2025. The press release, an overview of the quarter, and our latest presentation are available on our IR website. Joining me today from Tempus AI are Eric Lefkofsky, Founder and CEO of Tempus AI, and Jim Rogers, CFO.
+
+3
+00:00:59,000 --> 00:01:25,000
+[Elizabeth Krutoholow] Before we begin, I would like to remind you that during this call, management may make forward-looking statements that are subject to risks and uncertainties that could cause actual results to differ materially. For a discussion of these risks, please refer to our 10-K and other subsequent filings with the SEC. During the call, we will discuss non-GAAP financial measures, which are not prepared in accordance with generally accepted accounting principles.
+
+4
+00:01:25,000 --> 00:01:39,000
+[Elizabeth Krutoholow] Definitions of these non-GAAP financial measures, along with reconciliations to the most directly comparable GAAP financial measures, are included in our earnings release and are available on our IR page. I would now like to turn the call over to Eric.
+
+5
+00:01:39,000 --> 00:02:07,000
+[Eric Lefkofsky] Thank you. Q3 was a great quarter all around. Our genomics volume came in super strong with 33% overall growth, with oncology growing at 27% and hereditary growing at 37%. We expect hereditary growth will moderate a bit, although we now expect growth to be in the low- to mid-20s as opposed to our previous guide of mid- to high teens.
+
+6
+00:02:07,000 --> 00:02:42,000
+[Eric Lefkofsky] Our genomic growth was across the board. Really, all of our assays did exceptionally well, and with MRD reimbursement on track and our planned regulatory filing of our liquid biopsy xF later this year, we expect additional tailwind in that business, both from a unit perspective and revenue. Our data licensing or insights business grew 38% in the quarter, with an additional $150 million in total contract value, which was a super strong bookings quarter for us across multiple contracts that we highlighted in our letter.
+
+7
+00:02:42,000 --> 00:03:14,000
+[Eric Lefkofsky] This is on top of the multi-hundred-million-dollar foundation model deal we struck earlier this year. From a bookings perspective, our data licensing business is just really performing exceptionally well. The combination of growth in genomics and growth in our data business allowed us to generate positive Adjusted EBITDA for the first time this quarter, which has been a 10-year goal of ours and a key milestone. This was inclusive of several million dollars' worth of additional expense from Paige, which is an acquisition we made mid-quarter.
+
+8
+00:03:14,000 --> 00:03:46,000
+[Eric Lefkofsky] Even with that, we generated a positive EBITDA and would have been close to $4 million in Adjusted EBITDA without Paige. The business is doing exactly what we had hoped. We now expect for the year to be slightly positive in Adjusted EBITDA, and that's even with the additional several million dollars it dragged from Paige. All in, the business is performing well. We're growing at a rapid pace, and we're managing our cost to generate leverage in the business, which is exactly where we want to be. With that, take some questions.
+
+9
+00:03:46,000 --> 00:04:25,000
+[Operator] Thank you. We will now begin the question-and-answer session. If you have dialed in and would like to ask a question, please press *1 on your telephone keypad to raise your hand and join the queue. If you would like to withdraw your question, simply press *1 again. If you are called upon to ask a question and are listening via speakerphone on your device, please pick up your handset to ensure that your phone is not on mute when asking your question. And for this session, we do request that you please limit your questions to one only. Our first question comes from Ryan MacDonald from Needham. Please go ahead.
+
+10
+00:04:25,000 --> 00:04:48,000
+[Ryan MacDonald] Hi. Thanks for taking my questions and congrats on a great quarter. Maybe, Eric, to start just on the genomics business, obviously, oncology portfolio continuing to perform very well and a great increase in sort of testing volumes there. Can you just talk or sort of double-click a little bit on sort of to what you attribute that the great strength in the volume growth here?
+
+11
+00:04:48,000 --> 00:05:17,000
+[Ryan MacDonald] Are we starting to see sort of a broader market and industry shift to more NGS testing that's sort of just helping see more patients that are just getting sequenced? Or would you say that you're really starting to see a benefit from the execution changes and sort of the sales coverage here with the broader portfolio? Just maybe what sort of Tempus AI-controlled success, if you will, versus sort of broader industry and market tailwinds? Thanks.
+
+12
+00:05:17,000 --> 00:05:53,000
+[Eric Lefkofsky] Yeah. So at a high level, look, our success is maybe slightly different than some others. So let me just talk about, I think, what's driving ours, and then we can talk about some macro phenomenon. In terms of our success, it's predominantly related to the fact that our Salesforce is more efficient today than it was a year ago. We made significant changes to our Salesforce when we brought in our MRD portfolio. Anytime you make changes to Salesforces in this space, you kind of cause havoc.
+
+13
+00:05:53,000 --> 00:06:06,000
+[Eric Lefkofsky] I think people don't really realize how much havoc you cause. And then we all talk about the havoc after it's been caused. We certainly did cause some havoc, which was unintentional, and it's taken us several quarters to work through that.
+
+14
+00:06:06,000 --> 00:06:38,000
+[Eric Lefkofsky] Our Salesforce is now kind of efficiently trained and doing its job, and so we're benefiting from some of that. And the second is that our technology, which is really tightly integrated and allows us to deliver highly contextualized, comprehensive results to physicians, is picking up steam as more and more doctors want us to deliver results that help them treat patients in a more comprehensive and more efficient manner. So we're kind of benefiting from those two trends.
+
+15
+00:06:38,000 --> 00:06:58,000
+[Eric Lefkofsky] What I think broadly people are benefiting from. Certainly, I think testing volumes have been healthy as more and more biomarkers are identified. People are looking to make sure their patients are tested. And so I think that's a general tailwind to the space.
+
+16
+00:06:58,000 --> 00:07:18,000
+[Eric Lefkofsky] And then I think certainly there are some companies who might be benefiting from the fact that they only offered solid or only offered liquid, and so maybe they're now doing more concurrent testing, or maybe there's some sequential testing. We're not benefiting from nearly as much of that because we've had a comprehensive portfolio in place for years now.
+
+17
+00:07:18,000 --> 00:07:41,000
+[Eric Lefkofsky] So we don't see any of those kind of one-time benefits. So our unit growth, at least to us, looks really healthy and durable by virtue of the fact that we're not being artificially propped up by some kind of one-time benefit in our either solid or liquid assays that is driving the majority of that gain.
+
+18
+00:07:41,000 --> 00:07:48,000
+[Operator] Our next question comes from Mark Massaro from BTIG. Please go ahead.
+
+19
+00:07:48,000 --> 00:08:16,000
+[Mark Massaro] Hey, guys. Congrats on a good quarter. I wanted to ask, Eric, maybe can you just, there's a lot of interest, not only in AI and big data, of course, but there's a lot of interest in MRD testing. And so I was just wondering if you could give us an update on how you're thinking about going to market in the clinic with MRD, recognizing that you have a partner in Personalis.
+
+20
+00:08:16,000 --> 00:08:47,000
+[Mark Massaro] I'm just curious how whether or not your team is trained. I believe they are. And just can you give us a sense for how fast you might go, assuming reimbursement comes in over the coming weeks or months? How do you plan to sort of leverage your large sales team and go to market against a couple of other pretty significant labs in the space?
+
+21
+00:08:47,000 --> 00:09:34,000
+[Eric Lefkofsky] Yeah. I mean, so at a high level, first of all, at a high level, when you have kind of 27% unit growth, leaving aside the hereditary business. We're operating at a unit growth, which to us is quite healthy. As we've said historically, and we actually in our letter have called out that we expect to grow at about 25% for the next three years. So that's a fairly exceptional amount of growth. Given our size and scale, and so. We don't want to grow 40% this quarter and then grow 20% in Q1 of next year. We want sustained long-term unit growth and revenue growth, and we feel like we're in a really good spot to deliver that.
+
+22
+00:09:34,000 --> 00:09:54,000
+[Eric Lefkofsky] So I wouldn't expect us to get MRD reimbursement and all of a sudden try to jam as many tests as we can into the market, whatever that means, and kind of artificially buoy our growth rates. I would expect us to kind of dial that up every quarter in a more aggressive manner as reimbursement makes that more affordable.
+
+23
+00:09:54,000 --> 00:10:27,000
+[Eric Lefkofsky] And we will do that. We have a really good portfolio of both naive products and informed products that span CRC, breast, lung, IO. And we've got a whole bunch of, which we also talk about in our letter, a whole bunch of new studies being run with even a more sensitive version of our tumor-naive assay. So we're investing heavily in the space as is Personalis. And we have a really nice portfolio of tumor-naive and tumor-informed MRD assays. And we will certainly leverage our large Salesforce.
+
+24
+00:10:27,000 --> 00:11:03,000
+[Eric Lefkofsky] We also have a subset of that Salesforce that's well-trained in MRD, and we'll continue to dial that up. I wouldn't expect us to do anything unnatural in terms of investments in the Salesforce or anything unnatural in terms of growth, but it will certainly help us. It's one of the elements of tailwind we have that we believe can propel us to 25% growth in that space for the next three years. And if you kind of look at the size of our business and go out three years, you're looking at a pretty large genomics business in oncology at that point.
+
+25
+00:11:03,000 --> 00:11:09,000
+[Operator] Our next question comes from Daniel Brennan from TD Cowan. Please go ahead.
+
+26
+00:11:09,000 --> 00:11:29,000
+[Daniel Brennan] Great. Thank you. Thanks for the questions. Congrats on the quarter. Maybe just on the new contracts. Eric. The company hasn't really been disclosing, I don't think, new bookings. You had the Pathos deal earlier in the year, but obviously, I think it's been an annual basis. So just kind of walk through the $150 million. You had a lot of details in the press release, all the different customers.
+
+27
+00:11:29,000 --> 00:11:56,000
+[Daniel Brennan] But. Just can you fill us in a little bit about. Why disclose this? Kind of why did these come together here? Maybe if you want to update us on what the backlog looks like today since you're giving us the booking summary, just any more color on this trajectory and whether there was. Were you expecting these this year, next year? Just any more color you can provide since it is a pretty differentiated call out in the quarter this time. Thank you.
+
+28
+00:11:56,000 --> 00:12:18,000
+[Eric Lefkofsky] Yeah. I mean, so I think first of all, we try to provide some color in previous quarters as to the size of some of these data deals. So this isn't the first time we call out at a customer level or even at a kind of dollar level the size of these deals, including the fact that we called out that with the AZ Pathos deal with several hundred million dollars of additional data licensing.
+
+29
+00:12:18,000 --> 00:12:37,000
+[Eric Lefkofsky] So we try to call these things out when they rise to a level that we feel like we should call it out. So in other words, if we have. If we're just closing contracts in a normal cadence, we might just refer to one contract or two contracts. If we think something bundles together in a way that's worth calling out and worth highlighting, then we highlight it.
+
+30
+00:12:37,000 --> 00:13:20,000
+[Eric Lefkofsky] There's no rhyme or reason to why this quarter versus other quarters. We don't want to be in the habit of every quarter being like, "Oh, our bookings was 56 million or 152 million or whatever, 212," because it creates noise as if that number somehow translates into revenue in the next quarter, and it doesn't because these bookings, like all of our bookings, are over multi-year. So if we sign $150 million in data licensing today, it doesn't mean my revenue next quarter or next year is going to go up 150 million. These are typically multi-year deals, and so we try not to cause a havoc. Our total contract value is in a great spot. We'll disclose it at the end of the year.
+
+31
+00:13:20,000 --> 00:13:44,000
+[Eric Lefkofsky] We told people we'll give that number annually, but it's obviously we've already told the world about more than $350 million of bookings in just two data points. So you can imagine it's well north of that, and so it's in a really strong spot. And when we do disclose the number annually, it's a great number. So it's doing all the things you'd want it to do, which is go up into the right.
+
+32
+00:13:44,000 --> 00:14:17,000
+[Eric Lefkofsky] And at the present moment, we're having really strong success, even at our scale signing good-sized or large data licensing deals. We called out four in this particular release. Some of them are people licensing our analytic software Lens. Some of them are people licensing libraries of data or having us get additional data. But these are kind of garden-variety deals where people increasingly come to us because our data product is just really differentiated.
+
+33
+00:14:17,000 --> 00:14:37,000
+[Eric Lefkofsky] And you can see that in terms of the scale of our business, the growth of the business relative to our peer set, who are all really established companies. I mean, if you look at who we compete with in diagnostics, these are not underfunded companies. They're big companies. They're well-funded. They've been in business typically way longer than us.
+
+34
+00:14:37,000 --> 00:15:11,000
+[Eric Lefkofsky] To the extent they should have data, they should have lots of data. And so when you look at our data business growing and theirs, the differentiation is the fact that we just have a unique data asset. We've invested in a ton of products around that, including proprietary software and tools and technology. It resonates with people who license our data. They license more of our data on a regular basis. And so we're just pulling further and further apart from anybody else we know of in the data space in oncology. And I don't see any sign of that slowing down.
+
+35
+00:15:11,000 --> 00:15:17,000
+[Operator] Our next question comes from Casey Woodring from JPMorgan. Please go ahead.
+
+36
+00:15:17,000 --> 00:15:35,000
+[Casey Woodring] Great. Thanks for taking our questions. So starting off, just congrats on another strong quarter in core oncology volumes. You had another competitor come out recently and also report strong liquid therapy selection volumes. So just wondering if you're seeing a similar pickup in xF and more of a marketed shift towards liquid.
+
+37
+00:15:35,000 --> 00:16:04,000
+[Casey Woodring] And then as a follow-up here, you talked about plans to submit xF for FDA approval in 4Q, followed by a full PMA submission for xR. Once you get FDA approval for those tests, assume they would be eligible for ADLT status. So can you just walk through how you're thinking about the potential upside to the Medicare list price for those tests over the next year and what we could think about as a benchmark really for the price that you'll try to get for them? Thank you.
+
+38
+00:16:04,000 --> 00:16:22,000
+[Eric Lefkofsky] Yeah. So, in terms of, Tempus AI AI is unique in that we are now considered strong really across the entire continuum. We're strong in hereditary profiling when people are at risk. We're strong in therapy selection, either solid tumor or liquid biopsy.
+
+39
+00:16:22,000 --> 00:16:55,000
+[Eric Lefkofsky] And we now have a strong offering in MRD and monitoring. So people kind of look at us end-to-end. The interesting thing is we are probably in a pretty good position to see some of these big shifts, and we didn't see that. We had really good growth in our solid tumor assay. We had really good growth in liquid. Nothing stood out at us as a fundamental shift from solid to liquid. We had really good growth, certainly, prior period over this across both.
+
+40
+00:16:55,000 --> 00:17:27,000
+[Eric Lefkofsky] That said, I would agree that if with certain studies like, for example, Serena 6, some of these studies where you might have more repetitive liquid testing, I could see over time there being some additional volumes to our liquid portfolio that we and others might benefit from. But at the present moment, I haven't seen any seismic shift, although, again, I think the growth prospects for solid are great as more and more doctors order it, and liquid probably even better because you're going to benefit from some of that serial testing.
+
+41
+00:17:27,000 --> 00:17:54,000
+[Jim Rogers] And then, Casey, from a reimbursement perspective. As we've said, we have the long-term tailwinds remain there. xT, CDX, we ended the quarter with about 30% of the volume that had been migrated. We now have plans to move the majority of that over to the FDA-approved or ADLT version throughout 2026. In the letter, you also mentioned that we're submitting xF to the FDA by the end of this year.
+
+42
+00:17:54,000 --> 00:18:27,000
+[Jim Rogers] Obviously, that's a long process, so we can't speak to specific reimbursement levels, but certainly ADLT typically provides upside from where we're at today. And that will follow by xR. So our viewpoint, total reimbursement on average was $1,600 for the third quarter, so up about $20 sequentially, but still well below parity with our peers. So given kind of these efforts, these regulatory filings, that certainly will help us close that gap.
+
+43
+00:18:27,000 --> 00:18:36,000
+[Operator] Our next question comes from Doug Shankle from Wolfe Research. Please go ahead.
+
+44
+00:18:36,000 --> 00:19:03,000
+[Colleen Babington] Hi. Thank you for the question. This is Colleen on for Doug. We have a question about Ambry. Ambry continues to perform well and ahead of expectations. We believe that last quarter growth was driven about half by share gains and half by organic expansion. Can you clarify what the mix was this quarter? Also, a competitor reported last night that its hereditary cancer volumes grew low double digits in Q3.
+
+45
+00:19:03,000 --> 00:19:29,000
+[Colleen Babington] Should we therefore be thinking about industry growth in the low double-digit range as a reasonable baseline? And within that context, can you elaborate on how Ambry's growth compares to the broader market? And then finally, on Ambry, can you clarify the mix of panels, like larger panels like Cancer Next versus more targeted panels, and how that impacts how we should be thinking about the ASPs going forward?
+
+46
+00:19:29,000 --> 00:20:15,000
+[Jim Rogers] Yeah. So I'll start, and then Eric can chime in. So similar to last quarter, about 50% of the gain is coming from share gains. As we highlight in the letter, we expect that to moderate in Q4. And so we think kind of low- to mid-20s is a more likely scenario than kind of where we're tracking today. Obviously, in terms of competitors, we can't speak to the share gains or growth rates that others are experiencing. But Ambry continues to do well, both with bringing on new customers that are previously utilizing our competitors, and then also continuing to expand kind of share a wallet with existing accounts. Eric, anything you want to add?
+
+47
+00:20:15,000 --> 00:20:37,000
+[Eric Lefkofsky] Yeah. I mean, in terms of the overall market, I would think that I think the space is much stronger than people thought. We've said that now in the last several calls. So I think whereas people thought this space might be kind of flat to anemic growth, you're now seeing people be like, "Oh, yeah, we're growing in low double digits," which I think is probably right.
+
+48
+00:20:37,000 --> 00:21:01,000
+[Eric Lefkofsky] We suspect that our hereditary business will grow in the low to mid-20s, so kind of significantly above that by virtue of the fact that we have kind of the gold standard assays in market today in that space. Look, it is possible that you're going to see growth rate in the high 20s or low 30s. I mean, that could easily happen, whether it's in Q4 or Q1 or Q2.
+
+49
+00:21:01,000 --> 00:21:17,000
+[Eric Lefkofsky] And like we have historically, we're going to call out that I wouldn't expect that to continue as a long-term trend. We think a long-term trend, low to mid-20s. Feels pretty healthy to us and achievable. And that's where that business is. Do you want to cover the ASP piece first?
+
+50
+00:21:17,000 --> 00:21:53,000
+[Jim Rogers] Yeah. And then, in terms of kind of breakdown of assays, we don't disclose assay-level detail. The ASPs have been pretty consistent over the last couple of quarters, down a little bit year over year as one of our larger payers kind of renegotiated agreements, but overall, pretty stable in terms of the hereditary space. The only thing that will impact ASPs is the rare business is still relatively small component of overall testing for Ambry, but that comes with a higher ASP. So as that continues to scale, then that will have some impact on ASPs as well.
+
+51
+00:21:53,000 --> 00:22:23,000
+[Eric Lefkofsky] I would just add to that really quickly. There aren't a lot of rare companies out there. I mean, we are now at some size. There's a few others. Obviously, GeneDx is well-known, but there's not many. I do think that we will make real ground over the next 12-18 months in becoming a very big player in that space.
+
+52
+00:22:23,000 --> 00:22:30,000
+[Operator] Our next question comes from Michael Ryskin from Bank of America. Please.
+
+53
+00:22:30,000 --> 00:22:46,000
+[Michael Ryskin] Great. Thanks for taking the question, guys. I want to follow up on the last one on Ambry, but maybe tie it into a bigger picture one. Just if I'm looking at the guide, the raise for the guide for the year looks like you bumped it up. Effectively for the 3Q beat.
+
+54
+00:22:46,000 --> 00:23:09,000
+[Michael Ryskin] But just your comments on Ambry just now, if you're going from mid to high teens to low to mid-20s, by our math, it adds about $20 million of revenue to the full year. So if there's something else that's offsetting it where you're taking something out of the legacy genomics business or maybe data and services, just if you could talk about the bridge a little bit and sort of how that rolls up to the full year, that'd be helpful. Thanks.
+
+55
+00:23:09,000 --> 00:23:24,000
+[Jim Rogers] Yeah. So I'll start, and then Eric can chime in. So the Q3 growth rate was about 32% for Ambry. So we're saying it's going to go from 32% down sequentially into Q4. So not an increase in Q4.
+
+56
+00:23:24,000 --> 00:24:03,000
+[Eric Lefkofsky] But even still, let's assume that. To your point, if Ambry's outperforming by X amount of money, call it $15-$20 million a year, and that might equate to a $5 million benefit in Q4, we just take the approach that we've always taken. We try to look at it and say, "If we have a beat, a beat and a raise, that's great." But we don't need to get ahead of our skis. There's no benefit. We want to be in a place where we're consistently overperforming, outperforming expectation, and we don't need to artificially raise expectation for no reason, especially when the core business is growing at 30%.
+
+57
+00:24:03,000 --> 00:24:39,000
+[Eric Lefkofsky] If we were growing at 4%, we might be like, "Oh, God, we need to raise expectation." But our business is growing at a really healthy rate, and we want to constantly orient people around whether we grow at 31% in Q4 or 29% or 30%, that doesn't really matter. What really matters is, can we deliver 25% growth, not just for the next three years, but for the next 10 years? If we can, this will be a very, very big business. So we're architected around long-term growth, not short-term. That's how we guide.
+
+58
+00:24:39,000 --> 00:24:48,000
+[Operator] Our next question comes from Subbu Nambi from Guggenheim. Please go ahead.
+
+59
+00:24:48,000 --> 00:25:10,000
+[Subbu Nambi from] Hi. This is Ricky on for Subu. Thanks for taking our question here. There was a bit on this in the letter, but could you share any updates on your work on the foundation model with AstraZeneca and Pathos, and maybe what the next milestones we should be looking for here are? And is there any benefit you could speak to from the Paige acquisition in the foundation model work? Thanks.
+
+60
+00:25:10,000 --> 00:25:31,000
+[Eric Lefkofsky] Yeah. So the foundation model is just finishing the pretraining phase right now. It's going exceptionally well in terms of. You run all these small models, both single models and multimodal models, and see how they perform, and are they predictive, and you're measuring them against kind of these common benchmarks like C-Index to see how they're doing.
+
+61
+00:25:31,000 --> 00:26:05,000
+[Eric Lefkofsky] All that's going incredibly well. The teams feel great. We're kind of entering the phase of large compute over the next several months. And then when that is done, we begin post-training later this year, kind of early 2026, and we expect to have kind of the first versions of the model in Q1. In general, the team is super happy with the progress we're making, both on every side, and so there's no kind of red flags. And I would. We're in the midst of procuring additional GPU capacity.
+
+62
+00:26:05,000 --> 00:26:30,000
+[Eric Lefkofsky] We feel like this is just. An advantage we have, and we want to lean into it and double down. And we're going to address our, if you look at, and we call this out in the letter, if you look at Tempus AI relative to other companies, we're going to look and smell and feel like a tech company. In many ways, including lines of code we write, amount of money we spend on cloud and compute, number of software engineers we have on staff.
+
+63
+00:26:30,000 --> 00:26:49,000
+[Eric Lefkofsky] And we're in a world where AI is coming, and we happen to be perfectly situated, we think. We're investing in that heavily. And I think instead of us taking our foot off the gas, we will continue to press forward. Paige is awesome in that they had their own foundation model work going on.
+
+64
+00:26:49,000 --> 00:27:13,000
+[Eric Lefkofsky] In digital pathology, they have a tremendous team and have made really interesting progress there. Those teams are now connected. They're now part of our foundation model team. We're aggregating some of that data and trying to understand the insights. And so there's just quite a bit of good momentum that comes from that. And we're excited to see where it goes.
+
+65
+00:27:13,000 --> 00:27:20,000
+[Operator] Our next question comes from David Westenberg from Piper Sandler. Please go ahead.
+
+66
+00:27:20,000 --> 00:27:54,000
+[David Westenberg] Hi. Thanks for taking the question. I'll focus a little bit more on the long term. Generally, the reimbursement system, CPT codes, et cetera, have generally worked on reimbursing for what you're doing in the wet lab. Now, you've accumulated a lot of data, and you have a lot of strong analysis interpretation. Do you believe that the healthcare system can effectively start to reimburse for really the challenges around data interpretation and analysis? And do you believe there's still a major, or do you believe there's still maybe a differentiation with what you do in wet lab with, say, error correction? Thank you.
+
+67
+00:27:54,000 --> 00:28:18,000
+[Eric Lefkofsky] Yeah. I mean, so look, when we think about the business, and if you look at the kind of guide we laid out, the longer-term guide of growing at 25% for the next three years, we build that guide almost entirely looking at the growth we can see in our diagnostic business and our data business. Because those are big businesses, predictable, operating at scale, really good growth rates, really good margin.
+
+68
+00:28:18,000 --> 00:28:36,000
+[Eric Lefkofsky] We understand them. We have a very hard time predicting the growth rate of some of these algorithms we have in market. Effectively, to your point, this dry lab CPT code stuff, we have a hard time predicting the revenue associated with that because at the present moment, it isn't well reimbursed, if at all. We believe at some point that will change.
+
+69
+00:28:36,000 --> 00:29:06,000
+[Eric Lefkofsky] We believe at some point that has to change or the healthcare system in this country is in danger of real problems. We just can't afford $5.7 trillion a year growing at 7.5%. The only solution to this problem is some amount of intelligence, call it AI, that allows us to understand where error is occurring, where waste is occurring, where mistakes are occurring, where we can be predictive and preventative.
+
+70
+00:29:06,000 --> 00:29:31,000
+[Eric Lefkofsky] That's going to have to be paid for, or it isn't going to scale. When that's paid for, Tempus AI is in a really unique position because we have a lot of this. We invest a lot of money embedded in our results, even with positive EBITDA, generating a ton of algorithms. I mean, a lot. We have algorithms in digital pathology, radiology, cardiology, neuropsych, oncology, up and down the spectrum.
+
+71
+00:29:31,000 --> 00:30:07,000
+[Eric Lefkofsky] And so when these things are paid for, we can distribute them across the over 5,000 hospitals connected to our ecosystem very quickly. And many of these things already have to be approved. And so we suspect our path of reimbursement will be very quick if there is a path of reimbursement. And I've said this historically, if Tempus AI ever has its NVIDIA moment or whatever that moment is, it's going to be because one of these things starts to get paid for, two of them or three of them, and they just scale rapidly. So in the wet lab, you might go from 100 million of revenue to 150 million of revenue. That would be a very heavy lift.
+
+72
+00:30:07,000 --> 00:30:30,000
+[Eric Lefkofsky] But in the algo world, you go from 100 million of revenue to a billion of revenue overnight because you're distributing zeros and ones instead of having to kind of collect biospecimens and run a test and distribute it. So it just scales differently. So I'm hopeful they will get paid for. I can't see any other way out of this mess, and we're well situated.
+
+73
+00:30:30,000 --> 00:30:38,000
+[Operator] Our next question comes from Mark Schappel from Loop Capital Markets. Please go.
+
+74
+00:30:38,000 --> 00:31:03,000
+[Mark Schappel] Hi. Thank you for taking my question. Eric, question on Paige AI. In addition to their AI pathology applications, I believe they also bring some synergies and leverage to your genomic diagnostics business. I was wondering if you could just provide some additional color details on how Paige AI actually complements or works with your diagnostics business.
+
+75
+00:31:03,000 --> 00:31:29,000
+[Eric Lefkofsky] Yeah. I mean, it will work beautifully. Obviously, we just acquired Paige AI very recently. So some of these things are being integrated now. But I'll give you just one example of ways in which digital pathology can enhance sequencing. So first of all, some percentage of the time, sequencing doesn't work. It just doesn't work. You can't sequence the patient. Now, it's a low percentage, but it's real.
+
+76
+00:31:29,000 --> 00:31:47,000
+[Eric Lefkofsky] It's called kind of QNS. The results just aren't delivered. Or some percentage of the time, you don't get enough material to even run sequencing. You just don't literally have enough material, high enough tumor percentage to even sequence the patient. In these instances, today, we say to a doctor, "I can't help you.
+
+77
+00:31:47,000 --> 00:32:09,000
+[Eric Lefkofsky] I don't have a result." But in a world where you have these digital pathology algorithms that can be deployed that can predict the most common mutations that might exist from sequencing, and Paige AI already has some of these in flight with more coming, one FDA approved, others in front of the FDA, you can basically return results to physicians even when NGS fails.
+
+78
+00:32:09,000 --> 00:32:28,000
+[Eric Lefkofsky] Likewise, you can imagine a world where a certain number of results are really critical to get very quickly. For example, if a patient has non-small cell lung cancer, you want to know if their EGFR mutated in one or two days. And so another benefit of integrating these things is we will be able to make some number of predictions very quickly.
+
+79
+00:32:28,000 --> 00:33:01,000
+[Eric Lefkofsky] So we've always thought that the winning answer here was through this kind of multimodal approach to looking at the totality of data that can be generated for a patient and producing the highest quality data-driven insights as fast as possible. And those are typically never single data modality driven. So we want to live in a world where we're every bit as good at generating molecular data as we are at generating digitized pathology data or understanding a CT scan or an MRI or mammography.
+
+80
+00:33:01,000 --> 00:33:18,000
+[Eric Lefkofsky] And if you look at our investments, we make investments along those lines. And I think over time, similar to the way if you looked at Amazon, let's say, 20 years ago, you might have said, "Oh, whatever. They deliver books." Or maybe they deliver books in consumer electronics, and they're not that much better than eBay.
+
+81
+00:33:18,000 --> 00:33:43,000
+[Eric Lefkofsky] But if you start to fast forward 5 years, 10 years, you can see the differentiation by Amazon's ability to kind of give you anything you want instantaneously. And that's because of the investments they made in depth of product and speed of distribution. And we're making similar investments, or at least the corollary of those similar investments in our portfolio today.
+
+82
+00:33:43,000 --> 00:33:51,000
+[Operator] In terms of time, our final question comes from Dan Arias from Stifel. Please go ahead.
+
+83
+00:33:51,000 --> 00:34:22,000
+[Dan Arias] Yeah. Hi, guys. Thanks for taking the questions here. Maybe one on MRD. You guys have been pretty clear about not having plans to spend a bunch of money on big studies. But it does sound like you're investing there. And so to the extent that that involves R&D, is there data next year that we should look out for? It does seem like we're going to have a whole slew of high-sensitivity assays coming to the market over the next 12-plus months. So I just want to make sure we have our eyes on the right things and updates from Tempus AI within that discussion.
+
+84
+00:34:22,000 --> 00:34:39,000
+[Eric Lefkofsky] Yeah. I mean, I would say we put out, and I think this is called out in our investor deck, we put out publications, posters, presentations constantly. I mean, it's a crazy number. I just looked at the SITC press release. It's got like seven papers coming out or something.
+
+85
+00:34:39,000 --> 00:35:09,000
+[Eric Lefkofsky] So we put this stuff out pretty regularly. In terms of big studies, I think we called out in the letter that on the tumor naive side, we're in CRC today. We're running a non-small cell lung cancer study right now. We likely will go back and look at some of our CRC work. And I suspect you'll get some data coming out about both of those next year. Beyond that, we might bleed into early 2027 in terms of other disease areas or other disease indications that we go into.
+
+86
+00:35:09,000 --> 00:35:32,000
+[Eric Lefkofsky] But we expect to have really interesting data in market next year from our tumor naive assay in both lung and CRC. And we believe we're hitting metrics that are just super powerful on the tumor naive side that allow us to kind of go head-to-head against some of the tumor-informed guys by virtue of some of the enhancements we've made internally with we have 400 PhDs around here.
+
+87
+00:35:32,000 --> 00:35:49,000
+[Eric Lefkofsky] So it's like a fairly large and talented technical team. In terms of tumor-informed, I'll leave it to Personalis to kind of provide you their roadmap of what's coming and what studies they're doing. But they, too, are investing, I think, quite heavily.
+
+88
+00:35:49,000 --> 00:35:57,000
+[Operator] That concludes the question and answer session. I'd now like to turn the call back over to Liz Krutoholow for closing remarks.
+
+89
+00:35:57,000 --> 00:36:05,000
+[Elizabeth Krutoholow] Great. Thank you. Thanks all for joining us today. We look forward to updating you again next quarter.
+
+90
+00:36:05,000 --> 00:36:35,000
+[Operator] This concludes today's conference call. Give me an hour to disconnect.

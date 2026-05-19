@@ -33,7 +33,8 @@ def process_video(
     archive,
     prompts_dir: Optional[Path] = None,
     skip_filters: bool = False,
-    channel_config: Optional['ChannelConfig'] = None
+    channel_config: Optional['ChannelConfig'] = None,
+    skip_translate: bool = False
 ) -> PipelineResult:
     """
     Process a single video through the complete pipeline.
@@ -233,28 +234,33 @@ def process_video(
         logger.info(f"[{video_id}] ✓ Analysis complete ({len(chapters)} chapters, type: {video_type})")
 
         # Stage 5: Translation
-        if use_agent:
-            logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters with Agent '{agent_name}'...")
+        if skip_translate:
+            logger.info(f"[{video_id}] Stage 5: Skipping translation (--no-translate)")
+            translations = {}
+            failed_chapters = []
         else:
-            logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters...")
+            if use_agent:
+                logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters with Agent '{agent_name}'...")
+            else:
+                logger.info(f"[{video_id}] Stage 5: Translating {len(chapters)} chapters...")
 
-        translations, failed_chapters = translate_chapters(
-            summary=summary,
-            chapters=chapters,
-            raw_srt=raw_srt,
-            video_type=video_type,
-            speakers=speakers,
-            prompt_file=prompt_translate,
-            timeout=config.claude_timeout_seconds,
-            model=model_translate,
-            context_lines=config.context_lines,
-            max_retries=config.translation_max_retries,
-            retry_delay=config.translation_retry_delay,
-            use_agent=use_agent,
-            agent_name=agent_name
-        )
+            translations, failed_chapters = translate_chapters(
+                summary=summary,
+                chapters=chapters,
+                raw_srt=raw_srt,
+                video_type=video_type,
+                speakers=speakers,
+                prompt_file=prompt_translate,
+                timeout=config.claude_timeout_seconds,
+                model=model_translate,
+                context_lines=config.context_lines,
+                max_retries=config.translation_max_retries,
+                retry_delay=config.translation_retry_delay,
+                use_agent=use_agent,
+                agent_name=agent_name
+            )
 
-        logger.info(f"[{video_id}] ✓ Translation complete ({len(translations)}/{len(chapters)} successful)")
+            logger.info(f"[{video_id}] ✓ Translation complete ({len(translations)}/{len(chapters)} successful)")
 
         # Stage 6: Generate Markdown
         logger.info(f"[{video_id}] Stage 6: Generating markdown output...")

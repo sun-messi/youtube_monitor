@@ -155,7 +155,7 @@ def load_archive(archive_file: str):
     return Archive(archive_file)
 
 
-def process_single_video(video_id: str, config, archive, channel_name: Optional[str] = None) -> int:
+def process_single_video(video_id: str, config, archive, channel_name: Optional[str] = None, skip_translate: bool = False) -> int:
     """
     Process a single video (skips duration and date filters).
 
@@ -205,7 +205,7 @@ def process_single_video(video_id: str, config, archive, channel_name: Optional[
 
     logger.info("-" * 60)
 
-    result = process_video(video_id, config, archive, skip_filters=True, channel_config=channel_config)
+    result = process_video(video_id, config, archive, skip_filters=True, channel_config=channel_config, skip_translate=skip_translate)
 
     if result.success:
         if result.output_path:
@@ -348,6 +348,13 @@ Examples:
         help="Enable email notifications",
     )
 
+    parser.add_argument(
+        "--no-translate",
+        action="store_true",
+        dest="no_translate",
+        help="Skip translation stage (summary only)",
+    )
+
     args = parser.parse_args()
 
     # Load configuration
@@ -368,7 +375,7 @@ Examples:
     # Execute appropriate mode
     try:
         if args.video:
-            return process_single_video(args.video, config, archive, channel_name=args.channel)
+            return process_single_video(args.video, config, archive, channel_name=args.channel, skip_translate=args.no_translate)
         elif args.loop:
             # Loop mode defaults to sending email (use --no-email to disable)
             return run_loop(email_enabled=True)
